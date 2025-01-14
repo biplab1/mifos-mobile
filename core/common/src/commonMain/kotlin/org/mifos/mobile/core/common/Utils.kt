@@ -23,7 +23,7 @@ object Utils {
         try {
             type?.lowercase()?.split("_")?.forEach { str ->
                 builder.append(
-                    str[0].uppercaseChar() + str.substring(1)
+                    str[0].uppercaseChar() + str.substring(1),
                 ).append(" ")
             }
         } catch (_: Exception) {
@@ -31,4 +31,3 @@ object Utils {
         return builder.toString().trim()
     }
 }
-
