@@ -18,16 +18,12 @@ object Utils {
         return formString.toString()
     }
 
-    fun formatTransactionType(type: String?): String {
-        val builder = StringBuilder()
-        try {
-            type?.lowercase()?.split("_")?.forEach { str ->
-                builder.append(
-                    str[0].uppercaseChar() + str.substring(1),
-                ).append(" ")
+    fun formatTransactionType(type: String?): String =
+        type?.lowercase()
+            ?.split("_")
+            ?.joinToString(" ") { word ->
+                word.replaceFirstChar { it.uppercase() }
             }
-        } catch (_: Exception) {
-        }
-        return builder.toString().trim()
-    }
+            ?.trim()
+            ?: ""
 }

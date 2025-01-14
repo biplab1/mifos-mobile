@@ -350,4 +350,9 @@ object DateHelper {
      * "dd-MM-yyyy" is the format of the date picker.
      */
     val formattedShortDate = currentDate.format(shortMonthFormat)
+
+    fun getMonth(month: Int): String {
+        require(month in 1..12) { "Month should be between 1 and 12" }
+        return Month.entries[month - 1].name.lowercase().replaceFirstChar { it.uppercase() }
+    }
 }
