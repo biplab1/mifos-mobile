@@ -8,12 +8,13 @@
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
 package org.mifos.mobile.core.common
-
+/*
 import android.content.Context
 import android.preference.PreferenceManager
 import java.util.Locale
-
+*/
 object LanguageHelper {
+    /*
     fun onAttach(context: Context): Context? {
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)
         return if (preferences.getBoolean(
@@ -60,4 +61,5 @@ object LanguageHelper {
         configuration.setLayoutDirection(locale)
         return context.createConfigurationContext(configuration)
     }
+    */
 }
