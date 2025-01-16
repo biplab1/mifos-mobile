@@ -16,11 +16,13 @@ import androidx.compose.material.icons.automirrored.filled.CompareArrows
 import androidx.compose.material.icons.automirrored.filled.Help
 import androidx.compose.material.icons.automirrored.filled.Label
 import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.AccountBalanceWallet
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowDropUp
+import androidx.compose.material.icons.filled.ChevronLeft
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.FilterList
@@ -43,6 +45,14 @@ import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material.icons.outlined.Mail
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Wallet
+import androidx.compose.material.icons.rounded.AccountCircle
+import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.SwapHoriz
+import androidx.compose.material.icons.rounded.Wallet
 
 object MifosIcons {
     val Paid: ImageVector = Icons.Default.Paid
@@ -66,6 +76,7 @@ object MifosIcons {
     val Info: ImageVector = Icons.Default.Info
     val ArrowDropUp: ImageVector = Icons.Default.ArrowDropUp
     val ArrowDropDown: ImageVector = Icons.Default.ArrowDropDown
+    val Close: ImageVector = Icons.Filled.Close
     val ArrowBack = Icons.AutoMirrored.Default.ArrowBack
     val Edit = Icons.Default.Edit
     val FilterList = Icons.Filled.FilterList
@@ -77,4 +88,12 @@ object MifosIcons {
     val Error = Icons.Filled.Error
     val Notifications = Icons.Filled.Notifications
     val NavigationDrawer = Icons.Default.Menu
+    val ArrowBack2 = Icons.Filled.ChevronLeft
+    val Back = Icons.AutoMirrored.Outlined.ArrowBack
+    val Home = Icons.Outlined.Home
+    val HomeBoarder = Icons.Rounded.Home
+    val Payment = Icons.Rounded.SwapHoriz
+    val Finance = Icons.Outlined.Wallet
+    val Profile = Icons.Outlined.AccountCircle
+    val ProfileBoarder = Icons.Rounded.AccountCircle
 }
