@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.designsystem.theme
+package org.mifos.mobile.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

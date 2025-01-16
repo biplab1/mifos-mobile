@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.designsystem.icon
+package org.mifos.mobile.core.designsystem.icon
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack

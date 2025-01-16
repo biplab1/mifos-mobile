@@ -49,9 +49,6 @@ kotlin {
         }
     }
 }
-dependencies {
-    implementation(libs.androidx.ui.android)
-}
 
 compose.resources {
     publicResClass = true

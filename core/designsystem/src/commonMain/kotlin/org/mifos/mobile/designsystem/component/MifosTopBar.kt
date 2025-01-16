@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.designsystem.component
+package org.mifos.mobile.core.designsystem.component
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.isSystemInDarkTheme

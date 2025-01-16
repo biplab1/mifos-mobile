@@ -35,7 +35,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import org.mifos.mobile.R
-import org.mifos.mobile.designsystem.theme.MifosBackground
+import org.mifos.mobile.core.designsystem.theme.MifosBackground
 import org.mifos.mobile.navigation.MifosNavHost
 
 @OptIn(ExperimentalComposeUiApi::class)
