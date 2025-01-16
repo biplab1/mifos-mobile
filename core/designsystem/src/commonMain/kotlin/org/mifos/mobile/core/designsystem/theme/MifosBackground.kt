@@ -21,7 +21,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import org.mifos.mobile.core.designsystem.theme.LocalBackgroundTheme
 
 /**
  * The main background for the app.
