@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowDropUp
 import androidx.compose.material.icons.filled.ChevronLeft
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.FilterList
@@ -43,16 +44,16 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.filled.WifiOff
-import androidx.compose.material.icons.outlined.Mail
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.outlined.AccountCircle
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Mail
+import androidx.compose.material.icons.outlined.Visibility
+import androidx.compose.material.icons.outlined.VisibilityOff
 import androidx.compose.material.icons.outlined.Wallet
 import androidx.compose.material.icons.rounded.AccountCircle
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.SwapHoriz
-import androidx.compose.material.icons.rounded.Wallet
+import androidx.compose.ui.graphics.vector.ImageVector
 
 object MifosIcons {
     val Paid: ImageVector = Icons.Default.Paid
@@ -77,6 +78,8 @@ object MifosIcons {
     val ArrowDropUp: ImageVector = Icons.Default.ArrowDropUp
     val ArrowDropDown: ImageVector = Icons.Default.ArrowDropDown
     val Close: ImageVector = Icons.Filled.Close
+    val OutlinedVisibilityOff: ImageVector = Icons.Outlined.VisibilityOff
+    val OutlinedVisibility: ImageVector = Icons.Outlined.Visibility
     val ArrowBack = Icons.AutoMirrored.Default.ArrowBack
     val Edit = Icons.Default.Edit
     val FilterList = Icons.Filled.FilterList

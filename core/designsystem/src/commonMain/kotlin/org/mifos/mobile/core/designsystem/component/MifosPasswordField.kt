@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  *
- * See See https://github.com/openMF/kmp-project-template/blob/main/LICENSE
+ * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
 package org.mifos.mobile.core.designsystem.component
 
@@ -30,9 +30,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.mifos.core.designsystem.icon.AppIcons
-import org.mifos.core.designsystem.utils.nonLetterColorVisualTransformation
-import org.mifos.core.designsystem.utils.tabNavigation
+import org.mifos.mobile.core.designsystem.icon.MifosIcons
+import org.mifos.mobile.core.designsystem.utils.nonLetterColorVisualTransformation
+import org.mifos.mobile.core.designsystem.utils.tabNavigation
 
 @Composable
 fun MifosPasswordField(
@@ -77,9 +77,9 @@ fun MifosPasswordField(
                 onClick = { showPasswordChange.invoke(!showPassword) },
             ) {
                 val imageVector = if (showPassword) {
-                    AppIcons.OutlinedVisibilityOff
+                    MifosIcons.OutlinedVisibilityOff
                 } else {
-                    AppIcons.OutlinedVisibility
+                    MifosIcons.OutlinedVisibility
                 }
 
                 Icon(
