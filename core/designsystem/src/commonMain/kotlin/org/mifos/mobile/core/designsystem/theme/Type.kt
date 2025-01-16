@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  *
- * See See https://github.com/openMF/kmp-project-template/blob/main/LICENSE
+ * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
 package org.mifos.mobile.core.designsystem.theme
 
@@ -16,26 +16,26 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.sp
-import org.jetbrains.compose.resources.Font
 import mifos_mobile.core.designsystem.generated.resources.Res
-import mifos_mobile.core.designsystem.generated.resources.poppins_black
-import mifos_mobile.core.designsystem.generated.resources.poppins_extra_bold
-import mifos_mobile.core.designsystem.generated.resources.poppins_extra_light
-import mifos_mobile.core.designsystem.generated.resources.poppins_bold
-import mifos_mobile.core.designsystem.generated.resources.poppins_light
-import mifos_mobile.core.designsystem.generated.resources.poppins_medium
-import mifos_mobile.core.designsystem.generated.resources.poppins_regular
-import mifos_mobile.core.designsystem.generated.resources.poppins_semi_bold
-import mifos_mobile.core.designsystem.generated.resources.poppins_thin
 import mifos_mobile.core.designsystem.generated.resources.montserrat_black
+import mifos_mobile.core.designsystem.generated.resources.montserrat_bold
 import mifos_mobile.core.designsystem.generated.resources.montserrat_extra_bold
 import mifos_mobile.core.designsystem.generated.resources.montserrat_extra_light
-import mifos_mobile.core.designsystem.generated.resources.montserrat_bold
 import mifos_mobile.core.designsystem.generated.resources.montserrat_light
 import mifos_mobile.core.designsystem.generated.resources.montserrat_medium
 import mifos_mobile.core.designsystem.generated.resources.montserrat_regular
 import mifos_mobile.core.designsystem.generated.resources.montserrat_semi_bold
 import mifos_mobile.core.designsystem.generated.resources.montserrat_thin
+import mifos_mobile.core.designsystem.generated.resources.poppins_black
+import mifos_mobile.core.designsystem.generated.resources.poppins_bold
+import mifos_mobile.core.designsystem.generated.resources.poppins_extra_bold
+import mifos_mobile.core.designsystem.generated.resources.poppins_extra_light
+import mifos_mobile.core.designsystem.generated.resources.poppins_light
+import mifos_mobile.core.designsystem.generated.resources.poppins_medium
+import mifos_mobile.core.designsystem.generated.resources.poppins_regular
+import mifos_mobile.core.designsystem.generated.resources.poppins_semi_bold
+import mifos_mobile.core.designsystem.generated.resources.poppins_thin
+import org.jetbrains.compose.resources.Font
 
 @Composable
 private fun displayFontFamily(): FontFamily {

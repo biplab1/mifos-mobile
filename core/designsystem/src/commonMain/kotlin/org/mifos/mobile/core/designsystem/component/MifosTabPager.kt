@@ -69,7 +69,7 @@ fun MifosTabPager(
             modifier = Modifier.fillMaxWidth(),
             pageContent = { page ->
                 content(page)
-            }
+            },
         )
     }
 }
