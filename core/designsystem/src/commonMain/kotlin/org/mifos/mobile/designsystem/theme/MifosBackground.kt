@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.designsystem.theme
+package org.mifos.mobile.designsystem.theme
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mifos.mobile.core.designsystem.theme.LocalBackgroundTheme
 
 /**
  * The main background for the app.

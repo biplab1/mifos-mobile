@@ -115,6 +115,7 @@ jbSavedState = "1.2.2"
 packageName = "MifosWallet"
 packageNamespace = "org.mifos.desktop"
 packageVersion = "1.0.0"
+uiAndroidVersion = "1.7.6"
 
 [libraries]
 accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanistVersion" }
@@ -313,6 +314,7 @@ moko-permission = { group = "dev.icerock.moko", name = "permissions", version.re
 moko-permission-compose = { group = "dev.icerock.moko", name = "permissions-compose", version.ref = "mokoPermission" }
 
 window-size = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "windowsSizeClass" }
+androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroidVersion" }
 
 [bundles]
 androidx-compose-ui-test = [

@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.designsystem.components
+package org.mifos.mobile.designsystem.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -29,7 +29,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
+import org.mifos.mobile.designsystem.theme.MifosMobileTheme
 
 @Composable
 fun MifosSearchTextField(

@@ -8,8 +8,10 @@
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
 plugins {
-    alias(libs.plugins.mifos.android.library)
-    alias(libs.plugins.mifos.android.library.compose)
+    alias(libs.plugins.mifos.kmp.library)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.roborazzi)
 }
 
 android {
@@ -19,19 +21,39 @@ android {
     namespace = "org.mifos.mobile.core.designsystem"
 }
 
+kotlin {
+    sourceSets {
+        androidMain.dependencies {
+            implementation(libs.androidx.compose.ui.tooling.preview)
+            implementation(libs.androidx.activity.compose)
+            implementation(projects.core.model)
+        }
+        androidInstrumentedTest.dependencies {
+            implementation(libs.androidx.compose.ui.test)
+        }
+        androidUnitTest.dependencies {
+            implementation(libs.androidx.compose.ui.test)
+        }
+        commonMain.dependencies {
+            implementation(libs.coil.kt.compose)
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
+            implementation(compose.ui)
+            implementation(compose.uiUtil)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            api(libs.back.handler)
+            api(libs.window.size)
+        }
+    }
+}
 dependencies {
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.foundation)
-    api(libs.androidx.compose.foundation.layout)
-    api(libs.androidx.compose.material.iconsExtended)
-    api(libs.androidx.compose.material3)
-    api(libs.androidx.compose.runtime)
-    api(libs.androidx.compose.ui.util)
-    api(libs.androidx.activity.compose)
+    implementation(libs.androidx.ui.android)
+}
 
-    // Accompanist Pager Library
-    implementation(libs.accompanist.pager)
-
-    testImplementation(libs.androidx.compose.ui.test)
-    androidTestImplementation(libs.androidx.compose.ui.test)
+compose.resources {
+    publicResClass = true
+    generateResClass = always
 }

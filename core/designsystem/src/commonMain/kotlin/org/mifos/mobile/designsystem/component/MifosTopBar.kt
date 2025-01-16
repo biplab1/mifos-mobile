@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.designsystem.components
+package org.mifos.mobile.designsystem.component
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -22,7 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import org.mifos.mobile.core.designsystem.icons.MifosIcons
+import org.mifos.mobile.designsystem.icon.MifosIcons
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

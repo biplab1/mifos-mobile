@@ -32,9 +32,9 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import org.mifos.mobile.HomeActivityUiState.Success
 import org.mifos.mobile.core.data.utils.NetworkMonitor
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
-import org.mifos.mobile.core.designsystem.theme.darkScrim
-import org.mifos.mobile.core.designsystem.theme.lightScrim
+import org.mifos.mobile.designsystem.theme.MifosMobileTheme
+import org.mifos.mobile.designsystem.theme.darkScrim
+import org.mifos.mobile.designsystem.theme.lightScrim
 import org.mifos.mobile.navigation.MifosNavGraph.AUTH_GRAPH
 import org.mifos.mobile.navigation.MifosNavGraph.PASSCODE_GRAPH
 import org.mifos.mobile.navigation.RootNavGraph

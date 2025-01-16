@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.designsystem.components
+package org.mifos.mobile.designsystem.component
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.PaddingValues
