@@ -58,7 +58,7 @@ annotation class ThemePreviews
 @ThemePreviews
 @Composable
 fun BackgroundDefault() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }
@@ -66,7 +66,7 @@ fun BackgroundDefault() {
 @ThemePreviews
 @Composable
 fun BackgroundDynamic() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }
@@ -74,7 +74,7 @@ fun BackgroundDynamic() {
 @ThemePreviews
 @Composable
 fun BackgroundAndroid() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }

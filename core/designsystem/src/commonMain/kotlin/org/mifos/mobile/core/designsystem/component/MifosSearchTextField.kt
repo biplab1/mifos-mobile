@@ -28,7 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
+import org.mifos.mobile.core.designsystem.theme.MifosTheme
 
 @Composable
 fun MifosSearchTextField(
@@ -85,7 +85,7 @@ fun MifosSearchTextField(
 private fun MifosSearchTextFieldPreview(
     modifier: Modifier = Modifier,
 ) {
-    MifosMobileTheme {
+    MifosTheme {
         Surface {
             MifosSearchTextField(
                 value = TextFieldValue("Search"),

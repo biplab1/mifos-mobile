@@ -18,7 +18,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
+import org.mifos.mobile.core.designsystem.theme.MifosTheme
 
 @Composable
 fun MifosBasicDialog(
@@ -117,7 +117,7 @@ fun MifosBasicDialog(
 @Preview
 @Composable
 private fun MifosBasicDialog_preview() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosBasicDialog(
             visibilityState = BasicDialogState.Shown(
                 title = "An error has occurred.",

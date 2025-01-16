@@ -35,7 +35,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
+import org.mifos.mobile.core.designsystem.theme.MifosTheme
 import org.mifos.mobile.core.designsystem.utils.mirrorIfRtl
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -212,7 +212,7 @@ fun MifosTopAppBar(
 @Preview
 @Composable
 private fun MifosTopAppBar_preview() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosTopAppBar(
             title = "Title",
             scrollBehavior = TopAppBarDefaults
@@ -232,7 +232,7 @@ private fun MifosTopAppBar_preview() {
 @Preview
 @Composable
 private fun MifosTopAppBarOverflow_preview() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosTopAppBar(
             title = "Title that is too long for the top line",
             scrollBehavior = TopAppBarDefaults
@@ -252,7 +252,7 @@ private fun MifosTopAppBarOverflow_preview() {
 @Preview
 @Composable
 private fun MifosTopAppBarOverflowCutoff_preview() {
-    MifosMobileTheme {
+    MifosTheme {
         MifosTopAppBar(
             title = "Title that is too long for the top line and the bottom line",
             scrollBehavior = TopAppBarDefaults
