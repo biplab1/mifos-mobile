@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.mifos.mobile.core.designsystem.theme.MifosTheme
+import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 
 @Composable
 fun MifosLoadingDialog(
@@ -90,7 +90,7 @@ fun MifosLoadingDialog(
 @Preview
 @Composable
 private fun MifosLoadingDialog_preview() {
-    MifosTheme {
+    MifosMobileTheme {
         MifosLoadingDialog(
             visibilityState = LoadingDialogState.Shown,
         )

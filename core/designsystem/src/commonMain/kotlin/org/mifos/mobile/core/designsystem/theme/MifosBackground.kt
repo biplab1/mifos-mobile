@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 
 /**
  * The main background for the app.
@@ -58,7 +59,7 @@ annotation class ThemePreviews
 @ThemePreviews
 @Composable
 fun BackgroundDefault() {
-    MifosTheme {
+    MifosMobileTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }
@@ -66,7 +67,7 @@ fun BackgroundDefault() {
 @ThemePreviews
 @Composable
 fun BackgroundDynamic() {
-    MifosTheme {
+    MifosMobileTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }
@@ -74,7 +75,7 @@ fun BackgroundDynamic() {
 @ThemePreviews
 @Composable
 fun BackgroundAndroid() {
-    MifosTheme {
+    MifosMobileTheme {
         MifosBackground(Modifier.size(100.dp), content = {})
     }
 }

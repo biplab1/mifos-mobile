@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.mifos.mobile.core.designsystem.theme.MifosTheme
+import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 
 @Composable
 fun MifosRadioButton(
@@ -41,7 +41,7 @@ fun MifosRadioButton(
 @Preview(showSystemUi = true)
 @Composable
 private fun MifosRadioButtonPreview() {
-    MifosTheme {
+    MifosMobileTheme {
         MifosRadioButton(
             selected = false,
             onClick = {},

@@ -69,6 +69,7 @@ val md_theme_dark_inverseSurface = Color(0xFFE3E1EA)
 val md_theme_dark_inverseOnSurface = Color(0xFF2F3037)
 val md_theme_dark_inversePrimary = Color(0xFF4355B9)
 
+/*
 val Blue600 = Color(0xFF1E88E5)
 val Blue700 = Color(0xFF1976D2)
 
@@ -91,22 +92,10 @@ val Primary = Color(0xFF3F51B5)
 val DarkGray = Color(0xBB666666)
 
 val GreenSuccess = Color(0xff14c416)
+*/
 val LightSurfaceTint = Color(0xFF325CA8)
 val DarkSurfaceTint = Color(0xFFAEC6FF)
 
 val lightScrim = Color(0x80FFFFFF)
 val darkScrim = Color(0x80000000)
 
-object NewUi {
-    val gradientOne = Color(0xFFFFFFFF)
-    val gradientTwo = Color(0xFFD0D1D6)
-    val containerColor = Color(0xFFF5F5F5)
-    val primaryColor = Color(0xFF0673BA)
-    val tertiaryContainer = Color(0xFFFDFDFE)
-    val onSurface = Color(0xFF333333)
-    val secondaryColor = Color(0xFFFF3325)
-
-    // general color
-    val walletColor1 = Color(0xFF1f7dd5)
-    val walletColor2 = Color(0xFF1ec0a0)
-}

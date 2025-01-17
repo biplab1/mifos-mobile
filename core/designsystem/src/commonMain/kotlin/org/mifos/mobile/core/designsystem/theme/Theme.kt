@@ -14,11 +14,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import org.mifos.mobile.core.designsystem.theme.NewUi.gradientOne
-import org.mifos.mobile.core.designsystem.theme.NewUi.gradientTwo
 
 private val LightDefaultColorScheme = lightColorScheme(
     primary = md_theme_light_primary,
@@ -85,43 +80,18 @@ private val DarkDefaultColorScheme = darkColorScheme(
 )
 
 @Composable
-fun MifosTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+fun MifosMobileTheme(
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
-    // Color scheme
-    val colorScheme = when {
-        else -> if (darkTheme) DarkDefaultColorScheme else LightDefaultColorScheme
+    val colors = when {
+        useDarkTheme -> DarkDefaultColorScheme
+        else -> LightDefaultColorScheme
     }
-    val defaultGradientColors = GradientColors(
-        top = gradientOne,
-        bottom = gradientTwo,
-        container = Color.Transparent,
+
+    MaterialTheme(
+        colorScheme = colors,
+        content = content,
+        typography = mifosTypography(),
     )
-    val gradientColors = when {
-        else -> defaultGradientColors
-    }
-    // Background theme
-    val defaultBackgroundTheme = BackgroundTheme(
-        color = Color.Transparent,
-        tonalElevation = 2.dp,
-    )
-    val backgroundTheme = when {
-        else -> defaultBackgroundTheme
-    }
-    val tintTheme = when {
-        else -> TintTheme()
-    }
-    // Composition locals
-    CompositionLocalProvider(
-        LocalGradientColors provides gradientColors,
-        LocalBackgroundTheme provides backgroundTheme,
-        LocalTintTheme provides tintTheme,
-    ) {
-        MaterialTheme(
-            colorScheme = colorScheme,
-            typography = mifosTypography(),
-            content = content,
-        )
-    }
 }

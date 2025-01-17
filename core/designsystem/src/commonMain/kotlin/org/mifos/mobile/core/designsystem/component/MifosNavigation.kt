@@ -24,7 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.MifosTheme
+import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 
 /**
  * Now in Android navigation bar item with icon and label content slots. Wraps Material 3
@@ -162,7 +162,7 @@ fun MifosNavigationBarPreview() {
             MifosIcons.ProfileBoarder,
         )
 
-    MifosTheme {
+    MifosMobileTheme {
         MifosNavigationBar {
             items.forEachIndexed { index, item ->
                 MifosNavigationBarItem(
@@ -206,7 +206,7 @@ fun MifosNavigationRailPreview() {
             MifosIcons.ProfileBoarder,
         )
 
-    MifosTheme {
+    MifosMobileTheme {
         MifosNavigationRail {
             items.forEachIndexed { index, item ->
                 MifosNavigationRailItem(
