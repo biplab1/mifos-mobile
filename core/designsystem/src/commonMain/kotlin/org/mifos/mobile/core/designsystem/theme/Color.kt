@@ -98,4 +98,3 @@ val DarkSurfaceTint = Color(0xFFAEC6FF)
 
 val lightScrim = Color(0x80FFFFFF)
 val darkScrim = Color(0x80000000)
-
