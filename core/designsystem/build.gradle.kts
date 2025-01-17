@@ -47,6 +47,18 @@ kotlin {
             api(libs.back.handler)
             api(libs.window.size)
         }
+
+        nativeMain.dependencies {
+            implementation(compose.runtime)
+        }
+
+        jsMain.dependencies {
+            implementation(compose.runtime)
+        }
+
+        wasmJsMain.dependencies {
+            implementation(compose.runtime)
+        }
     }
 }
 

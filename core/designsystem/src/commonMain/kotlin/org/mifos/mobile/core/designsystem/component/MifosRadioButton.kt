@@ -15,15 +15,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 
 @Composable
 fun MifosRadioButton(
+    label: String,
     selected: Boolean,
     onClick: () -> Unit,
-    textResId: Int,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -34,18 +33,18 @@ fun MifosRadioButton(
             selected = selected,
             onClick = onClick,
         )
-        Text(text = stringResource(id = textResId))
+        Text(text = label)
     }
 }
 
-@Preview(showSystemUi = true)
+@Preview
 @Composable
 private fun MifosRadioButtonPreview() {
     MifosMobileTheme {
         MifosRadioButton(
+            label = "Test Label",
             selected = false,
             onClick = {},
-            textResId = 1,
         )
     }
 }
