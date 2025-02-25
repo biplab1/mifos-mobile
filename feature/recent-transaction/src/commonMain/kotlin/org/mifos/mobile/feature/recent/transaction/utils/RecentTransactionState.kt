@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.feature.transaction.utils
+package org.mifos.mobile.feature.recent.transaction.utils
 
 import org.mifos.mobile.core.model.entity.Transaction
 

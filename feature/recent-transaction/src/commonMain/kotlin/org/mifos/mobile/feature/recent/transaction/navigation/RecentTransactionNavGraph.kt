@@ -7,13 +7,13 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.feature.transaction.navigation
+package org.mifos.mobile.feature.recent.transaction.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
-import org.mifos.mobile.feature.transaction.screens.RecentTransactionScreen
+import org.mifos.mobile.feature.recent.transaction.screens.RecentTransactionScreen
 
 fun NavController.navigateToRecentTransaction() {
     navigate(RecentTransactionNavigation.RecentTransactionBase.route)

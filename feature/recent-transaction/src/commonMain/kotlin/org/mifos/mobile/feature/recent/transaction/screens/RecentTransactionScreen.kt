@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.feature.transaction.screens
+package org.mifos.mobile.feature.recent.transaction.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -53,9 +53,10 @@ import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.DevicePreviews
-import org.mifos.mobile.feature.recent_transaction.R
+import org.jetbrains.compose.resources.StringResource
 import org.mifos.mobile.feature.transaction.utils.RecentTransactionState
 import org.mifos.mobile.feature.transaction.viewmodel.RecentTransactionViewModel
+import mifos_mobile.feature.recent_transactions.generated.resources.Res
 
 @Composable
 internal fun RecentTransactionScreen(

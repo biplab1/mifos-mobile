@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.feature.transaction.viewmodel
+package org.mifos.mobile.feature.recent.transaction.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,8 +19,8 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 import org.mifos.mobile.core.data.repository.RecentTransactionRepository
 import org.mifos.mobile.core.model.entity.Transaction
-import org.mifos.mobile.feature.transaction.utils.RecentTransactionState
-import org.mifos.mobile.feature.transaction.utils.RecentTransactionState.Loading
+import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState
+import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState.Loading
 import javax.inject.Inject
 
 @HiltViewModel

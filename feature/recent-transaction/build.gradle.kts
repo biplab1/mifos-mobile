@@ -8,12 +8,24 @@
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
 plugins {
-    alias(libs.plugins.mifos.android.feature)
-    alias(libs.plugins.mifos.android.library.compose)
+    alias(libs.plugins.mifos.cmp.feature)
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.recent_transaction"
+    namespace = "org.mifos.mobile.feature.recent.transaction"
 }
 
-dependencies { }
+kotlin {
+    sourceSets{
+        commonMain.dependencies {
+            implementation(compose.material3)
+            implementation(compose.components.resources)
+
+            api(projects.core.common)
+            api(projects.core.model)
+            api(projects.core.designsystem)
+            api(projects.core.data)
+            api(projects.core.ui)
+        }
+    }
+}
