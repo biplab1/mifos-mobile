@@ -59,7 +59,6 @@ import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
-import org.mifos.mobile.core.ui.utils.DevicePreview
 import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState
 import org.mifos.mobile.feature.recent.transaction.viewmodel.RecentTransactionViewModel
 
