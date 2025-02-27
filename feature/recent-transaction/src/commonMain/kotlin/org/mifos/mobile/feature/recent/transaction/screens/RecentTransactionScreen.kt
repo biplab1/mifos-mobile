@@ -33,36 +33,41 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.PreviewParameter
-import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.mifos.mobile.core.common.Network
-import org.mifos.mobile.core.common.utils.CurrencyUtil
-import org.mifos.mobile.core.common.utils.DateHelper
-import org.mifos.mobile.core.common.utils.Utils
-import org.mifos.mobile.core.designsystem.components.MifosScaffold
+import mifos_mobile.feature.recent_transaction.generated.resources.Res
+import mifos_mobile.feature.recent_transaction.generated.resources.atm_icon
+import mifos_mobile.feature.recent_transaction.generated.resources.ic_error_black_24dp
+import mifos_mobile.feature.recent_transaction.generated.resources.ic_local_atm_black_24dp
+import mifos_mobile.feature.recent_transaction.generated.resources.no_transaction
+import mifos_mobile.feature.recent_transaction.generated.resources.recent_transactions
+import mifos_mobile.feature.recent_transaction.generated.resources.string_and_string
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+import org.jetbrains.compose.resources.vectorResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.jetbrains.compose.ui.tooling.preview.PreviewParameter
+import org.jetbrains.compose.ui.tooling.preview.PreviewParameterProvider
+import org.koin.compose.viewmodel.koinViewModel
+import org.mifos.mobile.core.common.CurrencyFormatter
+import org.mifos.mobile.core.common.DateHelper
+import org.mifos.mobile.core.common.Utils
+import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.model.entity.Transaction
 import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
-import org.mifos.mobile.core.ui.utils.DevicePreviews
-import org.jetbrains.compose.resources.StringResource
-import org.mifos.mobile.feature.transaction.utils.RecentTransactionState
-import org.mifos.mobile.feature.transaction.viewmodel.RecentTransactionViewModel
-import mifos_mobile.feature.recent_transactions.generated.resources.Res
+import org.mifos.mobile.core.ui.utils.DevicePreview
+import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState
+import org.mifos.mobile.feature.recent.transaction.viewmodel.RecentTransactionViewModel
 
 @Composable
 internal fun RecentTransactionScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: RecentTransactionViewModel = hiltViewModel(),
+    viewModel: RecentTransactionViewModel = koinViewModel(),
 ) {
     val uiState by viewModel.recentTransactionUiState.collectAsStateWithLifecycle()
     val isRefreshing by viewModel.isRefreshing.collectAsStateWithLifecycle()
@@ -91,13 +96,15 @@ private fun RecentTransactionScreen(
     onRefresh: () -> Unit,
     loadMore: (offset: Int) -> Unit,
     modifier: Modifier = Modifier,
+    viewModel: RecentTransactionViewModel = koinViewModel(),
 ) {
-    val context = LocalContext.current
+    val isNetworkAvailable by viewModel.isNetworkAvailable.collectAsStateWithLifecycle()
+
     val pullRefreshState = rememberPullToRefreshState()
 
     MifosScaffold(
-        topBarTitleResId = R.string.recent_transactions,
-        navigateBack = navigateBack,
+        topBarTitle = stringResource(Res.string.recent_transactions),
+        backPress = navigateBack,
         modifier = modifier,
         content = { paddingValues ->
             Box(
@@ -118,7 +125,7 @@ private fun RecentTransactionScreen(
                         when (uiState) {
                             is RecentTransactionState.Error -> {
                                 MifosErrorComponent(
-                                    isNetworkConnected = Network.isConnected(context),
+                                    isNetworkConnected = isNetworkAvailable,
                                     isRetryEnabled = true,
                                     onRetry = onRetry,
                                 )
@@ -131,8 +138,8 @@ private fun RecentTransactionScreen(
                             is RecentTransactionState.Success -> {
                                 if (uiState.transactions.isEmpty()) {
                                     EmptyDataView(
-                                        icon = R.drawable.ic_error_black_24dp,
-                                        error = R.string.no_transaction,
+                                        icon = vectorResource(resource = Res.drawable.ic_error_black_24dp),
+                                        error = Res.string.no_transaction,
                                         modifier = Modifier.fillMaxSize(),
                                     )
                                 } else {
@@ -191,15 +198,13 @@ private fun RecentTransactionListItem(
     transaction: Transaction?,
     modifier: Modifier = Modifier,
 ) {
-    val context = LocalContext.current
-
     Row(
         modifier = modifier.padding(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_local_atm_black_24dp),
-            contentDescription = stringResource(id = R.string.atm_icon),
+            painter = painterResource(Res.drawable.ic_local_atm_black_24dp),
+            contentDescription = stringResource(Res.string.atm_icon),
             modifier = Modifier.size(40.dp),
         )
 
@@ -214,11 +219,12 @@ private fun RecentTransactionListItem(
             Row {
                 Text(
                     text = stringResource(
-                        id = R.string.string_and_string,
+                        Res.string.string_and_string,
                         transaction?.currency?.displaySymbol ?: transaction?.currency?.code ?: "",
-                        CurrencyUtil.formatCurrency(
-                            context,
-                            transaction?.amount ?: 0.0,
+                        CurrencyFormatter.format(
+                            transaction?.amount,
+                            transaction?.currency?.code,
+                            2,
                         ),
                     ),
                     style = MaterialTheme.typography.labelMedium,
@@ -228,7 +234,7 @@ private fun RecentTransactionListItem(
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    text = DateHelper.getDateAsString(transaction?.submittedOnDate),
+                    text = DateHelper.getDateAsString(transaction!!.submittedOnDate),
                     style = MaterialTheme.typography.labelMedium,
                     modifier = Modifier.alpha(0.7f),
                     color = MaterialTheme.colorScheme.onSurface,
@@ -248,7 +254,7 @@ internal class RecentTransactionScreenPreviewProvider :
         )
 }
 
-@DevicePreviews
+@Preview
 @Composable
 private fun RecentTransactionScreenPreview(
     @PreviewParameter(RecentTransactionScreenPreviewProvider::class)

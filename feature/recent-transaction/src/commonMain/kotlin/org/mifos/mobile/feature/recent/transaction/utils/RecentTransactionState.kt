@@ -11,7 +11,7 @@ package org.mifos.mobile.feature.recent.transaction.utils
 
 import org.mifos.mobile.core.model.entity.Transaction
 
-internal sealed class RecentTransactionState {
+sealed class RecentTransactionState {
     data object Loading : RecentTransactionState()
     data class Error(val message: String?) : RecentTransactionState()
     data class Success(
