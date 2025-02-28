@@ -81,7 +81,7 @@ class RecentTransactionViewModel(
                     transactions.plus(it.data?.pageItems)
                     _recentTransactionUiState.value = RecentTransactionState.Success(
                         transactions = transactions,
-                        canPaginate = (it.data?.pageItems!!.isNotEmpty()),
+                        canPaginate = (it.data?.pageItems?.isNotEmpty() ?: false),
                     )
                     _isPaginating.emit(false)
                     _isRefreshing.emit(false)

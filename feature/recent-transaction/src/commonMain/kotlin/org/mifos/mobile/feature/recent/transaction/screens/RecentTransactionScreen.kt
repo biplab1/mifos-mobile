@@ -45,7 +45,6 @@ import mifos_mobile.feature.recent_transaction.generated.resources.string_and_st
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.ui.tooling.preview.PreviewParameter
 import org.jetbrains.compose.ui.tooling.preview.PreviewParameterProvider
 import org.koin.compose.viewmodel.koinViewModel
@@ -59,6 +58,7 @@ import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
+import org.mifos.mobile.core.ui.utils.DevicePreview
 import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState
 import org.mifos.mobile.feature.recent.transaction.viewmodel.RecentTransactionViewModel
 
@@ -253,9 +253,9 @@ internal class RecentTransactionScreenPreviewProvider :
         )
 }
 
-@Preview
+@DevicePreview
 @Composable
-private fun RecentTransactionScreenPreview(
+internal fun RecentTransactionScreenPreview(
     @PreviewParameter(RecentTransactionScreenPreviewProvider::class)
     recentTransactionUiState: RecentTransactionState,
 ) {

@@ -15,7 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import org.mifos.mobile.feature.recent.transaction.screens.RecentTransactionScreen
 
-fun NavController.navigateToRecentTransaction() {
+fun NavController.navigateToRecentTransactionScreen() {
     navigate(RecentTransactionNavigation.RecentTransactionBase.route)
 }
 

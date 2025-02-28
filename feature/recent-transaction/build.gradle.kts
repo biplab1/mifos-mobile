@@ -23,6 +23,8 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
 
             api(projects.core.common)
             api(projects.core.model)
