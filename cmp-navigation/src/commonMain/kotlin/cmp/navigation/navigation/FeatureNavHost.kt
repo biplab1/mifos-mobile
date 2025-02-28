@@ -24,6 +24,8 @@ import org.mifos.mobile.feature.accounts.navigation.navigateToAccountsScreen
 import org.mifos.mobile.feature.home.navigation.HomeDestinations
 import org.mifos.mobile.feature.home.navigation.HomeNavigation
 import org.mifos.mobile.feature.home.navigation.homeNavGraph
+import org.mifos.mobile.feature.recent.transaction.navigation.navigateToRecentTransactionScreen
+import org.mifos.mobile.feature.recent.transaction.navigation.recentTransactionNavGraph
 
 @Composable
 internal fun FeatureNavHost(
@@ -51,6 +53,8 @@ internal fun FeatureNavHost(
         )
 
         aboutUsNavGraph(navController = appState.navController, navigateToOssLicense = { })
+
+        recentTransactionNavGraph(navigateBack = { })
     }
 }
 
@@ -65,7 +69,7 @@ fun handleHomeNavigation(
         HomeDestinations.ACCOUNTS -> navController.navigateToAccountsScreen()
         HomeDestinations.LOAN_ACCOUNT -> navController.navigateToAccountsScreen(accountType = AccountType.LOAN)
         HomeDestinations.SAVINGS_ACCOUNT -> navController.navigateToAccountsScreen(accountType = AccountType.SAVINGS)
-        HomeDestinations.RECENT_TRANSACTIONS -> { }
+        HomeDestinations.RECENT_TRANSACTIONS -> navController.navigateToRecentTransactionScreen()
         HomeDestinations.CHARGES -> { }
         HomeDestinations.THIRD_PARTY_TRANSFER -> { }
         HomeDestinations.SETTINGS -> { }
