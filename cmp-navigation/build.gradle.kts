@@ -52,10 +52,6 @@ kotlin {
 android {
     namespace = "cmp.navigation"
 }
-dependencies {
-    implementation(project(":feature:recent-transaction"))
-}
-
 
 compose.resources {
     publicResClass = true
