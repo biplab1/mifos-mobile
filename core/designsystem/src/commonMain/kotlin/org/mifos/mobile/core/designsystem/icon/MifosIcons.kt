@@ -93,7 +93,6 @@ object MifosIcons {
     val NavigationDrawer = Icons.Default.Menu
 
     // Recently added
-    val ArrowBack2 = Icons.Filled.ChevronLeft
     val Back = Icons.AutoMirrored.Outlined.ArrowBack
     val Home = Icons.Outlined.Home
     val HomeBoarder = Icons.Rounded.Home
