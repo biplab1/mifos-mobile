@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.feature.recent.transaction.screens
+package org.mifos.mobile.feature.recent.transaction.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

@@ -54,7 +54,7 @@ internal fun FeatureNavHost(
 
         aboutUsNavGraph(navController = appState.navController, navigateToOssLicense = { })
 
-        recentTransactionNavGraph(navigateBack = { })
+        recentTransactionNavGraph(appState.navController)
     }
 }
 

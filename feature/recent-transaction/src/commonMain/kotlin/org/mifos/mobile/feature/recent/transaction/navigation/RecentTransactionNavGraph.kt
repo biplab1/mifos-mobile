@@ -13,26 +13,26 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
-import org.mifos.mobile.feature.recent.transaction.screens.RecentTransactionScreen
+import org.mifos.mobile.feature.recent.transaction.screen.RecentTransactionScreen
 
 fun NavController.navigateToRecentTransactionScreen() {
-    navigate(RecentTransactionNavigation.RecentTransactionBase.route)
+    navigate(RecentTransactionNavigation.RecentTransactionScreen.route)
 }
 
 fun NavGraphBuilder.recentTransactionNavGraph(
-    navigateBack: () -> Unit,
+    navController: NavController,
 ) {
     navigation(
         startDestination = RecentTransactionNavigation.RecentTransactionScreen.route,
         route = RecentTransactionNavigation.RecentTransactionBase.route,
     ) {
-        settingsScreenRoute(
-            navigateBack = navigateBack,
+        recentTransactionScreenRoute(
+            navigateBack = navController::popBackStack,
         )
     }
 }
 
-fun NavGraphBuilder.settingsScreenRoute(
+fun NavGraphBuilder.recentTransactionScreenRoute(
     navigateBack: () -> Unit,
 ) {
     composable(
