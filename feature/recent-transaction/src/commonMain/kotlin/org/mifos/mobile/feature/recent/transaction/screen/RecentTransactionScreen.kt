@@ -213,7 +213,6 @@ private fun RecentTransactionListItem(
             Text(
                 text = Utils.formatTransactionType(transaction?.type?.value),
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurface,
             )
             Row {
                 Text(
@@ -230,13 +229,11 @@ private fun RecentTransactionListItem(
                     modifier = Modifier
                         .weight(1f)
                         .alpha(0.7f),
-                    color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
                     text = DateHelper.getDateAsString(transaction!!.submittedOnDate),
                     style = MaterialTheme.typography.labelMedium,
                     modifier = Modifier.alpha(0.7f),
-                    color = MaterialTheme.colorScheme.onSurface,
                 )
             }
         }
