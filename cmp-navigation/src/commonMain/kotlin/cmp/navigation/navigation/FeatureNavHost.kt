@@ -17,15 +17,23 @@ import cmp.navigation.callHelpline
 import cmp.navigation.mailHelpline
 import cmp.navigation.ui.AppState
 import org.mifos.mobile.core.model.enums.AccountType
+import org.mifos.mobile.core.model.enums.ChargeType
 import org.mifos.mobile.feature.about.navigation.aboutUsNavGraph
 import org.mifos.mobile.feature.about.navigation.navigateToAboutUsScreen
 import org.mifos.mobile.feature.accounts.navigation.accountsNavGraph
 import org.mifos.mobile.feature.accounts.navigation.navigateToAccountsScreen
+import org.mifos.mobile.feature.charge.navigation.clientChargeNavGraph
+import org.mifos.mobile.feature.charge.navigation.navigateToClientChargeScreen
+import org.mifos.mobile.feature.help.navigation.helpNavGraph
+import org.mifos.mobile.feature.help.navigation.navigateToHelpScreen
 import org.mifos.mobile.feature.home.navigation.HomeDestinations
 import org.mifos.mobile.feature.home.navigation.HomeNavigation
 import org.mifos.mobile.feature.home.navigation.homeNavGraph
 import org.mifos.mobile.feature.recent.transaction.navigation.navigateToRecentTransactionScreen
 import org.mifos.mobile.feature.recent.transaction.navigation.recentTransactionNavGraph
+import org.mifos.mobile.feature.loan.navigation.loanNavGraph
+import org.mifos.mobile.feature.loan.navigation.navigateToLoanApplication
+import org.mifos.mobile.feature.loan.navigation.navigateToLoanDetailScreen
 
 @Composable
 internal fun FeatureNavHost(
@@ -39,6 +47,12 @@ internal fun FeatureNavHost(
         navController = appState.navController,
         modifier = modifier,
     ) {
+        helpNavGraph(
+            findLocations = {},
+            navigateBack = appState.navController::popBackStack,
+            callHelpline = {},
+            mailHelpline = {},
+        )
         homeNavGraph(
             onNavigate = { handleHomeNavigation(appState.navController, it, onClickLogout) },
             callHelpline = { callHelpline() },
@@ -47,14 +61,35 @@ internal fun FeatureNavHost(
 
         accountsNavGraph(
             navController = appState.navController,
-            navigateToLoanApplicationScreen = { },
+            navigateToLoanApplicationScreen = appState.navController::navigateToLoanApplication,
             navigateToSavingsApplicationScreen = { },
-            navigateToAccountDetail = { _, _ -> },
+            navigateToAccountDetail = { accountType, id ->
+                when (accountType) {
+                    AccountType.SAVINGS -> { }
+                    AccountType.LOAN ->
+                        appState.navController.navigateToLoanDetailScreen(loanId = id)
+                    AccountType.SHARE -> { }
+                }
+            },
         )
 
         aboutUsNavGraph(navController = appState.navController, navigateToOssLicense = { })
 
         recentTransactionNavGraph(appState.navController)
+
+        loanNavGraph(
+            navController = appState.navController,
+            viewQr = { },
+            viewGuarantor = { },
+            viewCharges = { chargeType, chargeTypeId ->
+                appState.navController.navigateToClientChargeScreen(chargeType, chargeTypeId)
+            },
+            makePayment = { _, _, _ -> },
+        )
+
+        clientChargeNavGraph(
+            navigateBack = { appState.navController.popBackStack() },
+        )
     }
 }
 
@@ -71,10 +106,12 @@ fun handleHomeNavigation(
         HomeDestinations.SAVINGS_ACCOUNT -> navController.navigateToAccountsScreen(accountType = AccountType.SAVINGS)
         HomeDestinations.RECENT_TRANSACTIONS -> navController.navigateToRecentTransactionScreen()
         HomeDestinations.CHARGES -> { }
+        HomeDestinations.RECENT_TRANSACTIONS -> { }
+        HomeDestinations.CHARGES -> navController.navigateToClientChargeScreen(ChargeType.CLIENT, -1L)
         HomeDestinations.THIRD_PARTY_TRANSFER -> { }
         HomeDestinations.SETTINGS -> { }
         HomeDestinations.ABOUT_US -> navController.navigateToAboutUsScreen()
-        HomeDestinations.HELP -> { }
+        HomeDestinations.HELP -> navController.navigateToHelpScreen()
         HomeDestinations.SHARE -> { }
         HomeDestinations.APP_INFO -> { }
         HomeDestinations.TRANSFER -> { }
