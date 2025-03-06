@@ -29,11 +29,11 @@ import org.mifos.mobile.feature.help.navigation.navigateToHelpScreen
 import org.mifos.mobile.feature.home.navigation.HomeDestinations
 import org.mifos.mobile.feature.home.navigation.HomeNavigation
 import org.mifos.mobile.feature.home.navigation.homeNavGraph
-import org.mifos.mobile.feature.recent.transaction.navigation.navigateToRecentTransactionScreen
-import org.mifos.mobile.feature.recent.transaction.navigation.recentTransactionNavGraph
 import org.mifos.mobile.feature.loan.navigation.loanNavGraph
 import org.mifos.mobile.feature.loan.navigation.navigateToLoanApplication
 import org.mifos.mobile.feature.loan.navigation.navigateToLoanDetailScreen
+import org.mifos.mobile.feature.recent.transaction.navigation.navigateToRecentTransactionScreen
+import org.mifos.mobile.feature.recent.transaction.navigation.recentTransactionNavGraph
 
 @Composable
 internal fun FeatureNavHost(
