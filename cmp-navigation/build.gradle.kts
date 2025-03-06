@@ -17,8 +17,9 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-
+            implementation(projects.feature.loan)
             implementation(projects.feature.auth)
+            implementation(projects.feature.help)
             implementation(projects.feature.home)
             implementation(projects.feature.accounts)
             implementation(projects.feature.loanAccount)
@@ -26,6 +27,7 @@ kotlin {
             implementation(projects.feature.savingsAccount)
             implementation(projects.feature.about)
             implementation(projects.feature.recentTransaction)
+            implementation(projects.feature.clientCharge)
             // Core Modules
             implementation(projects.core.data)
             implementation(projects.core.common)
