@@ -105,8 +105,6 @@ fun handleHomeNavigation(
         HomeDestinations.LOAN_ACCOUNT -> navController.navigateToAccountsScreen(accountType = AccountType.LOAN)
         HomeDestinations.SAVINGS_ACCOUNT -> navController.navigateToAccountsScreen(accountType = AccountType.SAVINGS)
         HomeDestinations.RECENT_TRANSACTIONS -> navController.navigateToRecentTransactionScreen()
-        HomeDestinations.CHARGES -> { }
-        HomeDestinations.RECENT_TRANSACTIONS -> { }
         HomeDestinations.CHARGES -> navController.navigateToClientChargeScreen(ChargeType.CLIENT, -1L)
         HomeDestinations.THIRD_PARTY_TRANSFER -> { }
         HomeDestinations.SETTINGS -> { }
