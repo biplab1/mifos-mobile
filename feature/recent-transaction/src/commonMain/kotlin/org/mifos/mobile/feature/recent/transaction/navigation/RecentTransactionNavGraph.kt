@@ -16,7 +16,7 @@ import androidx.navigation.compose.navigation
 import org.mifos.mobile.feature.recent.transaction.screen.RecentTransactionScreen
 
 fun NavController.navigateToRecentTransactionScreen() {
-    navigate(RecentTransactionNavigation.RecentTransactionScreen.route)
+    navigate(RecentTransactionNavigation.RecentTransactionBase.route)
 }
 
 fun NavGraphBuilder.recentTransactionNavGraph(
