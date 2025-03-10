@@ -21,19 +21,17 @@ import kotlinx.coroutines.launch
 import org.mifos.mobile.core.data.repository.RecentTransactionRepository
 import org.mifos.mobile.core.data.util.NetworkMonitor
 import org.mifos.mobile.core.datastore.UserPreferencesRepository
-import org.mifos.mobile.core.model.entity.Transaction
 import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState
 import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionState.Loading
 
 class RecentTransactionViewModel(
-    private val repository: RecentTransactionRepository,
+    private val recentTransactionRepositoryImpl: RecentTransactionRepository,
     networkMonitor: NetworkMonitor,
     userPreferencesRepository: UserPreferencesRepository,
 ) : ViewModel() {
 
     private val clientId = requireNotNull(userPreferencesRepository.clientId.value)
     private val limit = 50
-    private var transactions: MutableList<Transaction> = mutableListOf()
 
     private val _recentTransactionUiState = MutableStateFlow<RecentTransactionState>(Loading)
     val recentTransactionUiState = _recentTransactionUiState.asStateFlow()
@@ -44,16 +42,16 @@ class RecentTransactionViewModel(
     private val _isPaginating = MutableStateFlow(false)
     val isPaginating: StateFlow<Boolean> get() = _isPaginating.asStateFlow()
 
-    init {
-        loadInitialTransactions()
-    }
-
     val isNetworkAvailable = networkMonitor.isOnline
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
             initialValue = false,
         )
+
+    init {
+        loadInitialTransactions()
+    }
 
     fun refresh() {
         _isRefreshing.value = true
@@ -62,7 +60,6 @@ class RecentTransactionViewModel(
 
     fun loadPaginatedTransactions(offset: Int) {
         _isPaginating.value = true
-        transactions.clear()
         loadRecentTransactions(clientId, offset, limit)
     }
 
@@ -71,20 +68,31 @@ class RecentTransactionViewModel(
         loadRecentTransactions(clientId, 0, limit)
     }
 
-    private fun loadRecentTransactions(clientId: Long?, offset: Int?, limit: Int?) {
+    private fun loadRecentTransactions(
+        clientId: Long?,
+        offset: Int?,
+        limit: Int?,
+    ) {
         viewModelScope.launch {
-            repository.recentTransactions(clientId, offset, limit)
-                .catch {
-                    _recentTransactionUiState.value = RecentTransactionState.Error(it.message)
-                }
-                .collect {
-                    transactions.plus(it.data?.pageItems)
-                    _recentTransactionUiState.value = RecentTransactionState.Success(
-                        transactions = transactions,
-                        canPaginate = (it.data?.pageItems?.isNotEmpty() ?: false),
-                    )
-                    _isPaginating.emit(false)
-                    _isRefreshing.emit(false)
+            recentTransactionRepositoryImpl.recentTransactions(
+                clientId,
+                offset,
+                limit,
+            ).catch {
+                _recentTransactionUiState.value = RecentTransactionState.Error
+            }
+                .collect { recentTransactions ->
+                    val recentTransactionsList = recentTransactions.data?.pageItems
+                    _recentTransactionUiState.value = if (recentTransactionsList.isNullOrEmpty()) {
+                        RecentTransactionState.Empty
+                    } else {
+                        RecentTransactionState.Success(
+                            transactions = recentTransactionsList,
+                            canPaginate = recentTransactionsList.isNotEmpty(),
+                        )
+                    }
+                    _isPaginating.value = false
+                    _isRefreshing.value = false
                 }
         }
     }

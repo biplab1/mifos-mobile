@@ -134,21 +134,21 @@ private fun RecentTransactionScreen(
                                 MifosProgressIndicatorOverlay()
                             }
 
+                            is RecentTransactionState.Empty -> {
+                                EmptyDataView(
+                                    icon = vectorResource(resource = Res.drawable.ic_error_black_24dp),
+                                    error = Res.string.no_transaction,
+                                    modifier = Modifier.fillMaxSize(),
+                                )
+                            }
+
                             is RecentTransactionState.Success -> {
-                                if (uiState.transactions.isEmpty()) {
-                                    EmptyDataView(
-                                        icon = vectorResource(resource = Res.drawable.ic_error_black_24dp),
-                                        error = Res.string.no_transaction,
-                                        modifier = Modifier.fillMaxSize(),
-                                    )
-                                } else {
-                                    RecentTransactionsContent(
-                                        transactions = uiState.transactions,
-                                        isPaginating = isPaginating,
-                                        loadMore = loadMore,
-                                        canPaginate = uiState.canPaginate,
-                                    )
-                                }
+                                RecentTransactionsContent(
+                                    transactions = uiState.transactions,
+                                    isPaginating = isPaginating,
+                                    loadMore = loadMore,
+                                    canPaginate = uiState.canPaginate,
+                                )
                             }
                         }
                     }
@@ -245,7 +245,7 @@ internal class RecentTransactionScreenPreviewProvider :
     override val values: Sequence<RecentTransactionState>
         get() = sequenceOf(
             RecentTransactionState.Loading,
-            RecentTransactionState.Error(""),
+            RecentTransactionState.Error,
             RecentTransactionState.Success(listOf(), canPaginate = true),
         )
 }

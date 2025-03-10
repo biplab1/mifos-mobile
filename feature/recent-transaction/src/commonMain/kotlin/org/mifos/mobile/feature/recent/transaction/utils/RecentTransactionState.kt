@@ -13,7 +13,8 @@ import org.mifos.mobile.core.model.entity.Transaction
 
 sealed class RecentTransactionState {
     data object Loading : RecentTransactionState()
-    data class Error(val message: String?) : RecentTransactionState()
+    data object Error : RecentTransactionState()
+    data object Empty : RecentTransactionState()
     data class Success(
         val transactions: List<Transaction>,
         val canPaginate: Boolean,
