@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Mifos Initiative
+ * Copyright 2025 Mifos Initiative
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -9,13 +9,8 @@
  */
 package org.mifos.mobile.core.model.entity
 
-import kotlinx.serialization.Serializable
-
-/*
-* Created by saksham on 13/July/2018
-*/
-@Serializable
-data class UpdatePasswordPayload(
-    val password: String? = null,
-    val repeatPassword: String? = null,
-)
+enum class TransferSuccessDestination {
+    SAVINGS_ACCOUNT,
+    LOAN_ACCOUNT,
+    HOME,
+}
