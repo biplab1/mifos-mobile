@@ -26,6 +26,7 @@ import org.mifos.mobile.feature.loan.di.LoanModule
 import org.mifos.mobile.feature.loanaccount.di.loanAccountModule
 import org.mifos.mobile.feature.recent.transaction.di.recentTransactionModule
 import org.mifos.mobile.feature.savingsaccount.di.savingsAccountModule
+import org.mifos.mobile.feature.settings.di.SettingsModule
 import org.mifos.mobile.feature.shareaccount.di.shareAccountModule
 import org.mifos.mobile.feature.third.party.transfer.di.ThirdPartyTransferModule
 import org.mifos.mobile.feature.transfer.process.di.TransferProcessModule
@@ -60,6 +61,7 @@ object KoinModules {
             LoanModule,
             ChargeModule,
             TransferProcessModule,
+            SettingsModule,
             ThirdPartyTransferModule,
             updatePasswordModule,
         )
