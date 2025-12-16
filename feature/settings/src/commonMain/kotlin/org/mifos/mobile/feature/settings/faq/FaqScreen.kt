@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -47,6 +46,7 @@ import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.FaqItemHolder
 import org.mifos.mobile.core.ui.utils.DevicePreview
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that displays the FAQ screen. It collects state and events from
@@ -158,7 +158,7 @@ private fun FaqContent(
                 Text(
                     text = stringResource(Res.string.feature_settings_faq_contact_us),
                     style = MifosTypography.bodySmall,
-                    color = MaterialTheme.colorScheme.primary,
+                    color = KptTheme.colorScheme.primary,
                     modifier = Modifier.clickable {
                         onAction(FaqAction.NavigateToHelp)
                     },

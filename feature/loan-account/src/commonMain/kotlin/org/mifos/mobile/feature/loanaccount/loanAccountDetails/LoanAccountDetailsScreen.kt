@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -57,6 +56,7 @@ import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.loanaccount.component.LoanActionItems
 import org.mifos.mobile.feature.loanaccount.component.loanAccountActions
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * The main composable for the loan account details screen.
@@ -235,7 +235,7 @@ internal fun AccountDetailsGrid(
             Text(
                 text = label,
                 style = MifosTypography.labelLargeEmphasized,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = KptTheme.colorScheme.onSurface,
             )
         }
         if (details != null) {
@@ -256,7 +256,7 @@ internal fun AccountDetailsGrid(
                             AppColors
                                 .customEnable
                         } else {
-                            MaterialTheme.colorScheme.onBackground
+                            KptTheme.colorScheme.onBackground
                         },
                     )
                 }
@@ -282,7 +282,7 @@ internal fun SavingsAccountActions(
         Text(
             text = stringResource(Res.string.feature_account_details_action),
             style = MifosTypography.labelLargeEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
         FlowRow(
             modifier = Modifier.fillMaxWidth(),

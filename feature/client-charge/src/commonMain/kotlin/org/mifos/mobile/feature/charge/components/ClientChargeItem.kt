@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -40,6 +39,7 @@ import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.entity.Charge
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * Composable function that displays a charge item.
@@ -72,11 +72,11 @@ fun ClientChargeItem(
                 painterResource(Res.drawable.database_warning)
             },
             contentDescription = "Charges Symbol",
-            tint = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+            tint = KptTheme.colorScheme.onBackground.copy(alpha = 0.7f),
             modifier = Modifier
                 .size(36.dp)
                 .background(
-                    color = MaterialTheme.colorScheme.background.copy(alpha = 0.3f),
+                    color = KptTheme.colorScheme.background.copy(alpha = 0.3f),
                     shape = CircleShape,
                 )
                 .padding(DesignToken.padding.small),
@@ -122,7 +122,7 @@ fun ClientChargeItem(
                     color = if (charge.isChargePaid) {
                         AppColors.customEnable
                     } else {
-                        MaterialTheme.colorScheme.error
+                        KptTheme.colorScheme.error
                     },
                 )
                 Text(
@@ -147,7 +147,7 @@ fun ClientChargeItem(
                     color = if (charge.isChargePaid) {
                         AppColors.customEnable
                     } else {
-                        MaterialTheme.colorScheme.error
+                        KptTheme.colorScheme.error
                     },
                 )
             }

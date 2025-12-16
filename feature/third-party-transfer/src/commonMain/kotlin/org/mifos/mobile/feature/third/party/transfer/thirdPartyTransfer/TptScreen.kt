@@ -21,7 +21,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -60,6 +59,7 @@ import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.third.party.transfer.navigation.TptNavigationDestination
 import org.mifos.mobile.feature.third.party.transfer.navigation.TptNavigator
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * Composable function for the Third Party Transfer screen.
@@ -164,7 +164,7 @@ internal fun TprContent(
                     modifier = Modifier.clickable {
                         onAction(TptAction.OnNotificationClicked)
                     },
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                    colorFilter = ColorFilter.tint(KptTheme.colorScheme.onSurface),
                 )
             }
         },
@@ -250,7 +250,7 @@ internal fun TptForm(
             Text(
                 text = stringResource(Res.string.feature_tpt_tip),
                 style = MifosTypography.labelMedium,
-                color = MaterialTheme.colorScheme.secondary,
+                color = KptTheme.colorScheme.secondary,
             )
 
             Text(
@@ -260,7 +260,7 @@ internal fun TptForm(
                     },
                 text = stringResource(Res.string.feature_tpt_tip_action),
                 style = MifosTypography.labelMedium,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
         }
 
@@ -280,7 +280,7 @@ internal fun TptForm(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {
@@ -308,7 +308,7 @@ internal fun TptForm(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {

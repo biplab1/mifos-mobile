@@ -24,7 +24,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -61,6 +60,7 @@ import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that serves as the main entry point for the Savings Account list screen.
@@ -222,7 +222,7 @@ internal fun SavingsAccountContent(
                         Text(
                             text = stringResource(Res.string.feature_savings_account),
                             style = MifosTypography.titleMediumEmphasized,
-                            color = MaterialTheme.colorScheme.onBackground,
+                            color = KptTheme.colorScheme.onBackground,
                         )
                         Text(
                             text = stringResource(
@@ -230,7 +230,7 @@ internal fun SavingsAccountContent(
                                 state.items ?: 0,
                             ),
                             style = MifosTypography.labelMedium,
-                            color = MaterialTheme.colorScheme.secondary,
+                            color = KptTheme.colorScheme.secondary,
                         )
                     }
 
@@ -278,8 +278,8 @@ internal fun SavingsAccountContent(
                             val color = when (account.status?.value) {
                                 SavingStatus.ACTIVE.status -> AppColors.customEnable
                                 SavingStatus.SUBMIT_AND_PENDING_APPROVAL.status -> AppColors.customYellow
-                                SavingStatus.INACTIVE.status -> MaterialTheme.colorScheme.error
-                                else -> MaterialTheme.colorScheme.onSurface
+                                SavingStatus.INACTIVE.status -> KptTheme.colorScheme.error
+                                else -> KptTheme.colorScheme.onSurface
                             }
 
                             val accountStatus = if (account.status?.active == true) {

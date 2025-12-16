@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,6 +21,7 @@ import mifos_mobile.feature.location.generated.resources.Res
 import mifos_mobile.feature.location.generated.resources.mifos_initiative
 import mifos_mobile.feature.location.generated.resources.mifos_location
 import org.jetbrains.compose.resources.stringResource
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A composable function that displays the location of the Mifos Initiative.
@@ -41,11 +41,11 @@ internal fun LocationsScreen(
     ) {
         Text(
             text = stringResource(Res.string.mifos_initiative),
-            style = MaterialTheme.typography.bodyLarge,
+            style = KptTheme.typography.bodyLarge,
         )
         Text(
             text = stringResource(Res.string.mifos_location),
-            style = MaterialTheme.typography.bodyMedium,
+            style = KptTheme.typography.bodyMedium,
         )
         RenderMap(modifier = Modifier.fillMaxSize())
     }

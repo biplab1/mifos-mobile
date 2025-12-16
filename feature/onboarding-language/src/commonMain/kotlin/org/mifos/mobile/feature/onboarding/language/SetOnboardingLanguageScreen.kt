@@ -22,7 +22,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,6 +50,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.LanguageConfig
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun OnboardingLanguageScreen(
@@ -122,7 +122,7 @@ internal fun OnboardingLanguageScreenContent(
                 Text(
                     text = stringResource(Res.string.feature_onboarding_choose_your_app_language),
                     style = MifosTypography.headlineMedium,
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = KptTheme.colorScheme.onSurface,
                 )
 
                 Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
@@ -132,7 +132,7 @@ internal fun OnboardingLanguageScreenContent(
                         Res.string.feature_onboarding_chosen_language_can_be_changed_later_in_the_settings,
                     ),
                     style = MifosTypography.bodySmall,
-                    color = MaterialTheme.colorScheme.secondary,
+                    color = KptTheme.colorScheme.secondary,
                 )
 
                 Spacer(modifier = Modifier.height(DesignToken.spacing.large))
@@ -168,7 +168,7 @@ internal fun LanguageSelectionContent(
                     color = AppColors.primaryBlue,
                 ),
                 unselectedTextStyle = MifosTypography.titleSmallEmphasized.copy(
-                    MaterialTheme.colorScheme.onSurface,
+                    KptTheme.colorScheme.onSurface,
                 ),
             )
         }

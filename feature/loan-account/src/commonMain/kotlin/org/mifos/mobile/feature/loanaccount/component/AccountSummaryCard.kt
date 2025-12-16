@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -49,6 +48,7 @@ import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import template.core.base.designsystem.theme.KptTheme
 import kotlin.collections.component1
 import kotlin.collections.component2
 
@@ -75,7 +75,7 @@ fun AccountSummaryCard(
             .fillMaxWidth()
             .border(
                 1.dp,
-                MaterialTheme.colorScheme.secondaryContainer,
+                KptTheme.colorScheme.secondaryContainer,
                 DesignToken.shapes.medium,
             ),
         shape = DesignToken.shapes.medium,
@@ -95,13 +95,13 @@ fun AccountSummaryCard(
                 Text(
                     text = title,
                     style = MifosTypography.titleSmallEmphasized,
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = KptTheme.colorScheme.onSurface,
                 )
                 Icon(
                     modifier = Modifier.size(DesignToken.sizes.iconSmall),
                     imageVector = if (isExpanded) MifosIcons.CaretUp else MifosIcons.CaretDown,
                     contentDescription = if (isExpanded) "Collapse" else "Expand",
-                    tint = MaterialTheme.colorScheme.onSurface,
+                    tint = KptTheme.colorScheme.onSurface,
                 )
             }
 
@@ -121,7 +121,7 @@ fun AccountSummaryCard(
                             Text(
                                 text = "${stringResource(key)} :",
                                 style = MifosTypography.labelMediumEmphasized,
-                                color = MaterialTheme.colorScheme.secondary,
+                                color = KptTheme.colorScheme.secondary,
                             )
                             Text(
                                 text = value ?: "",
@@ -130,7 +130,7 @@ fun AccountSummaryCard(
                                 color = if (key == Res.string.feature_loan_account_status_label) {
                                     AppColors.customEnable
                                 } else {
-                                    MaterialTheme.colorScheme.secondary
+                                    KptTheme.colorScheme.secondary
                                 },
                             )
                         }

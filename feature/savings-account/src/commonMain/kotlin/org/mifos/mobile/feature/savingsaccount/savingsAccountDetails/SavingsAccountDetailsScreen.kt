@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -58,6 +57,7 @@ import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.savingsaccount.components.SavingsActionItems
 import org.mifos.mobile.feature.savingsaccount.components.savingsAccountActions
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that serves as the entry point for the "Savings Account Details" screen.
@@ -249,9 +249,9 @@ internal fun ActionBar(
             Text(
                 text = stringResource(Res.string.feature_account_action_update),
                 color = if (isUpdatable) {
-                    MaterialTheme.colorScheme.primary
+                    KptTheme.colorScheme.primary
                 } else {
-                    MaterialTheme.colorScheme.inversePrimary
+                    KptTheme.colorScheme.inversePrimary
                 },
                 style = MifosTypography.bodySmallEmphasized,
             )
@@ -261,9 +261,9 @@ internal fun ActionBar(
                 imageVector = MifosIcons.EditRegular,
                 contentDescription = null,
                 tint = if (isUpdatable) {
-                    MaterialTheme.colorScheme.primary
+                    KptTheme.colorScheme.primary
                 } else {
-                    MaterialTheme.colorScheme.inversePrimary
+                    KptTheme.colorScheme.inversePrimary
                 },
 
             )
@@ -296,7 +296,7 @@ internal fun AccountDetailsGrid(
             Text(
                 text = label,
                 style = MifosTypography.labelLargeEmphasized,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = KptTheme.colorScheme.onSurface,
             )
         }
         if (details != null) {
@@ -317,7 +317,7 @@ internal fun AccountDetailsGrid(
                             AppColors
                                 .customEnable
                         } else {
-                            MaterialTheme
+                            KptTheme
                                 .colorScheme.onBackground
                         },
                     )
@@ -347,7 +347,7 @@ internal fun SavingsAccountActions(
         Text(
             text = "Actions",
             style = MifosTypography.labelLargeEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
         FlowRow(
             modifier = Modifier.fillMaxWidth(),

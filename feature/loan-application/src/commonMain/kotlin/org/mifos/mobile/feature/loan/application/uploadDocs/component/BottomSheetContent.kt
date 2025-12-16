@@ -33,7 +33,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -72,6 +71,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.feature.loan.application.component.SignatureUploadType
 import org.mifos.mobile.feature.loan.application.uploadDocs.UploadDocsAction
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun BottomSheetContent(
@@ -149,7 +149,7 @@ internal fun BottomSheetIconContainer(
             modifier = Modifier.size(DesignToken.sizes.inputHeight)
                 .border(
                     1.dp,
-                    MaterialTheme.colorScheme.secondaryContainer,
+                    KptTheme.colorScheme.secondaryContainer,
                     DesignToken.shapes.medium,
                 )
                 .clickable { onClick() },
@@ -167,7 +167,7 @@ internal fun BottomSheetIconContainer(
         Text(
             text = stringResource(text),
             style = MifosTypography.bodySmallEmphasized,
-            color = MaterialTheme.colorScheme.onBackground,
+            color = KptTheme.colorScheme.onBackground,
         )
     }
 }
@@ -217,7 +217,7 @@ private fun SignatureContent(
                         .fillMaxWidth()
                         .border(
                             1.dp,
-                            MaterialTheme.colorScheme.secondaryContainer,
+                            KptTheme.colorScheme.secondaryContainer,
                             DesignToken.shapes.medium,
                         ),
                     shape = DesignToken.shapes.medium,

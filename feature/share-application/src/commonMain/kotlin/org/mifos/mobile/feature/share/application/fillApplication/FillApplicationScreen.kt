@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -61,6 +60,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A Composable function that represents the Share Fill Application screen.
@@ -225,7 +225,7 @@ internal fun ShareFillApplicationForm(
         Text(
             text = stringResource(Res.string.feature_apply_share_label_terms),
             style = MifosTypography.labelLargeEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
 
         MifosOutlineDropdown(
@@ -284,7 +284,7 @@ internal fun ShareFillApplicationForm(
         Text(
             text = stringResource(Res.string.feature_apply_share_section_minimum_active_period),
             style = MifosTypography.labelLargeEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
 
         MifosOutlinedTextField(
@@ -315,7 +315,7 @@ internal fun ShareFillApplicationForm(
         Text(
             text = stringResource(Res.string.feature_apply_share_section_lockin_period),
             style = MifosTypography.labelLargeEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
 
         MifosOutlinedTextField(

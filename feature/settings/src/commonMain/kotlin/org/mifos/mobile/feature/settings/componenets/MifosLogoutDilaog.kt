@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -36,6 +35,7 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A composable function that displays a confirmation dialog for logging out.
@@ -84,13 +84,13 @@ fun MifosLogoutDialog(
                         Text(
                             text = stringResource(visibilityState.message),
                             style = MifosTypography.bodySmallEmphasized,
-                            color = MaterialTheme.colorScheme.secondary,
+                            color = KptTheme.colorScheme.secondary,
                         )
 
                         Text(
                             text = stringResource(visibilityState.messageActionText),
                             style = MifosTypography.bodySmallEmphasized,
-                            color = MaterialTheme.colorScheme.primary,
+                            color = KptTheme.colorScheme.primary,
                             modifier = Modifier.clickable {
                                 visibilityState.onNavigateToHome.invoke()
                             },
@@ -112,7 +112,7 @@ fun MifosLogoutDialog(
                 Text(
                     text = stringResource(visibilityState.description),
                     style = MifosTypography.labelMediumEmphasized,
-                    color = MaterialTheme.colorScheme.secondary,
+                    color = KptTheme.colorScheme.secondary,
                     modifier = Modifier
                         .fillMaxWidth()
                         .testTag("AlertContentText"),

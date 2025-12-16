@@ -35,7 +35,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -64,6 +63,7 @@ import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionAction
 import org.mifos.mobile.feature.recent.transaction.utils.RecentTransactionUiState
 import org.mifos.mobile.feature.recent.transaction.utils.TransactionFilterType
 import org.mifos.mobile.feature.recent.transaction.viewmodel.RecentTransactionViewModel
+import template.core.base.designsystem.theme.KptTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -91,16 +91,16 @@ fun RecentTransactionScreen(
 
                             Text(
                                 text = "Transaction History",
-                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                style = KptTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                                 modifier = Modifier.padding(end = 8.dp),
                             )
                         }
                         state.selectedAccount?.let { account ->
                             Text(
                                 text = account.accountNo ?: "Selected Account",
-                                style = MaterialTheme.typography.bodyMedium,
+                                style = KptTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                color = KptTheme.colorScheme.onSurfaceVariant,
 
                             )
                         }
@@ -118,9 +118,9 @@ fun RecentTransactionScreen(
                             if (
                                 state.filterType != TransactionFilterType.ALL
                             ) {
-                                MaterialTheme.colorScheme.primary
+                                KptTheme.colorScheme.primary
                             } else {
-                                MaterialTheme.colorScheme.onSurface
+                                KptTheme.colorScheme.onSurface
                             },
                         )
                     }
@@ -160,7 +160,7 @@ fun RecentTransactionScreen(
             ModalBottomSheet(
                 onDismissRequest = { viewModel.handleAction(RecentTransactionAction.ToggleFilter) },
                 sheetState = sheetState,
-                containerColor = MaterialTheme.colorScheme.surface,
+                containerColor = KptTheme.colorScheme.surface,
             ) {
                 TransactionFilterSheetContent(
                     accounts = state.accounts,
@@ -204,13 +204,13 @@ fun TransactionItem(
         ) {
             Text(
                 text = if (isCredit) "CREDIT" else "DEBIT",
-                style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold),
-                color = MaterialTheme.colorScheme.onSurface,
+                style = KptTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold),
+                color = KptTheme.colorScheme.onSurface,
             )
             Text(
                 text = formatDate(transaction.date),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                style = KptTheme.typography.bodyMedium,
+                color = KptTheme.colorScheme.onSurfaceVariant,
             )
         }
 
@@ -220,7 +220,7 @@ fun TransactionItem(
                 transaction.currency?.code ?: "USD",
                 8,
             )}",
-            style = MaterialTheme.typography.bodyLarge.copy(
+            style = KptTheme.typography.bodyLarge.copy(
                 color = amountColor,
                 fontWeight = FontWeight.SemiBold,
             ),
@@ -274,7 +274,7 @@ fun TransactionList(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp),
-                    color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
+                    color = KptTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
                 )
             }
         }
@@ -288,7 +288,7 @@ fun ErrorScreen(message: String, onRetry: () -> Unit, modifier: Modifier = Modif
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Text(text = message, color = MaterialTheme.colorScheme.error)
+        Text(text = message, color = KptTheme.colorScheme.error)
         Button(onClick = onRetry) {
             Text("Retry")
         }
@@ -327,7 +327,7 @@ fun TransactionFilterSheetContent(
         ) {
             Text(
                 text = "Filter Transactions",
-                style = MaterialTheme.typography.titleLarge.copy(
+                style = KptTheme.typography.titleLarge.copy(
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp,
                 ),
@@ -335,8 +335,8 @@ fun TransactionFilterSheetContent(
             TextButton(onClick = onClear) {
                 Text(
                     text = "Clear All",
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        color = MaterialTheme.colorScheme.primary,
+                    style = KptTheme.typography.bodyMedium.copy(
+                        color = KptTheme.colorScheme.primary,
                         fontWeight = FontWeight.SemiBold,
                     ),
                 )
@@ -347,7 +347,7 @@ fun TransactionFilterSheetContent(
 
         Text(
             text = "Filter By Account :",
-            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
+            style = KptTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
             modifier = Modifier.padding(vertical = 12.dp),
         )
 
@@ -371,14 +371,14 @@ fun TransactionFilterSheetContent(
                     Column {
                         Text(
                             text = "A/c No: ${selectedAccount?.accountNo ?: "Select Account"}",
-                            style = MaterialTheme.typography.bodyLarge
+                            style = KptTheme.typography.bodyLarge
                                 .copy(fontWeight = FontWeight.Bold),
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = "Balance: ${selectedAccount?.accountBalance ?: "0.0"} " +
                                 "${selectedAccount?.currency?.code ?: ""}",
-                            style = MaterialTheme.typography.bodySmall.copy(color = Color.Gray),
+                            style = KptTheme.typography.bodySmall.copy(color = Color.Gray),
                         )
                     }
                     Icon(
@@ -401,7 +401,7 @@ fun TransactionFilterSheetContent(
                         text = {
                             Column {
                                 Text(text = account.productName ?: "Account", fontWeight = FontWeight.Bold)
-                                Text(text = account.accountNo ?: "", style = MaterialTheme.typography.bodySmall)
+                                Text(text = account.accountNo ?: "", style = KptTheme.typography.bodySmall)
                             }
                         },
                         onClick = {
@@ -417,7 +417,7 @@ fun TransactionFilterSheetContent(
 
         Text(
             text = "Transaction Type:",
-            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
+            style = KptTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
             modifier = Modifier.padding(bottom = 12.dp),
         )
 
@@ -458,7 +458,7 @@ fun TransactionFilterSheetContent(
                 .height(50.dp),
             shape = RoundedCornerShape(25.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.primary,
+                containerColor = KptTheme.colorScheme.primary,
             ),
         ) {
             Text(
@@ -482,8 +482,8 @@ fun FilterOptionChip(
     Surface(
         modifier = modifier.height(40.dp),
         shape = RoundedCornerShape(20.dp),
-        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface,
-        border = if (!isSelected) BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)) else null,
+        color = if (isSelected) KptTheme.colorScheme.primary else KptTheme.colorScheme.surface,
+        border = if (!isSelected) BorderStroke(1.dp, KptTheme.colorScheme.outline.copy(alpha = 0.5f)) else null,
         onClick = onClick,
     ) {
         Box(
@@ -492,7 +492,7 @@ fun FilterOptionChip(
         ) {
             Text(
                 text = label,
-                color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
+                color = if (isSelected) KptTheme.colorScheme.onPrimary else KptTheme.colorScheme.onSurface,
                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
             )
         }

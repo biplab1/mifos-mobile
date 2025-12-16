@@ -27,7 +27,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -68,6 +67,7 @@ import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.feature.home.components.BottomSheetContent
 import org.mifos.mobile.feature.home.navigation.HomeNavigationDestination
 import org.mifos.mobile.feature.home.navigation.HomeNavigator
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun HomeScreen(
@@ -140,7 +140,7 @@ internal fun HomeContent(
                 Image(
                     imageVector = MifosIcons.Alert,
                     contentDescription = null,
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                    colorFilter = ColorFilter.tint(KptTheme.colorScheme.onSurface),
                     modifier = Modifier.clickable {
                         onAction(HomeAction.OnNotificationClick)
                     },
@@ -180,7 +180,7 @@ internal fun HomeContent(
                             state.firstName.toString(),
                         ),
                         style = MifosTypography.titleLarge,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = KptTheme.colorScheme.onSurface,
                     )
 
                     Spacer(modifier = Modifier.height(DesignToken.spacing.large))
@@ -206,7 +206,7 @@ internal fun HomeContent(
                     Text(
                         text = stringResource(Res.string.feature_home_services),
                         style = MifosTypography.titleMediumEmphasized,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = KptTheme.colorScheme.onSurface,
                     )
 
                     Spacer(modifier = Modifier.height(DesignToken.spacing.large))
@@ -275,20 +275,20 @@ internal fun ServiceItemCard(
                 modifier = Modifier
                     .border(
                         1.dp,
-                        MaterialTheme.colorScheme.secondaryContainer,
+                        KptTheme.colorScheme.secondaryContainer,
                         DesignToken.shapes.medium,
                     )
                     .padding(DesignToken.padding.medium + 2.dp),
                 imageVector = icon,
                 contentDescription = null,
-                colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.tertiary),
+                colorFilter = ColorFilter.tint(KptTheme.colorScheme.tertiary),
             )
         }
 
         Text(
             text = stringResource(title),
             style = MifosTypography.bodySmallEmphasized,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
             textAlign = TextAlign.Center,
         )
     }
@@ -325,7 +325,7 @@ private fun HomeScreenDialog(
                     onAction(HomeAction.OnDismissDialog)
                 },
                 sheetState = sheetState,
-                containerColor = MaterialTheme.colorScheme.surface,
+                containerColor = KptTheme.colorScheme.surface,
                 contentWindowInsets = {
                     BottomSheetDefaults.windowInsets
                 },

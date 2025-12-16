@@ -24,7 +24,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -57,6 +56,7 @@ import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 import kotlin.collections.orEmpty
 
 /**
@@ -220,7 +220,7 @@ internal fun ShareAccountContent(
                         Text(
                             text = stringResource(Res.string.feature_share_account),
                             style = MifosTypography.titleMediumEmphasized,
-                            color = MaterialTheme.colorScheme.onBackground,
+                            color = KptTheme.colorScheme.onBackground,
                         )
                         Text(
                             text = stringResource(
@@ -228,7 +228,7 @@ internal fun ShareAccountContent(
                                 state.items ?: 0,
                             ),
                             style = MifosTypography.labelMedium,
-                            color = MaterialTheme.colorScheme.secondary,
+                            color = KptTheme.colorScheme.secondary,
                         )
                     }
 
@@ -286,8 +286,8 @@ internal fun ShareAccountContent(
                                 LoanStatus.ACTIVE.status -> AppColors.customEnable
                                 LoanStatus.SUBMIT_AND_PENDING_APPROVAL.status -> AppColors.customYellow
                                 LoanStatus.WITHDRAWN.status, LoanStatus.MATURED.status ->
-                                    MaterialTheme.colorScheme.error
-                                else -> MaterialTheme.colorScheme.onSurface
+                                    KptTheme.colorScheme.error
+                                else -> KptTheme.colorScheme.onSurface
                             }
 
                             MifosAccountCard(

@@ -16,7 +16,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -42,6 +41,7 @@ import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun GuarantorListScreen(
@@ -100,7 +100,7 @@ private fun GuarantorListScreen(
                     contentDescription = null,
                 )
             },
-            contentColor = MaterialTheme.colorScheme.primary,
+            contentColor = KptTheme.colorScheme.primary,
         ),
         content = {
             if (state.guarantorList == null) {
@@ -148,7 +148,7 @@ private fun GuarantorListItem(
     guarantor: GuarantorPayload = GuarantorPayload(),
 ) {
     OutlinedCard(
-        colors = CardDefaults.outlinedCardColors(containerColor = MaterialTheme.colorScheme.background),
+        colors = CardDefaults.outlinedCardColors(containerColor = KptTheme.colorScheme.background),
         modifier = modifier
             .padding(horizontal = 16.dp, vertical = 8.dp)
             .fillMaxWidth(),
@@ -157,11 +157,11 @@ private fun GuarantorListItem(
             Column(modifier = Modifier.padding(8.dp)) {
                 Text(
                     text = guarantor.firstname + " " + guarantor.lastname,
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = KptTheme.typography.bodyMedium,
                 )
                 Text(
                     text = guarantor.guarantorType?.value ?: "",
-                    style = MaterialTheme.typography.labelMedium,
+                    style = KptTheme.typography.labelMedium,
                 )
             }
         },

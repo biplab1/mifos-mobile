@@ -21,7 +21,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -62,6 +61,7 @@ import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable serving as the entry point for the "Fill Savings Application" screen.
@@ -214,7 +214,7 @@ internal fun SavingsFillApplicationContent(
                     Text(
                         text = stringResource(Res.string.feature_apply_savings_label_details),
                         style = MifosTypography.labelLargeEmphasized,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = KptTheme.colorScheme.onSurface,
                     )
 
                     MifosOutlineDropdown(
@@ -244,7 +244,7 @@ internal fun SavingsFillApplicationContent(
                     Text(
                         text = stringResource(Res.string.feature_apply_savings_label_lock_in_period),
                         style = MifosTypography.labelLargeEmphasized,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = KptTheme.colorScheme.onSurface,
                     )
 
                     MifosOutlinedTextField(
@@ -276,7 +276,7 @@ internal fun SavingsFillApplicationContent(
                         Text(
                             text = stringResource(Res.string.feature_apply_savings_label_overdraft),
                             style = MifosTypography.labelLargeEmphasized,
-                            color = MaterialTheme.colorScheme.onSurface,
+                            color = KptTheme.colorScheme.onSurface,
                         )
 
                         Row(

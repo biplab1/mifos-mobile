@@ -25,7 +25,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -69,6 +68,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun LoginScreen(
@@ -216,7 +216,7 @@ fun LogoBox(
         Text(
             text = stringResource(Res.string.feature_sign_in_title),
             style = MifosTypography.headlineMedium,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = KptTheme.colorScheme.onSurface,
         )
 
         Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
@@ -224,7 +224,7 @@ fun LogoBox(
         Text(
             text = stringResource(Res.string.feature_sign_in_sub_title),
             style = MifosTypography.bodySmall,
-            color = MaterialTheme.colorScheme.secondary,
+            color = KptTheme.colorScheme.secondary,
         )
     }
 }
@@ -255,7 +255,7 @@ fun InputBox(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = "Error",
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {
@@ -288,7 +288,7 @@ fun InputBox(
                 },
             text = stringResource(Res.string.feature_sign_in_forgot_password),
             style = MifosTypography.labelMedium,
-            color = MaterialTheme.colorScheme.primary,
+            color = KptTheme.colorScheme.primary,
         )
 
         MifosButton(
@@ -325,7 +325,7 @@ fun InputBox(
                 },
                 text = stringResource(Res.string.feature_sign_in_sign_up),
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
         }
     }

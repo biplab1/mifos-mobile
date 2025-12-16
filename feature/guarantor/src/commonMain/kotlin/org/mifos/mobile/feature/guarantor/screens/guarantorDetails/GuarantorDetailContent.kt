@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -25,6 +24,7 @@ import mifos_mobile.feature.guarantor.generated.resources.last_name
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosTextTitleDescDoubleLine
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun GuarantorDetailContent(
@@ -39,7 +39,7 @@ internal fun GuarantorDetailContent(
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.first_name),
             description = data.firstname ?: "",
-            descriptionStyle = MaterialTheme.typography.bodyLarge,
+            descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -47,7 +47,7 @@ internal fun GuarantorDetailContent(
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.last_name),
             description = data.lastname ?: "",
-            descriptionStyle = MaterialTheme.typography.bodyLarge,
+            descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -55,7 +55,7 @@ internal fun GuarantorDetailContent(
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.city),
             description = data.city ?: "",
-            descriptionStyle = MaterialTheme.typography.bodyLarge,
+            descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -63,7 +63,7 @@ internal fun GuarantorDetailContent(
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.guarantor_type),
             description = data.guarantorType?.value ?: "",
-            descriptionStyle = MaterialTheme.typography.bodyLarge,
+            descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))

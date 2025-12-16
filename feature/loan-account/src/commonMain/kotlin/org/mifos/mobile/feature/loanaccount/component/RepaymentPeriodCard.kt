@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -46,6 +45,7 @@ import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.entity.accounts.loan.Periods
+import template.core.base.designsystem.theme.KptTheme
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 
@@ -83,7 +83,7 @@ fun RepaymentScheduleItem(
             .fillMaxWidth()
             .border(
                 1.dp,
-                MaterialTheme.colorScheme.secondaryContainer,
+                KptTheme.colorScheme.secondaryContainer,
                 DesignToken.shapes.medium,
             ),
     ) {
@@ -98,7 +98,7 @@ fun RepaymentScheduleItem(
                 modifier = Modifier
                     .size(36.dp)
                     .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.primary),
+                    .background(KptTheme.colorScheme.primary),
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
@@ -128,14 +128,14 @@ fun RepaymentScheduleItem(
                             }}"
                         } ?: "-",
                     ),
-                    color = MaterialTheme.colorScheme.outline,
+                    color = KptTheme.colorScheme.outline,
                     style = MifosTypography.labelMediumEmphasized,
                 )
 
                 Text(
                     text = dueDate,
                     style = MifosTypography.labelLargeEmphasized,
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = KptTheme.colorScheme.onSurface,
                 )
             }
             if (canPay) {
@@ -163,13 +163,13 @@ fun RepaymentScheduleItem(
                             stringResource(Res.string.feature_loan_due)
                         },
                         style = MifosTypography.labelSmall.copy(
-                            color = if (isPaid) AppColors.customEnable else MaterialTheme.colorScheme.error,
+                            color = if (isPaid) AppColors.customEnable else KptTheme.colorScheme.error,
                         ),
                     )
                     Text(
                         text = amount,
                         style = MifosTypography.titleSmallEmphasized,
-                        color = if (isPaid) AppColors.customEnable else MaterialTheme.colorScheme.error,
+                        color = if (isPaid) AppColors.customEnable else KptTheme.colorScheme.error,
                     )
                 }
             }

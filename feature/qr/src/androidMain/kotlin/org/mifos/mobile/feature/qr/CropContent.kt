@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,6 +34,7 @@ import com.attafitamim.krop.core.crop.cropperStyle
 import com.attafitamim.krop.ui.ImageCropperDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.theme.DesignToken
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun CropContent(
@@ -87,7 +87,7 @@ fun CropContent(
             ) {
                 Text(
                     text = "Choose Image",
-                    style = MaterialTheme.typography.labelLarge,
+                    style = KptTheme.typography.labelLarge,
                 )
             }
         }

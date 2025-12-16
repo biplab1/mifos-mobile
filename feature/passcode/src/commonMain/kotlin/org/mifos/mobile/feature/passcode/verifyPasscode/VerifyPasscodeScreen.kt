@@ -26,7 +26,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,6 +50,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun VerifyPasscodeScreen(
@@ -103,11 +103,11 @@ private fun VerifyPasscodeScreenContent(
                     contentDescription = null,
                     modifier = Modifier
                         .background(
-                            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f),
+                            color = KptTheme.colorScheme.primary.copy(alpha = 0.2f),
                             shape = CircleShape,
                         )
                         .padding(DesignToken.padding.small),
-                    tint = MaterialTheme.colorScheme.primary,
+                    tint = KptTheme.colorScheme.primary,
                 )
 
                 Spacer(modifier = Modifier.height(24.dp))
@@ -115,7 +115,7 @@ private fun VerifyPasscodeScreenContent(
                 Text(
                     text = stringResource(Res.string.feature_passcode_authenticate),
                     style = MifosTypography.titleMedium,
-                    color = MaterialTheme.colorScheme.onBackground,
+                    color = KptTheme.colorScheme.onBackground,
                 )
 
                 Spacer(modifier = Modifier.height(8.dp))
@@ -123,7 +123,7 @@ private fun VerifyPasscodeScreenContent(
                 Text(
                     text = stringResource(Res.string.feature_passcode_authenticate_tip),
                     style = MifosTypography.bodySmall,
-                    color = MaterialTheme.colorScheme.secondary,
+                    color = KptTheme.colorScheme.secondary,
                     textAlign = TextAlign.Center,
                 )
 
@@ -133,14 +133,14 @@ private fun VerifyPasscodeScreenContent(
                     repeat(state.maxDigits) { index ->
                         val filled = index < state.filledDots
                         val color = when {
-                            filled -> MaterialTheme.colorScheme.primary
+                            filled -> KptTheme.colorScheme.primary
                             else -> Color.Transparent
                         }
                         val borderColor =
                             if (state.passcodeError) {
-                                MaterialTheme.colorScheme.error
+                                KptTheme.colorScheme.error
                             } else {
-                                MaterialTheme.colorScheme.primary
+                                KptTheme.colorScheme.primary
                             }
                         Box(
                             modifier = Modifier
@@ -189,7 +189,7 @@ fun NumericKeyboard(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surface)
+            .background(KptTheme.colorScheme.surface)
             .padding(DesignToken.padding.large),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
@@ -210,7 +210,7 @@ fun NumericKeyboard(
 
                         PasscodeKey.Backspace -> KeyButton(
                             modifier = Modifier.weight(1f),
-                            backgroundColor = MaterialTheme.colorScheme.tertiaryContainer,
+                            backgroundColor = KptTheme.colorScheme.tertiaryContainer,
                             content = {
                                 Icon(
                                     imageVector = MifosIcons.Backspace,
@@ -222,7 +222,7 @@ fun NumericKeyboard(
 
                         PasscodeKey.Send -> KeyButton(
                             modifier = Modifier.weight(1f),
-                            backgroundColor = MaterialTheme.colorScheme.inversePrimary,
+                            backgroundColor = KptTheme.colorScheme.inversePrimary,
                             content = {
                                 Icon(
                                     imageVector = MifosIcons.Send,
@@ -286,7 +286,7 @@ fun DigitKeyButton(
             .width(107.33333.dp)
             .height(41.dp)
             .clip(RoundedCornerShape(100.dp))
-            .background(MaterialTheme.colorScheme.surfaceContainerLow)
+            .background(KptTheme.colorScheme.surfaceContainerLow)
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center,
     ) {
@@ -297,13 +297,13 @@ fun DigitKeyButton(
             Text(
                 text = digit,
                 style = MifosTypography.keyBoardNumeric,
-                color = MaterialTheme.colorScheme.onBackground,
+                color = KptTheme.colorScheme.onBackground,
             )
             if (letters.isNotEmpty()) {
                 Text(
                     text = letters,
                     style = MifosTypography.keyBoardAlpha,
-                    color = MaterialTheme.colorScheme.outline,
+                    color = KptTheme.colorScheme.outline,
                 )
             }
         }

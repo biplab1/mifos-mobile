@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -47,6 +46,7 @@ import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.feature.settings.util.appVersion
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * The main composable for the App Info screen, which acts as a stateful wrapper
@@ -136,7 +136,7 @@ internal fun AppInfoContent(
                             )
                             Text(
                                 text = stringResource(Res.string.feature_settings_about_mifos),
-                                color = MaterialTheme.colorScheme.primary,
+                                color = KptTheme.colorScheme.primary,
                                 style = MifosTypography.titleLarge,
                             )
                         }

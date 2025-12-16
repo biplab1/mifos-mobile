@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -27,6 +26,7 @@ import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import template.core.base.designsystem.theme.KptTheme
 import kotlin.collections.component1
 import kotlin.collections.component2
 
@@ -41,7 +41,7 @@ fun ConfirmDetailsCard(
             .fillMaxWidth()
             .border(
                 1.dp,
-                MaterialTheme.colorScheme.secondaryContainer,
+                KptTheme.colorScheme.secondaryContainer,
                 DesignToken.shapes.medium,
             ),
         shape = DesignToken.shapes.medium,

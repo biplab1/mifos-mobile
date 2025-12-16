@@ -27,7 +27,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,6 +43,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.designsystem.utils.onClick
 import org.mifos.mobile.feature.accounts.model.CheckboxStatus
 import org.mifos.mobile.feature.accounts.model.TransactionCheckboxStatus
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * Composable function for the Filter Section.
@@ -92,7 +92,7 @@ internal fun FilterSection(
                 Text(
                     text = title,
                     style = MifosTypography.labelLargeEmphasized,
-                    color = MaterialTheme.colorScheme.onBackground,
+                    color = KptTheme.colorScheme.onBackground,
                 )
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
@@ -102,7 +102,7 @@ internal fun FilterSection(
                         Text(
                             text = stringResource(Res.string.feature_filters_count, filtersSelected),
                             style = MifosTypography.labelSmall,
-                            color = MaterialTheme.colorScheme.secondary,
+                            color = KptTheme.colorScheme.secondary,
                         )
                     }
                     Icon(
@@ -202,7 +202,7 @@ fun FilterCheckboxUI(
         Text(
             text = stringResource(statusLabel),
             style = MifosTypography.labelMediumEmphasized,
-            color = MaterialTheme.colorScheme.secondary,
+            color = KptTheme.colorScheme.secondary,
         )
     }
 }

@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -49,6 +48,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.enums.BeneficiaryState
 import org.mifos.mobile.core.ui.component.MifosDropDownTextField
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * Composable function to display a beneficiary application form.
@@ -172,7 +172,7 @@ internal fun BeneficiaryApplicationContent(
             Text(
                 text = buildAnnotatedString {
                     append(stringResource(Res.string.skip_the_form))
-                    withStyle(style = SpanStyle(color = MaterialTheme.colorScheme.primary)) {
+                    withStyle(style = SpanStyle(color = KptTheme.colorScheme.primary)) {
                         append(stringResource(Res.string.upload_or_scan_qr_code))
                     }
                 },

@@ -25,7 +25,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -58,6 +57,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun RecoverPasswordScreen(
@@ -127,7 +127,7 @@ internal fun RecoverPasswordScreen(
                     Text(
                         text = stringResource(Res.string.feature_recover_now_title),
                         style = MifosTypography.headlineMedium,
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = KptTheme.colorScheme.onBackground,
                     )
 
                     Spacer(modifier = Modifier.height(12.dp))
@@ -135,7 +135,7 @@ internal fun RecoverPasswordScreen(
                     Text(
                         text = stringResource(Res.string.feature_recover_now_message),
                         style = MifosTypography.bodySmall,
-                        color = MaterialTheme.colorScheme.secondary,
+                        color = KptTheme.colorScheme.secondary,
                     )
 
                     Spacer(modifier = Modifier.height(24.dp))
@@ -183,7 +183,7 @@ internal fun ForgotPasswordInputBox(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = "Error",
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {
@@ -208,7 +208,7 @@ internal fun ForgotPasswordInputBox(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = "Error",
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {
@@ -238,7 +238,7 @@ internal fun ForgotPasswordInputBox(
             Text(
                 text = stringResource(Res.string.feature_recover_now_remember_your_password),
                 style = MifosTypography.labelMedium,
-                color = MaterialTheme.colorScheme.secondary,
+                color = KptTheme.colorScheme.secondary,
             )
 
             Spacer(modifier = Modifier.width(6.dp))
@@ -247,7 +247,7 @@ internal fun ForgotPasswordInputBox(
                 modifier = Modifier.clickable { onAction.invoke(RecoverPasswordAction.OnLogin) },
                 text = stringResource(Res.string.feature_recover_now_log_in),
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
         }
     }

@@ -28,7 +28,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -84,6 +83,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun RegistrationScreen(
@@ -211,7 +211,7 @@ private fun RegistrationScreenContent(
             Text(
                 text = stringResource(Res.string.feature_signup_title),
                 style = MifosTypography.headlineMedium,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = KptTheme.colorScheme.onSurface,
             )
         }
 
@@ -219,7 +219,7 @@ private fun RegistrationScreenContent(
             Text(
                 text = stringResource(Res.string.feature_signup_sub_title),
                 style = MifosTypography.bodySmall,
-                color = MaterialTheme.colorScheme.secondary,
+                color = KptTheme.colorScheme.secondary,
             )
         }
 
@@ -264,7 +264,7 @@ private fun RegistrationScreenContent(
                     },
                     text = stringResource(Res.string.feature_signup_log_in),
                     style = MifosTypography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary,
+                    color = KptTheme.colorScheme.primary,
                 )
             }
         }
@@ -307,9 +307,9 @@ fun MifosInputField(
                         imageVector = if (config.isPasswordVisible) MifosIcons.EyeOff else MifosIcons.Eye,
                         contentDescription = "Toggle password visibility",
                         tint = if (config.errorText != null) {
-                            MaterialTheme.colorScheme.error
+                            KptTheme.colorScheme.error
                         } else {
-                            MaterialTheme.colorScheme.onSurface
+                            KptTheme.colorScheme.onSurface
                         },
                     )
                 }
@@ -320,7 +320,7 @@ fun MifosInputField(
                 Icon(
                     imageVector = MifosIcons.ErrorCircle,
                     contentDescription = "Error",
-                    tint = MaterialTheme.colorScheme.error,
+                    tint = KptTheme.colorScheme.error,
                 )
             }
         }

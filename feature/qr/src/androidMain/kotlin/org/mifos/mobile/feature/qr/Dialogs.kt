@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.attafitamim.krop.core.crop.CropError
 import com.attafitamim.krop.core.crop.CropperLoading
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun CropErrorDialog(error: CropError, onDismiss: () -> Unit) {
@@ -55,7 +55,7 @@ fun LoadingDialog(
     var dismissed by remember(status) { mutableStateOf(false) }
     if (!dismissed) {
         Dialog(onDismissRequest = { dismissed = true }) {
-            Surface(shape = MaterialTheme.shapes.small) {
+            Surface(shape = KptTheme.shapes.small) {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
                     horizontalAlignment = Alignment.CenterHorizontally,

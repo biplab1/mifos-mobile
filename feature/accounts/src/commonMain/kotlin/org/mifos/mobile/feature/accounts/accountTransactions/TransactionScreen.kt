@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -66,6 +65,7 @@ import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.accounts.component.FilterSection
 import org.mifos.mobile.feature.accounts.model.TransactionFilterType
+import template.core.base.designsystem.theme.KptTheme
 /**
  * Composable function for the Account Transactions Screen.
  *
@@ -276,7 +276,7 @@ internal fun ActionBar(
 //        ) {
 //            Text(
 //                text = stringResource(Res.string.feature_transaction_statement),
-//                color = MaterialTheme.colorScheme.primary,
+//                color = KptTheme.colorScheme.primary,
 //                style = MifosTypography.bodySmallEmphasized,
 //            )
 //
@@ -284,7 +284,7 @@ internal fun ActionBar(
 //                modifier = Modifier.size(DesignToken.sizes.iconSmall),
 //                imageVector = MifosIcons.Download,
 //                contentDescription = stringResource(Res.string.feature_transaction_download_icon_description),
-//                tint = MaterialTheme.colorScheme.primary,
+//                tint = KptTheme.colorScheme.primary,
 //            )
 //        }
 
@@ -299,7 +299,7 @@ internal fun ActionBar(
         ) {
             Text(
                 text = stringResource(Res.string.feature_transaction_filter),
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
                 style = MifosTypography.bodySmallEmphasized,
             )
 
@@ -307,7 +307,7 @@ internal fun ActionBar(
                 modifier = Modifier.size(DesignToken.sizes.iconSmall),
                 imageVector = MifosIcons.Filter,
                 contentDescription = stringResource(Res.string.feature_transaction_filter_icon_description),
-                tint = MaterialTheme.colorScheme.primary,
+                tint = KptTheme.colorScheme.primary,
             )
         }
     }

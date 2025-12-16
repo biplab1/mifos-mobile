@@ -25,7 +25,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -56,6 +55,7 @@ import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.settings.componenets.LogoutDialogState
 import org.mifos.mobile.feature.settings.componenets.MifosLogoutDialog
 import org.mifos.mobile.feature.settings.componenets.SettingsItems
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that serves as the entry point for the main "Settings" screen.
@@ -220,7 +220,7 @@ internal fun SettingsProfileCard(
             modifier = Modifier
                 .size(DesignToken.sizes.profile)
                 .clip(CircleShape)
-                .border(1.dp, MaterialTheme.colorScheme.primary, CircleShape),
+                .border(1.dp, KptTheme.colorScheme.primary, CircleShape),
         ) {
             MifosUserImage(
                 bitmap = state.profileImage,
@@ -237,7 +237,7 @@ internal fun SettingsProfileCard(
             Text(
                 text = state.client?.displayName ?: "",
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
 
 //            TODO email is not receiving from api response
@@ -246,7 +246,7 @@ internal fun SettingsProfileCard(
             Text(
                 text = stringResource(Res.string.feature_settings_customer_account_no, state.client?.accountNo ?: ""),
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.secondary,
+                color = KptTheme.colorScheme.secondary,
             )
         }
     }

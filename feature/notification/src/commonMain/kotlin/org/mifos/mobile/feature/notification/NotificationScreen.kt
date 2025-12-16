@@ -21,7 +21,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
@@ -50,6 +49,7 @@ import org.mifos.mobile.core.model.entity.MifosNotification
 import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * This is the main entry point for the Notification Screen feature. It's a composable function
@@ -188,7 +188,7 @@ private fun NotificationContent(
                     dismissNotification = dismissNotification,
                 )
                 if (index < notifications.lastIndex) {
-                    HorizontalDivider(color = MaterialTheme.colorScheme.surfaceDim)
+                    HorizontalDivider(color = KptTheme.colorScheme.surfaceDim)
                 }
             }
         }
@@ -222,9 +222,9 @@ private fun NotificationItem(
             painter = painterResource(Res.drawable.ic_notifications),
             contentDescription = "Notifications Icon",
             tint = if (isRead.value) {
-                MaterialTheme.colorScheme.onSurfaceVariant
+                KptTheme.colorScheme.onSurfaceVariant
             } else {
-                MaterialTheme.colorScheme.primary
+                KptTheme.colorScheme.primary
             },
         )
         Column(
@@ -233,12 +233,12 @@ private fun NotificationItem(
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = notification.msg ?: "",
-                style = MaterialTheme.typography.bodyMedium,
+                style = KptTheme.typography.bodyMedium,
             )
             Text(
                 modifier = Modifier.alpha(0.7f),
                 text = DateHelper.getDateAsStringFromLong(notification.timeStamp),
-                style = MaterialTheme.typography.labelMedium,
+                style = KptTheme.typography.labelMedium,
             )
             if (!isRead.value) {
                 MifosTextButton(

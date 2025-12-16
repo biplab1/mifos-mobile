@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,6 +47,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun QrCodeDisplayScreen(
@@ -125,7 +125,7 @@ private fun QrCodeDisplayContent(
             Text(
                 text = stringResource(Res.string.scan_your_qr),
                 style = MifosTypography.titleLargeEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
 
             Spacer(Modifier.height(DesignToken.padding.largeIncreased))
@@ -157,7 +157,7 @@ private fun QrCodeDisplayContent(
         Text(
             text = stringResource(Res.string.generated_on) + date,
             style = MifosTypography.bodySmall,
-            color = MaterialTheme.colorScheme.primary,
+            color = KptTheme.colorScheme.primary,
             modifier = Modifier.align(Alignment.BottomCenter),
         )
     }

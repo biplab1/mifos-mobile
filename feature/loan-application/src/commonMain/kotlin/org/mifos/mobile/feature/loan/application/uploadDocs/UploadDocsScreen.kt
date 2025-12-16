@@ -23,7 +23,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -51,6 +50,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.feature.loan.application.component.UploadDocumentsSection
 import org.mifos.mobile.feature.loan.application.uploadDocs.component.BottomSheetContent
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun UploadDocsScreen(
@@ -199,7 +199,7 @@ internal fun UploadDocsScreenContent(
             ) {
                 Text(
                     text = stringResource(Res.string.feature_button_next),
-                    style = MaterialTheme.typography.labelLarge,
+                    style = KptTheme.typography.labelLarge,
                 )
             }
         }

@@ -26,7 +26,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -45,6 +44,7 @@ import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.feature.home.HomeAction
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun BottomSheetContent(
@@ -95,7 +95,7 @@ internal fun BottomSheetIconContainer(
                 .fillMaxWidth()
                 .border(
                     1.dp,
-                    MaterialTheme.colorScheme.secondaryContainer,
+                    KptTheme.colorScheme.secondaryContainer,
                     DesignToken.shapes.medium,
                 ),
             onClick = { onClick(it) },
@@ -109,7 +109,7 @@ internal fun BottomSheetIconContainer(
                     modifier = Modifier.size(DesignToken.sizes.inputHeight)
                         .border(
                             1.dp,
-                            MaterialTheme.colorScheme.secondaryContainer,
+                            KptTheme.colorScheme.secondaryContainer,
                             DesignToken.shapes.medium,
                         ),
                     contentAlignment = Alignment.Center,
@@ -134,7 +134,7 @@ internal fun BottomSheetIconContainer(
                             BottomSheetItemType.SAVINGS -> stringResource(Res.string.feature_home_saving_account)
                         },
                         style = MifosTypography.bodyMediumEmphasized,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = KptTheme.colorScheme.onSurface,
                     )
 
                     Text(
@@ -143,7 +143,7 @@ internal fun BottomSheetIconContainer(
                             BottomSheetItemType.SAVINGS -> stringResource(Res.string.feature_home_savings_tip)
                         },
                         style = MifosTypography.bodySmallEmphasized,
-                        color = MaterialTheme.colorScheme.secondary,
+                        color = KptTheme.colorScheme.secondary,
                     )
                 }
             }

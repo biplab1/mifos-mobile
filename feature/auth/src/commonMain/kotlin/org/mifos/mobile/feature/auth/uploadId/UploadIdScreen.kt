@@ -27,7 +27,6 @@ import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.SelectableDates
 import androidx.compose.material3.Surface
@@ -74,6 +73,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 
@@ -159,7 +159,7 @@ internal fun UploadIdScreenContent(
             Text(
                 text = stringResource(Res.string.feature_upload_id_title),
                 style = MifosTypography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground,
+                color = KptTheme.colorScheme.onBackground,
             )
 
             Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
@@ -167,7 +167,7 @@ internal fun UploadIdScreenContent(
             Text(
                 text = stringResource(Res.string.feature_upload_id_subtitle),
                 style = MifosTypography.bodySmall,
-                color = MaterialTheme.colorScheme.secondary,
+                color = KptTheme.colorScheme.secondary,
             )
 
             Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
@@ -272,7 +272,7 @@ internal fun InputForm(
             Text(
                 text = stringResource(Res.string.feature_upload_id_take_me_back),
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
                 modifier = Modifier.clickable(
                     onClick = {
                         onAction(UploadIdAction.OnBackClick)
@@ -334,9 +334,9 @@ private fun MifosTextFieldWithError(
         shape = DesignToken.shapes.medium,
         textStyle = MifosTypography.bodyLarge,
         colors = OutlinedTextFieldDefaults.colors(
-            focusedBorderColor = MaterialTheme.colorScheme.secondaryContainer,
-            unfocusedBorderColor = MaterialTheme.colorScheme.secondaryContainer,
-            errorBorderColor = MaterialTheme.colorScheme.error,
+            focusedBorderColor = KptTheme.colorScheme.secondaryContainer,
+            unfocusedBorderColor = KptTheme.colorScheme.secondaryContainer,
+            errorBorderColor = KptTheme.colorScheme.error,
         ),
         config = MifosTextFieldConfig(
             isError = isError,

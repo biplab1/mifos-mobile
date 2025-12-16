@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -46,6 +45,7 @@ import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosDetailsCard
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that serves as the entry point for the "Account Withdraw" screen.
@@ -184,9 +184,9 @@ internal fun AccountWithdrawScreenContent(
                     shape = DesignToken.shapes.medium,
                     textStyle = MifosTypography.bodyLarge,
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = MaterialTheme.colorScheme.secondaryContainer,
-                        unfocusedBorderColor = MaterialTheme.colorScheme.secondaryContainer,
-                        errorBorderColor = MaterialTheme.colorScheme.error,
+                        focusedBorderColor = KptTheme.colorScheme.secondaryContainer,
+                        unfocusedBorderColor = KptTheme.colorScheme.secondaryContainer,
+                        errorBorderColor = KptTheme.colorScheme.error,
                     ),
                 )
                 MifosButton(
@@ -204,7 +204,7 @@ internal fun AccountWithdrawScreenContent(
                     enabled = state.remark.isNotBlank(),
                     shape = DesignToken.shapes.medium,
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
+                        containerColor = KptTheme.colorScheme.primary,
                     ),
                 )
             }

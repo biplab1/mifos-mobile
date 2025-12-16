@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -64,6 +63,7 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicatorOverlay
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun OtpAuthenticationScreen(
@@ -156,7 +156,7 @@ internal fun OptAuthScreenContent(
                 ) {
                     Text(
                         text = stringResource(Res.string.feature_otp_title),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = KptTheme.colorScheme.onBackground,
                         style = MifosTypography.headlineMedium,
                     )
 
@@ -164,7 +164,7 @@ internal fun OptAuthScreenContent(
 
                     Text(
                         text = stringResource(Res.string.feature_otp_subtitle),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = KptTheme.colorScheme.onBackground,
                         style = MifosTypography.titleSmallEmphasized,
                     )
 
@@ -172,7 +172,7 @@ internal fun OptAuthScreenContent(
 
                     Text(
                         text = stringResource(Res.string.feature_otp_message),
-                        color = MaterialTheme.colorScheme.secondary,
+                        color = KptTheme.colorScheme.secondary,
                         style = MifosTypography.bodySmall,
                     )
 
@@ -224,7 +224,7 @@ internal fun OtpInputForm(
                             Icon(
                                 imageVector = MifosIcons.ErrorCircle,
                                 contentDescription = "Error",
-                                tint = MaterialTheme.colorScheme.error,
+                                tint = KptTheme.colorScheme.error,
                             )
                         }
                     } else {
@@ -253,7 +253,7 @@ internal fun OtpInputForm(
                         Icon(
                             imageVector = MifosIcons.ErrorCircle,
                             contentDescription = "Error",
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = KptTheme.colorScheme.error,
                         )
                     }
                 } else {
@@ -270,8 +270,8 @@ internal fun OtpInputForm(
                     .fillMaxWidth()
                     .height(DesignToken.sizes.buttonHeight),
                 colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = MaterialTheme.colorScheme.onPrimary,
-                    contentColor = MaterialTheme.colorScheme.primary,
+                    containerColor = KptTheme.colorScheme.onPrimary,
+                    contentColor = KptTheme.colorScheme.primary,
                 ),
                 onClick = {
                     onAction(OtpAuthAction.OnCancelClick)
@@ -280,7 +280,7 @@ internal fun OtpInputForm(
             ) {
                 Text(
                     text = stringResource(Res.string.feature_common_cancel),
-                    style = MaterialTheme.typography.labelLarge,
+                    style = KptTheme.typography.labelLarge,
                 )
             }
 
@@ -321,7 +321,7 @@ internal fun OtpInputForm(
                 },
                 text = stringResource(Res.string.feature_otp_action_tip),
                 style = MifosTypography.labelMediumEmphasized,
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
             )
         }
     }

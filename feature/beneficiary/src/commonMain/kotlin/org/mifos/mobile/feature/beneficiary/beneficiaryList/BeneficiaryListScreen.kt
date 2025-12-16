@@ -32,7 +32,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -75,6 +74,8 @@ import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
+
 /**
  * Composable function to display the beneficiary list screen.
  *
@@ -312,7 +313,7 @@ internal fun ActionBar(
         ) {
             Text(
                 text = stringResource(Res.string.add),
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
                 style = MifosTypography.bodySmallEmphasized,
             )
 
@@ -320,7 +321,7 @@ internal fun ActionBar(
                 modifier = Modifier.size(DesignToken.sizes.iconSmall),
                 imageVector = MifosIcons.Add,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
+                tint = KptTheme.colorScheme.primary,
             )
         }
 
@@ -335,7 +336,7 @@ internal fun ActionBar(
         ) {
             Text(
                 text = stringResource(Res.string.filter),
-                color = MaterialTheme.colorScheme.primary,
+                color = KptTheme.colorScheme.primary,
                 style = MifosTypography.bodySmallEmphasized,
             )
 
@@ -343,7 +344,7 @@ internal fun ActionBar(
                 modifier = Modifier.size(DesignToken.sizes.iconSmall),
                 imageVector = MifosIcons.Filter,
                 contentDescription = stringResource(Res.string.filter),
-                tint = MaterialTheme.colorScheme.primary,
+                tint = KptTheme.colorScheme.primary,
             )
         }
     }
@@ -469,7 +470,7 @@ internal fun FilterSection(
                 Text(
                     text = title,
                     style = MifosTypography.labelLargeEmphasized,
-                    color = MaterialTheme.colorScheme.onBackground,
+                    color = KptTheme.colorScheme.onBackground,
                 )
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
@@ -479,7 +480,7 @@ internal fun FilterSection(
                         Text(
                             text = "${selectedFilters.size} selected",
                             style = MifosTypography.labelSmall,
-                            color = MaterialTheme.colorScheme.secondary,
+                            color = KptTheme.colorScheme.secondary,
                         )
                     }
                     Icon(
@@ -523,7 +524,7 @@ internal fun FilterSection(
                             Text(
                                 text = filter ?: "",
                                 style = MifosTypography.labelMediumEmphasized,
-                                color = MaterialTheme.colorScheme.secondary,
+                                color = KptTheme.colorScheme.secondary,
                             )
                         }
                     }
