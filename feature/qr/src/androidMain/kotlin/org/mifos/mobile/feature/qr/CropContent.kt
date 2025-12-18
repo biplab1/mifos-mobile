@@ -22,7 +22,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.unit.dp
 import com.attafitamim.krop.core.crop.AspectRatio
 import com.attafitamim.krop.core.crop.CircleCropShape
 import com.attafitamim.krop.core.crop.CropState
@@ -64,7 +63,7 @@ fun CropContent(
         contentAlignment = Alignment.Center,
     ) {
         Column(
-            modifier = modifier.padding(16.dp),
+            modifier = modifier.padding(DesignToken.padding.large),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {

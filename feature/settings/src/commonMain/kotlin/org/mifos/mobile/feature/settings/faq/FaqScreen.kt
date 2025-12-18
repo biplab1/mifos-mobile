@@ -27,7 +27,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.settings.generated.resources.Res
 import mifos_mobile.feature.settings.generated.resources.feature_settings_action_faq
@@ -154,7 +153,7 @@ private fun FaqContent(
                     text = stringResource(Res.string.feature_settings_faq_doubt),
                     style = MifosTypography.bodySmall,
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
                 Text(
                     text = stringResource(Res.string.feature_settings_faq_contact_us),
                     style = MifosTypography.bodySmall,

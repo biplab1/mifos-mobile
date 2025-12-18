@@ -46,6 +46,7 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosLoadingDialog
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextField
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorApplicationPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorType
@@ -148,8 +149,8 @@ private fun AddGuarantorContent(
     Column(
         modifier = modifier
             .verticalScroll(state = scrollState)
-            .padding(horizontal = 16.dp)
-            .padding(bottom = 16.dp),
+            .padding(horizontal = DesignToken.padding.large)
+            .padding(bottom = DesignToken.padding.large),
     ) {
         MifosDropDownTextField(
             optionsList = guarantorTypeOptions.filter { it.id == 3L }.mapNotNull { it.value },

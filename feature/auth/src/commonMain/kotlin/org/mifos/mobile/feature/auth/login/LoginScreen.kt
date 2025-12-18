@@ -204,7 +204,7 @@ fun LogoBox(
         modifier = modifier,
     ) {
         Image(
-            modifier = Modifier.height(48.dp).width(165.dp),
+            modifier = Modifier.height(DesignToken.sizes.avatarMedium).width(165.dp),
             painter = painterResource(
                 mifos_mobile.core.ui.generated.resources.Res.drawable.ic_icon_logo_1,
             ),

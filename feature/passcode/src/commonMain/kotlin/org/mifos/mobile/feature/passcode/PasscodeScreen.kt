@@ -128,7 +128,7 @@ private fun PasscodeScreenContent(
                     color = KptTheme.colorScheme.onBackground,
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
 
                 Text(
                     text = stringResource(Res.string.feature_passcode_tip),
@@ -137,7 +137,7 @@ private fun PasscodeScreenContent(
                     textAlign = TextAlign.Center,
                 )
 
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.extraLargeIncreased))
 
                 Row(horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large)) {
                     repeat(state.maxDigits) { index ->
@@ -155,7 +155,7 @@ private fun PasscodeScreenContent(
                             }
                         Box(
                             modifier = Modifier
-                                .size(16.dp)
+                                .size(DesignToken.sizes.iconSmall)
                                 .clip(CircleShape)
                                 .background(color)
                                 .border(

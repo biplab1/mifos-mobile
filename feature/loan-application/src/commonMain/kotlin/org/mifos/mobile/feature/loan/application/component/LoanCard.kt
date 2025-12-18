@@ -89,7 +89,7 @@ fun LoanCard(
                         color = AppColors.customWhite,
                     )
 
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(DesignToken.spacing.extraSmall))
 
                     Text(
                         text = amount,
@@ -98,7 +98,7 @@ fun LoanCard(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.extraLargeIncreased))
 
                 Text(
                     text = interestRate,
@@ -115,7 +115,7 @@ fun LoanCard(
 @Composable
 fun LoanCardPreview() {
     LoanCard(
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier.padding(DesignToken.padding.large),
         cardImage = UiRes.drawable.ic_icon_dashboard,
         onClick = {},
         title = "title",
@@ -167,7 +167,7 @@ fun LoanCardCustom(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp),
+                    .padding(DesignToken.padding.largeIncreased),
             ) {
                 Text(
                     text = title,
@@ -175,7 +175,7 @@ fun LoanCardCustom(
                     color = contentColor,
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
 
                 Text(
                     text = amount,
@@ -183,7 +183,7 @@ fun LoanCardCustom(
                     color = contentColor,
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.large))
 
                 Text(
                     text = interestRate,
@@ -199,7 +199,7 @@ fun LoanCardCustom(
 @Composable
 fun LoanCardPreviewCustom() {
     LoanCardCustom(
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier.padding(DesignToken.padding.large),
         cardImage = UiRes.drawable.ic_icon_dashboard,
         onClick = {},
         title = "title",

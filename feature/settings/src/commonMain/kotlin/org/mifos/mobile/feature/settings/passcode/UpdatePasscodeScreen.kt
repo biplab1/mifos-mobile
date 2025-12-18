@@ -149,7 +149,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.OldPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
 
         MifosPasswordField(
             value = passcodeData.newPasscode,
@@ -165,7 +165,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.NewPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
 
         MifosPasswordField(
             value = passcodeData.confirmPasscode,

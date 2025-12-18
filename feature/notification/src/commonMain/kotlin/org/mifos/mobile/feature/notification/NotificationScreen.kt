@@ -31,7 +31,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.notification.generated.resources.Res
 import mifos_mobile.feature.notification.generated.resources.dialog_action_ok
@@ -45,6 +44,7 @@ import org.mifos.mobile.core.common.DateHelper
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextButton
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.MifosNotification
 import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
@@ -215,8 +215,8 @@ private fun NotificationItem(
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.padding(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        modifier = modifier.padding(DesignToken.padding.small),
+        horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
     ) {
         Icon(
             painter = painterResource(Res.drawable.ic_notifications),

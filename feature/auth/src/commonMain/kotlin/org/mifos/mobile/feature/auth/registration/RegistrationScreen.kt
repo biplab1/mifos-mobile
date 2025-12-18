@@ -45,7 +45,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import mifos_mobile.feature.auth.generated.resources.Res
@@ -332,7 +331,7 @@ fun MifosInputField(
     if (config.fieldType == InputFieldType.PASSWORD) {
         Column(
             modifier = modifier,
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
         ) {
             MifosPasswordField(
                 label = stringResource(config.labelRes),

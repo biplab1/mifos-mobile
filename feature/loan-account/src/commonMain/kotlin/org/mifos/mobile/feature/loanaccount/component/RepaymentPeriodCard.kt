@@ -96,7 +96,7 @@ fun RepaymentScheduleItem(
         ) {
             Box(
                 modifier = Modifier
-                    .size(36.dp)
+                    .size(DesignToken.sizes.iconExtraLarge)
                     .clip(CircleShape)
                     .background(KptTheme.colorScheme.primary),
                 contentAlignment = Alignment.Center,

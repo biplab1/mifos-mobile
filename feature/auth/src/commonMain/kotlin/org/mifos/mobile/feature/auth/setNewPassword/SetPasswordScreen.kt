@@ -147,7 +147,7 @@ internal fun SetPasswordScreen(
                         color = KptTheme.colorScheme.onBackground,
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
 
                     Text(
                         text = stringResource(Res.string.feature_set_new_password_message),

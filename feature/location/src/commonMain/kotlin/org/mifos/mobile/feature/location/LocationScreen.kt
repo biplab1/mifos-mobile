@@ -16,11 +16,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.location.generated.resources.Res
 import mifos_mobile.feature.location.generated.resources.mifos_initiative
 import mifos_mobile.feature.location.generated.resources.mifos_location
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import template.core.base.designsystem.theme.KptTheme
 
 /**
@@ -36,8 +36,8 @@ internal fun LocationsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
+            .padding(DesignToken.padding.large),
+        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
     ) {
         Text(
             text = stringResource(Res.string.mifos_initiative),

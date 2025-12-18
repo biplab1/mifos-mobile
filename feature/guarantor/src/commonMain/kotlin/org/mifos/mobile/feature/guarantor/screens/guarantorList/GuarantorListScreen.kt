@@ -23,9 +23,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import mifos_mobile.feature.guarantor.generated.resources.Res
@@ -37,6 +35,7 @@ import org.mifos.mobile.core.designsystem.component.FloatingActionButtonContent
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
@@ -150,11 +149,11 @@ private fun GuarantorListItem(
     OutlinedCard(
         colors = CardDefaults.outlinedCardColors(containerColor = KptTheme.colorScheme.background),
         modifier = modifier
-            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .padding(horizontal = DesignToken.padding.large, vertical = DesignToken.padding.small)
             .fillMaxWidth(),
         onClick = { onGuarantorClicked.invoke() },
         content = {
-            Column(modifier = Modifier.padding(8.dp)) {
+            Column(modifier = Modifier.padding(DesignToken.padding.small)) {
                 Text(
                     text = guarantor.firstname + " " + guarantor.lastname,
                     style = KptTheme.typography.bodyMedium,

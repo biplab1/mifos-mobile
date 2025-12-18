@@ -15,13 +15,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.guarantor.generated.resources.Res
 import mifos_mobile.feature.guarantor.generated.resources.city
 import mifos_mobile.feature.guarantor.generated.resources.first_name
 import mifos_mobile.feature.guarantor.generated.resources.guarantor_type
 import mifos_mobile.feature.guarantor.generated.resources.last_name
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosTextTitleDescDoubleLine
 import template.core.base.designsystem.theme.KptTheme
@@ -34,7 +34,7 @@ internal fun GuarantorDetailContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(DesignToken.padding.large),
     ) {
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.first_name),
@@ -42,7 +42,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.last_name),
@@ -50,7 +50,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.city),
@@ -58,7 +58,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.guarantor_type),
@@ -66,6 +66,6 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
     }
 }

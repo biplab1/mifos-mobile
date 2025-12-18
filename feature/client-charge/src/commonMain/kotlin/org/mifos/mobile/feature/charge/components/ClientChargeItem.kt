@@ -74,7 +74,7 @@ fun ClientChargeItem(
             contentDescription = "Charges Symbol",
             tint = KptTheme.colorScheme.onBackground.copy(alpha = 0.7f),
             modifier = Modifier
-                .size(36.dp)
+                .size(DesignToken.sizes.iconExtraLarge)
                 .background(
                     color = KptTheme.colorScheme.background.copy(alpha = 0.3f),
                     shape = CircleShape,

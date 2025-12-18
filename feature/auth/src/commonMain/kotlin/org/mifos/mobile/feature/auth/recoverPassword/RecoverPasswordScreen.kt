@@ -130,7 +130,7 @@ internal fun RecoverPasswordScreen(
                         color = KptTheme.colorScheme.onBackground,
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
 
                     Text(
                         text = stringResource(Res.string.feature_recover_now_message),
