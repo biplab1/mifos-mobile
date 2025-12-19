@@ -198,8 +198,8 @@ private fun RegistrationScreenContent(
                     keyboardController?.hide()
                 }
             }
-            .padding(DesignToken.padding.large)
-            .padding(top = DesignToken.padding.large)
+            .padding(KptTheme.spacing.md)
+            .padding(top = KptTheme.spacing.md)
             .statusBarsPadding(),
         verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
         contentPadding = PaddingValues(
@@ -229,13 +229,13 @@ private fun RegistrationScreenContent(
         }
 
         item {
-            Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
             MifosButton(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(DesignToken.sizes.inputHeight),
                 onClick = { onAction(SignUpAction.SubmitClick) },
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 enabled = state.isSubmitButtonEnabled,
             ) {
                 Text(
@@ -246,7 +246,7 @@ private fun RegistrationScreenContent(
         }
 
         item {
-            Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center,
@@ -256,7 +256,7 @@ private fun RegistrationScreenContent(
                     text = stringResource(Res.string.feature_signup_already_have_an_account),
                     style = MifosTypography.labelMedium,
                 )
-                Spacer(modifier = Modifier.width(DesignToken.spacing.extraSmall))
+                Spacer(modifier = Modifier.width(KptTheme.spacing.xs))
                 Text(
                     modifier = Modifier.clickable {
                         onAction(SignUpAction.OnNavigateToLogin)
@@ -331,13 +331,13 @@ fun MifosInputField(
     if (config.fieldType == InputFieldType.PASSWORD) {
         Column(
             modifier = modifier,
-            verticalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
         ) {
             MifosPasswordField(
                 label = stringResource(config.labelRes),
                 value = config.value,
                 onValueChange = config.onValueChange,
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 modifier = Modifier.fillMaxWidth(),
                 showPassword = config.isPasswordVisible,
                 showPasswordChange = {
@@ -374,7 +374,7 @@ fun MifosInputField(
             value = config.value,
             onValueChange = config.onValueChange,
             label = stringResource(config.labelRes),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 isError = config.errorText != null,

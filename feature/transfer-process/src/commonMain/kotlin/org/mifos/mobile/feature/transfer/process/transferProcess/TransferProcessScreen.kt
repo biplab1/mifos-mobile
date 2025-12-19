@@ -142,9 +142,9 @@ private fun TransferProcessContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large)
+            .padding(KptTheme.spacing.md)
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.large),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         MifosDetailsCard(
             keyValuePairs = mapOf(
@@ -163,7 +163,7 @@ private fun TransferProcessContent(
             onClick = {
                 onAction(TransferProcessAction.OnNavigate)
             },
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         ) {
             Text(
                 text = stringResource(Res.string.cancel),

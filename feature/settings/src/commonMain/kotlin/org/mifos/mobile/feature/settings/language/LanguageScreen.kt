@@ -93,8 +93,8 @@ internal fun LanguageScreenContent(
                 modifier = modifier
                     .fillMaxWidth()
                     .height(DesignToken.sizes.buttonHeight)
-                    .padding(horizontal = DesignToken.padding.large),
-                shape = DesignToken.shapes.medium,
+                    .padding(horizontal = KptTheme.spacing.md),
+                shape = KptTheme.shapes.medium,
                 onClick = { onAction(LanguageAction.SetLanguage(uiState.selectedLanguage)) },
             ) {
                 Text(
@@ -125,7 +125,7 @@ internal fun LanguageSelectionContent(
     onSetLanguage: (LanguageConfig) -> Unit,
 ) {
     LazyColumn(
-        modifier = modifier.padding(DesignToken.padding.large),
+        modifier = modifier.padding(KptTheme.spacing.md),
         verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
     ) {
         items(LanguageConfig.entries) {

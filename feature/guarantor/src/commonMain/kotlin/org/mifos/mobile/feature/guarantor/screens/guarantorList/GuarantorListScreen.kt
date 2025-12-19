@@ -35,7 +35,6 @@ import org.mifos.mobile.core.designsystem.component.FloatingActionButtonContent
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
@@ -149,11 +148,11 @@ private fun GuarantorListItem(
     OutlinedCard(
         colors = CardDefaults.outlinedCardColors(containerColor = KptTheme.colorScheme.background),
         modifier = modifier
-            .padding(horizontal = DesignToken.padding.large, vertical = DesignToken.padding.small)
+            .padding(horizontal = KptTheme.spacing.md, vertical = KptTheme.spacing.sm)
             .fillMaxWidth(),
         onClick = { onGuarantorClicked.invoke() },
         content = {
-            Column(modifier = Modifier.padding(DesignToken.padding.small)) {
+            Column(modifier = Modifier.padding(KptTheme.spacing.sm)) {
                 Text(
                     text = guarantor.firstname + " " + guarantor.lastname,
                     style = KptTheme.typography.bodyMedium,

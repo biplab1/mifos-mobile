@@ -31,6 +31,7 @@ import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.designsystem.utils.onClick
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun ApplyLoanBottomBar(
@@ -43,8 +44,8 @@ fun ApplyLoanBottomBar(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(DesignToken.padding.large),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+            .padding(KptTheme.spacing.md),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Row(
             modifier = Modifier
@@ -70,7 +71,7 @@ fun ApplyLoanBottomBar(
             modifier = Modifier.fillMaxWidth().height(DesignToken.sizes.inputHeight),
             onClick = onApplyClick,
             enabled = isEnabled,
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         ) {
             Text(
                 text = stringResource(Res.string.feature_apply_loan_title),

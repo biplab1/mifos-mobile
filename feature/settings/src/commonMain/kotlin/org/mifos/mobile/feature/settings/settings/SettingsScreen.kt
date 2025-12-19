@@ -156,7 +156,7 @@ internal fun SettingsScreenContent(
             ScreenUiState.Success -> {
                 Column(
                     modifier = Modifier
-                        .padding(vertical = DesignToken.padding.large)
+                        .padding(vertical = KptTheme.spacing.md)
                         .verticalScroll(rememberScrollState()),
 
                 ) {
@@ -229,10 +229,10 @@ internal fun SettingsProfileCard(
             )
         }
 
-        Spacer(modifier = Modifier.width(DesignToken.spacing.large))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.md))
 
         Column(
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = state.client?.displayName ?: "",
@@ -270,7 +270,7 @@ internal fun SettingsActions(
         ) {
             items.forEach { item ->
                 MifosActionCard(
-                    modifier = Modifier.padding(horizontal = DesignToken.padding.large),
+                    modifier = Modifier.padding(horizontal = KptTheme.spacing.md),
                     title = item.title,
                     subTitle = item.subTitle,
                     icon = item.icon,

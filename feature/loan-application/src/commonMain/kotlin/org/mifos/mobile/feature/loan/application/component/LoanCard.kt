@@ -59,7 +59,7 @@ fun LoanCard(
                     Modifier
                 },
             ),
-        shape = DesignToken.shapes.medium,
+        shape = KptTheme.shapes.medium,
         variant = CardVariant.ELEVATED,
         elevation = CardDefaults.cardElevation(defaultElevation = DesignToken.elevation.elevation),
     ) {
@@ -70,7 +70,7 @@ fun LoanCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(128.dp)
-                    .clip(DesignToken.shapes.medium),
+                    .clip(KptTheme.shapes.medium),
                 painter = painterResource(cardImage),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
@@ -89,7 +89,7 @@ fun LoanCard(
                         color = AppColors.customWhite,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.extraSmall))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.xs))
 
                     Text(
                         text = amount,
@@ -98,7 +98,7 @@ fun LoanCard(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.extraLargeIncreased))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.xl))
 
                 Text(
                     text = interestRate,
@@ -115,7 +115,7 @@ fun LoanCard(
 @Composable
 fun LoanCardPreview() {
     LoanCard(
-        modifier = Modifier.padding(DesignToken.padding.large),
+        modifier = Modifier.padding(KptTheme.spacing.md),
         cardImage = UiRes.drawable.ic_icon_dashboard,
         onClick = {},
         title = "title",
@@ -145,7 +145,7 @@ fun LoanCardCustom(
                     Modifier
                 },
             ),
-        shape = DesignToken.shapes.medium,
+        shape = KptTheme.shapes.medium,
         colors = CardDefaults.cardColors(containerColor = backgroundColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
     ) {
@@ -175,7 +175,7 @@ fun LoanCardCustom(
                     color = contentColor,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
 
                 Text(
                     text = amount,
@@ -183,7 +183,7 @@ fun LoanCardCustom(
                     color = contentColor,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                 Text(
                     text = interestRate,
@@ -199,7 +199,7 @@ fun LoanCardCustom(
 @Composable
 fun LoanCardPreviewCustom() {
     LoanCardCustom(
-        modifier = Modifier.padding(DesignToken.padding.large),
+        modifier = Modifier.padding(KptTheme.spacing.md),
         cardImage = UiRes.drawable.ic_icon_dashboard,
         onClick = {},
         title = "title",

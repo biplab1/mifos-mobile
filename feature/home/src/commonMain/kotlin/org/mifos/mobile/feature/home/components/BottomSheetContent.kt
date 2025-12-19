@@ -70,7 +70,7 @@ internal fun BottomSheetContent(
         modifier = modifier,
     ) {
         Column(
-            modifier = Modifier.padding(horizontal = DesignToken.padding.large),
+            modifier = Modifier.padding(horizontal = KptTheme.spacing.md),
             verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
         ) {
             BottomSheetIconContainer(
@@ -96,21 +96,21 @@ internal fun BottomSheetIconContainer(
                 .border(
                     1.dp,
                     KptTheme.colorScheme.secondaryContainer,
-                    DesignToken.shapes.medium,
+                    KptTheme.shapes.medium,
                 ),
             onClick = { onClick(it) },
             variant = CardVariant.OUTLINED,
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(DesignToken.padding.large),
+                modifier = Modifier.padding(KptTheme.spacing.md),
             ) {
                 Box(
                     modifier = Modifier.size(DesignToken.sizes.inputHeight)
                         .border(
                             1.dp,
                             KptTheme.colorScheme.secondaryContainer,
-                            DesignToken.shapes.medium,
+                            KptTheme.shapes.medium,
                         ),
                     contentAlignment = Alignment.Center,
                 ) {
@@ -125,8 +125,8 @@ internal fun BottomSheetIconContainer(
                 }
                 Column(
                     horizontalAlignment = Alignment.Start,
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
-                    modifier = Modifier.padding(horizontal = DesignToken.padding.large),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
+                    modifier = Modifier.padding(horizontal = KptTheme.spacing.md),
                 ) {
                     Text(
                         text = when (it) {

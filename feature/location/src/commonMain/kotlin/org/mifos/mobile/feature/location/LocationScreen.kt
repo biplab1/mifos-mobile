@@ -20,7 +20,6 @@ import mifos_mobile.feature.location.generated.resources.Res
 import mifos_mobile.feature.location.generated.resources.mifos_initiative
 import mifos_mobile.feature.location.generated.resources.mifos_location
 import org.jetbrains.compose.resources.stringResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import template.core.base.designsystem.theme.KptTheme
 
 /**
@@ -36,8 +35,8 @@ internal fun LocationsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+            .padding(KptTheme.spacing.md),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Text(
             text = stringResource(Res.string.mifos_initiative),

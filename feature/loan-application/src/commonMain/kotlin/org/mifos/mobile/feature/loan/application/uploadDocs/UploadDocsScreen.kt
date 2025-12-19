@@ -177,10 +177,10 @@ internal fun UploadDocsScreenContent(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(top = DesignToken.padding.large)
-                .padding(DesignToken.padding.large)
+                .padding(top = KptTheme.spacing.md)
+                .padding(KptTheme.spacing.md)
                 .statusBarsPadding(),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
         ) {
             UploadDocumentsSection(
                 state = state,
@@ -191,7 +191,7 @@ internal fun UploadDocsScreenContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(DesignToken.sizes.buttonHeight),
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 onClick = {
                     onAction(UploadDocsAction.NavigateToNextScreen)
                 },

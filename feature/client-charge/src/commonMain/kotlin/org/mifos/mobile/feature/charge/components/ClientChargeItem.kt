@@ -61,7 +61,7 @@ fun ClientChargeItem(
             .clickable {
                 onChargeClick()
             }
-            .padding(vertical = DesignToken.padding.large),
+            .padding(vertical = KptTheme.spacing.md),
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -79,7 +79,7 @@ fun ClientChargeItem(
                     color = KptTheme.colorScheme.background.copy(alpha = 0.3f),
                     shape = CircleShape,
                 )
-                .padding(DesignToken.padding.small),
+                .padding(KptTheme.spacing.sm),
 
         )
         Spacer(Modifier.width(DesignToken.padding.medium))
@@ -107,7 +107,7 @@ fun ClientChargeItem(
         Spacer(Modifier.width(DesignToken.padding.medium))
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Column(
                 horizontalAlignment = Alignment.End,

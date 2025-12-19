@@ -168,7 +168,7 @@ internal fun TransactionScreenContent(
                 Column(
                     Modifier
                         .fillMaxSize()
-                        .padding(DesignToken.padding.large),
+                        .padding(KptTheme.spacing.md),
                 ) {
                     if (state.data.isNotEmpty()) {
                         ActionBar(
@@ -272,7 +272,7 @@ internal fun ActionBar(
 //            modifier = Modifier.clickable {
 //            },
 //            verticalAlignment = Alignment.CenterVertically,
-//            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+//            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
 //        ) {
 //            Text(
 //                text = stringResource(Res.string.feature_transaction_statement),
@@ -295,7 +295,7 @@ internal fun ActionBar(
                 onAction(AccountTransactionAction.ToggleFilter)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = stringResource(Res.string.feature_transaction_filter),
@@ -345,8 +345,8 @@ internal fun TransactionFilters(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(DesignToken.padding.large)
-                .padding(top = DesignToken.padding.large),
+                .padding(KptTheme.spacing.md)
+                .padding(top = KptTheme.spacing.md),
         ) {
             FilterTopSection(
                 isAnyFilterSelected = state.isAnyFilterSelected,

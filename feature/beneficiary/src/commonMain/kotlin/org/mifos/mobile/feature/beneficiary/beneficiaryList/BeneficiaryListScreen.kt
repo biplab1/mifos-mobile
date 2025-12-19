@@ -198,8 +198,8 @@ fun BeneficiaryListContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = DesignToken.padding.small),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+            .padding(top = KptTheme.spacing.sm),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
     ) {
         when (state.uiState) {
             is ScreenUiState.Loading -> {
@@ -224,7 +224,7 @@ fun BeneficiaryListContent(
 
             is ScreenUiState.Empty -> {
                 Box(
-                    Modifier.fillMaxSize().padding(horizontal = DesignToken.padding.large),
+                    Modifier.fillMaxSize().padding(horizontal = KptTheme.spacing.md),
                     contentAlignment = Alignment.Center,
                 ) {
                     Column {
@@ -233,13 +233,13 @@ fun BeneficiaryListContent(
                             image = Res.drawable.ic_error_black_24dp,
                             error = Res.string.no_beneficiary_found_please_add,
                         )
-                        Spacer(Modifier.padding(DesignToken.padding.large))
+                        Spacer(Modifier.padding(KptTheme.spacing.md))
                         MifosButton(
                             modifier = Modifier.fillMaxWidth(),
                             onClick = {
                                 onAction(BeneficiaryListAction.OnAddBeneficiaryClicked)
                             },
-                            shape = DesignToken.shapes.medium,
+                            shape = KptTheme.shapes.medium,
                         ) {
                             Text(stringResource(Res.string.add_beneficiary))
                         }
@@ -249,7 +249,7 @@ fun BeneficiaryListContent(
 
             is ScreenUiState.Success -> {
                 Column(
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                 ) {
                     if (state.beneficiaries.isNotEmpty()) {
                         ActionBar(onAction = onAction)
@@ -300,7 +300,7 @@ internal fun ActionBar(
             .fillMaxWidth()
             .padding(
                 vertical = DesignToken.padding.medium,
-                horizontal = DesignToken.padding.large,
+                horizontal = KptTheme.spacing.md,
             ),
         horizontalArrangement = Arrangement.End,
     ) {
@@ -309,7 +309,7 @@ internal fun ActionBar(
                 onAction(BeneficiaryListAction.OnAddBeneficiaryClicked)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = stringResource(Res.string.add),
@@ -332,7 +332,7 @@ internal fun ActionBar(
                 onAction(BeneficiaryListAction.ToggleFilter)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = stringResource(Res.string.filter),
@@ -382,8 +382,8 @@ internal fun BeneficiaryFilters(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(DesignToken.padding.large)
-                .padding(top = DesignToken.padding.large),
+                .padding(KptTheme.spacing.md)
+                .padding(top = KptTheme.spacing.md),
         ) {
             FilterTopSection(
                 isAnyFilterSelected = state.isAnyFilterSelected,
@@ -454,8 +454,8 @@ internal fun FilterSection(
     ) {
         Column(
             modifier = Modifier.padding(
-                start = DesignToken.spacing.extraLargeIncreased,
-                end = DesignToken.spacing.small,
+                start = KptTheme.spacing.xl,
+                end = KptTheme.spacing.sm,
                 top = DesignToken.padding.medium,
             ),
             verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
@@ -473,7 +473,7 @@ internal fun FilterSection(
                     color = KptTheme.colorScheme.onBackground,
                 )
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+                    horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     if (selectedFilters.isNotEmpty()) {
@@ -520,7 +520,7 @@ internal fun FilterSection(
                                 },
                             )
 
-                            Spacer(modifier = Modifier.width(DesignToken.spacing.small))
+                            Spacer(modifier = Modifier.width(KptTheme.spacing.sm))
                             Text(
                                 text = filter ?: "",
                                 style = MifosTypography.labelMediumEmphasized,

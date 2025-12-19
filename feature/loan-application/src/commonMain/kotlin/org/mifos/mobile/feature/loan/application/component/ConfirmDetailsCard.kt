@@ -24,7 +24,6 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import template.core.base.designsystem.theme.KptTheme
 import kotlin.collections.component1
@@ -42,16 +41,16 @@ fun ConfirmDetailsCard(
             .border(
                 1.dp,
                 KptTheme.colorScheme.secondaryContainer,
-                DesignToken.shapes.medium,
+                KptTheme.shapes.medium,
             ),
-        shape = DesignToken.shapes.medium,
+        shape = KptTheme.shapes.medium,
     ) {
-        Column(modifier = Modifier.padding(DesignToken.padding.large)) {
+        Column(modifier = Modifier.padding(KptTheme.spacing.md)) {
             keyValuePairs.forEach { (key, value) ->
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = DesignToken.padding.small),
+                        .padding(vertical = KptTheme.spacing.sm),
                     horizontalArrangement = Arrangement.SpaceBetween,
                 ) {
                     Text(

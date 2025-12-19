@@ -76,15 +76,15 @@ fun AccountSummaryCard(
             .border(
                 1.dp,
                 KptTheme.colorScheme.secondaryContainer,
-                DesignToken.shapes.medium,
+                KptTheme.shapes.medium,
             ),
-        shape = DesignToken.shapes.medium,
+        shape = KptTheme.shapes.medium,
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { isExpanded = !isExpanded }
-                .padding(DesignToken.padding.large),
+                .padding(KptTheme.spacing.md),
         ) {
             Row(
                 modifier = Modifier
@@ -115,7 +115,7 @@ fun AccountSummaryCard(
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(vertical = DesignToken.padding.small),
+                                .padding(vertical = KptTheme.spacing.sm),
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Text(
@@ -148,7 +148,7 @@ private fun Account_Card_Preview() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(DesignToken.padding.large),
+                .padding(KptTheme.spacing.md),
         ) {
             AccountSummaryCard(
                 keyValuePairs = mapOf(

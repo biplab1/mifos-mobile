@@ -93,7 +93,7 @@ fun RecentTransactionScreen(
                             Text(
                                 text = "Transaction History",
                                 style = KptTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                                modifier = Modifier.padding(end = DesignToken.padding.small),
+                                modifier = Modifier.padding(end = KptTheme.spacing.sm),
                             )
                         }
                         state.selectedAccount?.let { account ->
@@ -195,13 +195,13 @@ fun TransactionItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .padding(horizontal = DesignToken.padding.large, vertical = DesignToken.padding.medium),
+            .padding(horizontal = KptTheme.spacing.md, vertical = DesignToken.padding.medium),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Column(
             horizontalAlignment = Alignment.Start,
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = if (isCredit) "CREDIT" else "DEBIT",
@@ -274,7 +274,7 @@ fun TransactionList(
                 HorizontalDivider(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = DesignToken.padding.large),
+                        .padding(horizontal = KptTheme.spacing.md),
                     color = KptTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
                 )
             }
@@ -319,7 +319,7 @@ fun TransactionFilterSheetContent(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = DesignToken.padding.large),
+            .padding(horizontal = 24.dp, vertical = KptTheme.spacing.md),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -344,7 +344,7 @@ fun TransactionFilterSheetContent(
             }
         }
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
+        HorizontalDivider(modifier = Modifier.padding(vertical = KptTheme.spacing.sm))
 
         Text(
             text = "Filter By Account :",
@@ -357,7 +357,7 @@ fun TransactionFilterSheetContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { isAccountDropdownExpanded = true },
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 border = BorderStroke(1.dp, Color.Gray.copy(alpha = 0.5f)),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 elevation = CardDefaults.cardElevation(0.dp),
@@ -365,7 +365,7 @@ fun TransactionFilterSheetContent(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(DesignToken.padding.large),
+                        .padding(KptTheme.spacing.md),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
@@ -375,7 +375,7 @@ fun TransactionFilterSheetContent(
                             style = KptTheme.typography.bodyLarge
                                 .copy(fontWeight = FontWeight.Bold),
                         )
-                        Spacer(modifier = Modifier.height(DesignToken.spacing.extraSmall))
+                        Spacer(modifier = Modifier.height(KptTheme.spacing.xs))
                         Text(
                             text = "Balance: ${selectedAccount?.accountBalance ?: "0.0"} " +
                                 (selectedAccount?.currency?.code ?: ""),

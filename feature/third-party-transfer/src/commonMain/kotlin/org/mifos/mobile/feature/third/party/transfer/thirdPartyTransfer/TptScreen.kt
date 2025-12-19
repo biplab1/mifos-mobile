@@ -151,7 +151,7 @@ internal fun TprContent(
         onNavigateBack = { },
         actions = {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
             ) {
                 // TODO : once ui/ux team gives this flow uncomment and implement
 //                Image(
@@ -212,7 +212,7 @@ internal fun TptForm(
 ) {
     Column(
         modifier = modifier
-            .padding(DesignToken.padding.large)
+            .padding(KptTheme.spacing.md)
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
     ) {
@@ -243,7 +243,7 @@ internal fun TptForm(
         )
 
         Row(
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
             modifier = Modifier
                 .align(Alignment.CenterHorizontally),
         ) {
@@ -268,7 +268,7 @@ internal fun TptForm(
             value = state.amount,
             onValueChange = { onAction(TptAction.OnAmountChanged(it)) },
             label = stringResource(Res.string.feature_tpt_label_amount),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 isError = state.amountError != null,
@@ -296,7 +296,7 @@ internal fun TptForm(
             value = state.remark,
             onValueChange = { onAction(TptAction.OnRemarksChanged(it)) },
             label = stringResource(Res.string.feature_tpt_label_remarks),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 isError = state.remarkError != null,
@@ -325,7 +325,7 @@ internal fun TptForm(
                 onAction(TptAction.OnMakeTransferClicked)
             },
             enabled = state.isEnabled,
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         ) {
             Text(
                 text = stringResource(Res.string.feature_tpt_transfer_button),

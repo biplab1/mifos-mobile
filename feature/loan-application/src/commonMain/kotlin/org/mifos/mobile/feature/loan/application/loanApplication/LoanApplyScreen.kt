@@ -179,15 +179,15 @@ internal fun LoanAccountContent(
             ScreenUiState.Success -> {
                 Column(
                     modifier = Modifier
-                        .padding(DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
                         .verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     MifosOutlinedTextField(
                         value = state.applicantName,
                         onValueChange = { onAction(LoanApplicationAction.ApplicantNameChange(it)) },
                         label = stringResource(Res.string.feature_apply_loan_label_applicant_name),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                         textStyle = MifosTypography.bodyLarge,
                         config = MifosTextFieldConfig(
                             isError = state.applicantNameError != null,
@@ -231,7 +231,7 @@ internal fun LoanAccountContent(
                                 )
                             },
                         ),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                     )
 
                     MifosOutlinedTextField(
@@ -246,7 +246,7 @@ internal fun LoanAccountContent(
                                 imeAction = ImeAction.Done,
                             ),
                         ),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                     )
 
                     MifosButton(
@@ -255,7 +255,7 @@ internal fun LoanAccountContent(
                         onClick = {
                             onAction(LoanApplicationAction.NavigateToConfirmDetails)
                         },
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                     ) {
                         Text(
                             text = stringResource(Res.string.feature_apply_loan_button_continue),

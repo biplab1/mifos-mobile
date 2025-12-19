@@ -186,8 +186,8 @@ internal fun LoanAccountDetailsContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(DesignToken.padding.large),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                        .padding(KptTheme.spacing.md),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     AccountDetailsGrid(
                         details = state.displayItems,
@@ -277,7 +277,7 @@ internal fun SavingsAccountActions(
     onActionClick: (String) -> Unit,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Text(
             text = stringResource(Res.string.feature_account_details_action),

@@ -207,9 +207,9 @@ internal fun SavingsFillApplicationContent(
             ScreenUiState.Success -> {
                 Column(
                     modifier = Modifier
-                        .padding(DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
                         .verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     Text(
                         text = stringResource(Res.string.feature_apply_savings_label_details),
@@ -229,7 +229,7 @@ internal fun SavingsFillApplicationContent(
                         value = state.minOpeningBalance,
                         onValueChange = { onAction(SavingsApplicationAction.MinimumOpeningBalanceChange(it)) },
                         label = stringResource(Res.string.feature_apply_savings_label_minimum_opening_balance),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                         textStyle = MifosTypography.bodyLarge,
                         config = MifosTextFieldConfig(
                             isError = state.minOpeningBalanceError != null,
@@ -251,7 +251,7 @@ internal fun SavingsFillApplicationContent(
                         value = state.frequency,
                         onValueChange = { onAction(SavingsApplicationAction.FrequencyChange(it)) },
                         label = stringResource(Res.string.feature_apply_savings_label_frequency),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                         textStyle = MifosTypography.bodyLarge,
                         config = MifosTextFieldConfig(
                             isError = state.frequencyError != null,
@@ -308,7 +308,7 @@ internal fun SavingsFillApplicationContent(
                         onClick = {
                             onAction(SavingsApplicationAction.NavigateToAuthentication)
                         },
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                     ) {
                         Text(
                             text = stringResource(Res.string.feature_button_next),

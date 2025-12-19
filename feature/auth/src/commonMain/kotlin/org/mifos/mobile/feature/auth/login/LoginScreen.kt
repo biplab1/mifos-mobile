@@ -177,7 +177,7 @@ private fun LoginScreenContent(
         modifier = modifier
             .fillMaxSize()
             .padding(top = 100.dp)
-            .padding(DesignToken.padding.large)
+            .padding(KptTheme.spacing.md)
             .pointerInput(Unit) {
                 detectTapGestures(
                     onTap = {
@@ -245,7 +245,7 @@ fun InputBox(
                 onAction(LoginAction.UsernameChanged(it))
             },
             label = stringResource(Res.string.feature_sign_in_username_label),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 isError = state.isError,
@@ -270,7 +270,7 @@ fun InputBox(
             onValueChange = {
                 onAction(LoginAction.PasswordChanged(it))
             },
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             modifier = Modifier.fillMaxWidth(),
             showPassword = state.isPasswordVisible,
             showPasswordChange = {
@@ -297,7 +297,7 @@ fun InputBox(
             onClick = {
                 onAction(LoginAction.LoginClicked)
             },
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         ) {
             Text(
                 text = stringResource(Res.string.feature_sign_in_Sign_in),
@@ -316,7 +316,7 @@ fun InputBox(
             )
 
             Spacer(
-                modifier = Modifier.width(DesignToken.spacing.extraSmall),
+                modifier = Modifier.width(KptTheme.spacing.xs),
             )
 
             Text(

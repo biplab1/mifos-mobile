@@ -59,7 +59,7 @@ internal fun BeneficiaryDetailContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large)
+            .padding(KptTheme.spacing.md)
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
     ) {
@@ -145,7 +145,7 @@ internal fun ActionBar(
                 onAction(BeneficiaryDetailAction.ShowDeleteConfirmation)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = "Delete",
@@ -168,7 +168,7 @@ internal fun ActionBar(
                 onAction(BeneficiaryDetailAction.OnUpdateBeneficiary)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = "Update",

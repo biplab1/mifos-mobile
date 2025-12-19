@@ -64,7 +64,7 @@ fun MifosLogoutDialog(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(DesignToken.sizes.buttonHeight),
-                        shape = DesignToken.shapes.medium,
+                        shape = KptTheme.shapes.medium,
                         onClick = visibilityState.onLogout,
                     ) {
                         Text(
@@ -77,7 +77,7 @@ fun MifosLogoutDialog(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(
-                            space = DesignToken.spacing.extraSmall,
+                            space = KptTheme.spacing.xs,
                             alignment = Alignment.CenterHorizontally,
                         ),
                     ) {
@@ -119,7 +119,7 @@ fun MifosLogoutDialog(
                 )
             },
             containerColor = Color.White,
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         )
     }
 }

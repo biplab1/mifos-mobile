@@ -63,6 +63,7 @@ import org.mifos.mobile.core.qr.CodeType
 import org.mifos.mobile.core.qr.QrScannerWithPermissions
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun QrCodeReaderScreen(
@@ -144,8 +145,8 @@ private fun QrCodeReaderContent(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(DesignToken.padding.large)
-                .padding(top = DesignToken.padding.large),
+                .padding(KptTheme.spacing.md)
+                .padding(top = KptTheme.spacing.md),
         ) {
             Column(
                 modifier = Modifier
@@ -166,9 +167,9 @@ private fun QrCodeReaderContent(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
-                        .clip(DesignToken.shapes.medium)
+                        .clip(KptTheme.shapes.medium)
                         .drawQrCorners()
-                        .border(1.dp, Color.Transparent, DesignToken.shapes.medium),
+                        .border(1.dp, Color.Transparent, KptTheme.shapes.medium),
                     contentAlignment = Alignment.Center,
                 ) {
                     QrScannerWithPermissions(
@@ -184,18 +185,18 @@ private fun QrCodeReaderContent(
                         modifier = Modifier
                             .align(Alignment.BottomCenter)
                             .fillMaxWidth()
-                            .padding(DesignToken.padding.small),
-                        shape = DesignToken.shapes.medium,
+                            .padding(KptTheme.spacing.sm),
+                        shape = KptTheme.shapes.medium,
                         variant = CardVariant.OUTLINED,
                     ) {
                         Column(
-                            modifier = Modifier.padding(DesignToken.padding.large),
+                            modifier = Modifier.padding(KptTheme.spacing.md),
                             horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+                            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+                                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                             ) {
                                 Icon(
                                     modifier = Modifier.size(20.dp),
@@ -226,7 +227,7 @@ private fun QrCodeReaderContent(
                     .align(Alignment.BottomCenter)
                     .fillMaxWidth()
                     .height(DesignToken.sizes.buttonHeight),
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
             ) {
                 Text(
                     text = stringResource(Res.string.feature_qr_upload),

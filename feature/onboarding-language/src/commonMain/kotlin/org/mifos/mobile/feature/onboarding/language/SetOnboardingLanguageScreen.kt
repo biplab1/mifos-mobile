@@ -85,9 +85,9 @@ internal fun OnboardingLanguageScreenContent(
                 MifosButton(
                     modifier = modifier
                         .fillMaxWidth()
-                        .padding(DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
                         .height(DesignToken.sizes.buttonHeight),
-                    shape = DesignToken.shapes.medium,
+                    shape = KptTheme.shapes.medium,
                     onClick = { onAction(OnboardingLanguageAction.SetLanguage(selectedLanguage)) },
                 ) {
                     Text(
@@ -107,7 +107,7 @@ internal fun OnboardingLanguageScreenContent(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = DesignToken.padding.large),
+                    .padding(horizontal = KptTheme.spacing.md),
             ) {
                 Image(
                     modifier = Modifier.height(DesignToken.sizes.avatarMedium).width(165.dp),
@@ -135,7 +135,7 @@ internal fun OnboardingLanguageScreenContent(
                     color = KptTheme.colorScheme.secondary,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                 LanguageSelectionContent(
                     selectedLanguage = selectedLanguage,

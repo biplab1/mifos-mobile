@@ -169,7 +169,7 @@ internal fun SavingsAccountContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large),
+            .padding(KptTheme.spacing.md),
     ) {
         when (state.uiState) {
             ScreenUiState.Loading -> {
@@ -200,7 +200,7 @@ internal fun SavingsAccountContent(
             }
 
             ScreenUiState.Success -> {
-                Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                 MifosDashboardCard(
                     isSingleLine = true,
@@ -272,7 +272,7 @@ internal fun SavingsAccountContent(
                             .fillMaxSize()
                             .weight(1f),
                     ) {
-                        item { Spacer(modifier = Modifier.height(DesignToken.spacing.small)) }
+                        item { Spacer(modifier = Modifier.height(KptTheme.spacing.sm)) }
 
                         items(accounts) { account ->
                             val color = when (account.status?.value) {

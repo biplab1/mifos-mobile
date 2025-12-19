@@ -125,7 +125,7 @@ internal fun AppInfoContent(
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+                            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                         ) {
                             Image(
                                 painter = painterResource(Res.drawable.mifos_icon),
@@ -155,7 +155,7 @@ internal fun AppInfoContent(
                         Text(
                             text = stringResource(Res.string.feature_settings_appinfo_app_name),
                             style = MifosTypography.titleMediumEmphasized,
-                            modifier = Modifier.padding(top = DesignToken.padding.small),
+                            modifier = Modifier.padding(top = KptTheme.spacing.sm),
                             color = AppColors.customBlack,
                         )
 
@@ -168,7 +168,7 @@ internal fun AppInfoContent(
                                     text = point,
                                     style = MifosTypography.bodySmall,
                                     modifier = Modifier.padding(
-                                        vertical = DesignToken.padding.small,
+                                        vertical = KptTheme.spacing.sm,
                                     ),
                                     color = AppColors.customBlack,
                                 )

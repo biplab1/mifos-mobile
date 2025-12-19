@@ -95,7 +95,7 @@ internal fun ThemeScreenContent(
         },
     ) {
         Column(
-            modifier = Modifier.padding(DesignToken.padding.large),
+            modifier = Modifier.padding(KptTheme.spacing.md),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
         ) {
@@ -118,7 +118,7 @@ internal fun ThemeScreenContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(DesignToken.sizes.buttonHeight),
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 onClick = {
                     onAction(ThemeAction.SetTheme)
                 },

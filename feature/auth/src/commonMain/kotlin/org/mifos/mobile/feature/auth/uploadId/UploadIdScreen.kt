@@ -152,8 +152,8 @@ internal fun UploadIdScreenContent(
             modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(top = DesignToken.padding.large)
-                .padding(DesignToken.padding.large)
+                .padding(top = KptTheme.spacing.md)
+                .padding(KptTheme.spacing.md)
                 .statusBarsPadding(),
         ) {
             Text(
@@ -247,7 +247,7 @@ internal fun InputForm(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(DesignToken.sizes.buttonHeight),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             text = {
                 Text(
                     text = stringResource(Res.string.feature_common_submit),
@@ -263,7 +263,7 @@ internal fun InputForm(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .padding(bottom = DesignToken.padding.medium),
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
         ) {
             Text(
                 text = stringResource(Res.string.feature_upload_id_edit_prompt),
@@ -331,7 +331,7 @@ private fun MifosTextFieldWithError(
         value = value,
         label = label,
         onValueChange = onValueChange,
-        shape = DesignToken.shapes.medium,
+        shape = KptTheme.shapes.medium,
         textStyle = MifosTypography.bodyLarge,
         colors = OutlinedTextFieldDefaults.colors(
             focusedBorderColor = KptTheme.colorScheme.secondaryContainer,

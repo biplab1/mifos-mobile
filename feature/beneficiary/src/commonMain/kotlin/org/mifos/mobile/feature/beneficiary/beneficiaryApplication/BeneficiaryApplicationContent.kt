@@ -69,8 +69,8 @@ internal fun BeneficiaryApplicationContent(
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(
-                horizontal = DesignToken.padding.large,
-                vertical = DesignToken.padding.extraLargeIncreased,
+                horizontal = KptTheme.spacing.md,
+                vertical = KptTheme.spacing.xl,
             ),
     ) {
         MifosOutlinedTextField(
@@ -151,7 +151,7 @@ internal fun BeneficiaryApplicationContent(
             ),
         )
 
-        Spacer(Modifier.height(DesignToken.padding.large))
+        Spacer(Modifier.height(KptTheme.spacing.md))
 
         MifosButton(
             modifier = Modifier
@@ -166,7 +166,7 @@ internal fun BeneficiaryApplicationContent(
             enabled = state.isEnabled,
         )
 
-        Spacer(Modifier.height(DesignToken.padding.extraLargeIncreased))
+        Spacer(Modifier.height(KptTheme.spacing.xl))
 
         if (state.beneficiaryState == BeneficiaryState.CREATE_MANUAL) {
             Text(

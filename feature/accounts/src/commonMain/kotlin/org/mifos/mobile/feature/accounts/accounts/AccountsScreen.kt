@@ -53,6 +53,8 @@ import org.mifos.mobile.feature.accounts.model.FilterType
 import org.mifos.mobile.feature.loanaccount.loanAccount.LoanAccountScreen
 import org.mifos.mobile.feature.savingsaccount.savingsAccount.SavingsAccountScreen
 import org.mifos.mobile.feature.shareaccount.shareAccount.ShareAccountScreen
+import template.core.base.designsystem.theme.KptTheme
+
 /**
  * Composable function that displays the Accounts Screen.
  *
@@ -145,8 +147,8 @@ internal fun SavingsAccountFilters(
         modifier = modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(DesignToken.padding.large)
-            .padding(top = DesignToken.padding.large),
+            .padding(KptTheme.spacing.md)
+            .padding(top = KptTheme.spacing.md),
     ) {
         FilterTopSection(
             isAnyFilterSelected = state.isAnyFilterSelected,

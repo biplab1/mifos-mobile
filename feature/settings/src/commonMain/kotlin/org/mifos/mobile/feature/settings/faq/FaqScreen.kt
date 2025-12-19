@@ -130,9 +130,9 @@ private fun FaqContent(
         if (faqArrayList.isNotEmpty()) {
             LazyColumn(
                 modifier = Modifier.weight(1f).fillMaxWidth()
-                    .padding(horizontal = DesignToken.padding.large)
+                    .padding(horizontal = KptTheme.spacing.md)
                     .padding(top = DesignToken.padding.extraLarge),
-                verticalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+                verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
             ) {
                 itemsIndexed(items = faqArrayList) { index, faqItem ->
                     FaqItemHolder(
@@ -153,7 +153,7 @@ private fun FaqContent(
                     text = stringResource(Res.string.feature_settings_faq_doubt),
                     style = MifosTypography.bodySmall,
                 )
-                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
                 Text(
                     text = stringResource(Res.string.feature_settings_faq_contact_us),
                     style = MifosTypography.bodySmall,

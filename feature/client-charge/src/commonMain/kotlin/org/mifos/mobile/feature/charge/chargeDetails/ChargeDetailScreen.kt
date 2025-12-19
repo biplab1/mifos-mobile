@@ -93,7 +93,7 @@ internal fun ChargeDetailScreen(
                     .verticalScroll(rememberScrollState())
                     .padding(
                         vertical = DesignToken.padding.extraLarge,
-                        horizontal = DesignToken.padding.large,
+                        horizontal = KptTheme.spacing.md,
                     ),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
@@ -155,7 +155,7 @@ fun ChargeDetailsPaidComponent(
             style = KptTheme.typography.bodySmall,
             textAlign = TextAlign.Center,
         )
-        Spacer(Modifier.height(DesignToken.padding.small))
+        Spacer(Modifier.height(KptTheme.spacing.sm))
         if (paidOn.isNotEmpty()) {
             Text(
                 text = stringResource(Res.string.paid_on, paidOn),
@@ -189,12 +189,12 @@ fun ChargeDetailsUnPaidComponent(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(DesignToken.sizes.buttonHeight),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             onClick = onPayOutStanding,
         ) {
             Text(stringResource(Res.string.pay_outstanding))
         }
-        Spacer(Modifier.height(DesignToken.padding.large))
+        Spacer(Modifier.height(KptTheme.spacing.md))
         if (amountPaidOn.isNotEmpty()) {
             Text(
                 text = stringResource(Res.string.partial_amount_paid_on, amountPaidOn),

@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun TermsAndConditionItem(
@@ -29,7 +29,7 @@ fun TermsAndConditionItem(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
     ) {
         Text(
             text = stringResource(title),
@@ -40,6 +40,6 @@ fun TermsAndConditionItem(
             text = stringResource(description),
             style = MifosTypography.bodySmall,
         )
-        Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
     }
 }

@@ -149,8 +149,8 @@ internal fun OptAuthScreenContent(
             ScreenUiState.Success -> {
                 Column(
                     modifier = Modifier.fillMaxSize()
-                        .padding(DesignToken.padding.large)
-                        .padding(top = DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
+                        .padding(top = KptTheme.spacing.md)
                         .statusBarsPadding(),
 
                 ) {
@@ -202,7 +202,7 @@ internal fun OtpInputForm(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         if (state.nextRoute != Constants.SET_PASSWORD) {
             MifosOutlinedTextField(
@@ -211,7 +211,7 @@ internal fun OtpInputForm(
                     onAction(OtpAuthAction.OnRequestIdChange(it))
                 },
                 label = stringResource(Res.string.feature_otp_request_id_label),
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
                 textStyle = MifosTypography.bodyLarge,
                 config = MifosTextFieldConfig(
                     keyboardOptions = KeyboardOptions(
@@ -240,7 +240,7 @@ internal fun OtpInputForm(
                 onAction(OtpAuthAction.OnOtpChange(it))
             },
             label = stringResource(Res.string.feature_otp_authentication_code_label),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 keyboardOptions = KeyboardOptions(
@@ -276,7 +276,7 @@ internal fun OtpInputForm(
                 onClick = {
                     onAction(OtpAuthAction.OnCancelClick)
                 },
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
             ) {
                 Text(
                     text = stringResource(Res.string.feature_common_cancel),
@@ -292,7 +292,7 @@ internal fun OtpInputForm(
                     onAction(OtpAuthAction.OnNextClick)
                 },
                 enabled = state.isNextButtonEnabled,
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
             ) {
                 Text(
                     text = stringResource(Res.string.feature_common_next),
@@ -312,7 +312,7 @@ internal fun OtpInputForm(
             )
 
             Spacer(
-                modifier = Modifier.width(DesignToken.spacing.extraSmall),
+                modifier = Modifier.width(KptTheme.spacing.xs),
             )
 
             Text(
@@ -332,7 +332,7 @@ internal fun OtpInputForm(
 internal fun Otp_Auth_Preview() {
     MifosMobileTheme {
         Column(
-            modifier = Modifier.padding(DesignToken.padding.large),
+            modifier = Modifier.padding(KptTheme.spacing.md),
         ) {
             OptAuthScreenContent(
                 state = OtpAuthState(dialogState = null),

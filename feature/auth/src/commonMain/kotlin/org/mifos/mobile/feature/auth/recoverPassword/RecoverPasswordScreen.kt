@@ -120,8 +120,8 @@ internal fun RecoverPasswordScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(DesignToken.padding.large)
-                        .padding(top = DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
+                        .padding(top = KptTheme.spacing.md)
                         .statusBarsPadding(),
                 ) {
                     Text(
@@ -162,7 +162,7 @@ internal fun ForgotPasswordInputBox(
     onAction: (RecoverPasswordAction) -> Unit,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         MifosOutlinedTextField(
             value = state.phoneNumber,
@@ -170,7 +170,7 @@ internal fun ForgotPasswordInputBox(
                 onAction(RecoverPasswordAction.OnPhoneNumberChange(it))
             },
             label = stringResource(Res.string.feature_recover_now_phone_number_label),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 keyboardOptions = KeyboardOptions(
@@ -198,7 +198,7 @@ internal fun ForgotPasswordInputBox(
                 onAction(RecoverPasswordAction.OnEmailChange(it))
             },
             label = stringResource(Res.string.feature_recover_now_email_label),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             textStyle = MifosTypography.bodyLarge,
             config = MifosTextFieldConfig(
                 isError = state.emailError != null,
@@ -223,7 +223,7 @@ internal fun ForgotPasswordInputBox(
             onClick = {
                 onAction(RecoverPasswordAction.OnRecoverClicked)
             },
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
         ) {
             Text(
                 text = stringResource(Res.string.feature_recover_now_title),

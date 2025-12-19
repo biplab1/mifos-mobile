@@ -182,8 +182,8 @@ internal fun SavingsAccountDetailsContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(DesignToken.padding.large),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                        .padding(KptTheme.spacing.md),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     ActionBar(
                         isUpdatable = state.isUpdatable,
@@ -244,7 +244,7 @@ internal fun ActionBar(
                 onAction(SavingsAccountDetailsAction.OnUpdateAccount)
             },
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
         ) {
             Text(
                 text = stringResource(Res.string.feature_account_action_update),
@@ -342,7 +342,7 @@ internal fun SavingsAccountActions(
     onActionClick: (String) -> Unit,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Text(
             text = "Actions",

@@ -21,7 +21,6 @@ import mifos_mobile.feature.guarantor.generated.resources.first_name
 import mifos_mobile.feature.guarantor.generated.resources.guarantor_type
 import mifos_mobile.feature.guarantor.generated.resources.last_name
 import org.jetbrains.compose.resources.stringResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.ui.component.MifosTextTitleDescDoubleLine
 import template.core.base.designsystem.theme.KptTheme
@@ -34,7 +33,7 @@ internal fun GuarantorDetailContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large),
+            .padding(KptTheme.spacing.md),
     ) {
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.first_name),
@@ -42,7 +41,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
+        HorizontalDivider(modifier = Modifier.padding(vertical = KptTheme.spacing.sm))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.last_name),
@@ -50,7 +49,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
+        HorizontalDivider(modifier = Modifier.padding(vertical = KptTheme.spacing.sm))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.city),
@@ -58,7 +57,7 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
+        HorizontalDivider(modifier = Modifier.padding(vertical = KptTheme.spacing.sm))
 
         MifosTextTitleDescDoubleLine(
             title = stringResource(Res.string.guarantor_type),
@@ -66,6 +65,6 @@ internal fun GuarantorDetailContent(
             descriptionStyle = KptTheme.typography.bodyLarge,
         )
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = DesignToken.padding.small))
+        HorizontalDivider(modifier = Modifier.padding(vertical = KptTheme.spacing.sm))
     }
 }

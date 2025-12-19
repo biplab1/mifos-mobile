@@ -104,12 +104,12 @@ internal fun AboutScreenContent(
                 Column(
                     Modifier
                         .fillMaxWidth()
-                        .padding(DesignToken.padding.extraLargeIncreased),
+                        .padding(KptTheme.spacing.xl),
                     verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(DesignToken.padding.small),
+                        horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                     ) {
                         Image(
                             painter = painterResource(Res.drawable.mifos_icon),
@@ -140,7 +140,7 @@ internal fun AboutScreenContent(
                         text = stringResource(Res.string.feature_settings_about_what_does_mifos_do),
                         style = MifosTypography.titleSmallEmphasized,
                         color = AppColors.customBlack,
-                        modifier = Modifier.padding(top = DesignToken.padding.small),
+                        modifier = Modifier.padding(top = KptTheme.spacing.sm),
                     )
 
                     Column {

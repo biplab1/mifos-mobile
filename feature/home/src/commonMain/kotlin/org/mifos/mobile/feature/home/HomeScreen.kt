@@ -130,7 +130,7 @@ internal fun HomeContent(
         onNavigateBack = {},
         actions = {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
             ) {
                 // TODO : once ui/ux team gives this flow uncomment and implement
 //                Image(
@@ -171,9 +171,9 @@ internal fun HomeContent(
                 Column(
                     modifier = Modifier
                         .verticalScroll(rememberScrollState())
-                        .padding(DesignToken.padding.large),
+                        .padding(KptTheme.spacing.md),
                 ) {
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
                     Text(
                         text = stringResource(
                             Res.string.feature_home_greet,
@@ -183,7 +183,7 @@ internal fun HomeContent(
                         color = KptTheme.colorScheme.onSurface,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                     if (state.isAccountsPresent) {
                         MifosDashboardCard(
@@ -209,7 +209,7 @@ internal fun HomeContent(
                         color = KptTheme.colorScheme.onSurface,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                     ServiceBox(
                         items = state.items,
@@ -261,8 +261,8 @@ internal fun ServiceItemCard(
 ) {
     Column(
         modifier = modifier
-            .padding(vertical = DesignToken.padding.small),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+            .padding(vertical = KptTheme.spacing.sm),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Box(
@@ -276,7 +276,7 @@ internal fun ServiceItemCard(
                     .border(
                         1.dp,
                         KptTheme.colorScheme.secondaryContainer,
-                        DesignToken.shapes.medium,
+                        KptTheme.shapes.medium,
                     )
                     .padding(DesignToken.padding.medium + 2.dp),
                 imageVector = icon,

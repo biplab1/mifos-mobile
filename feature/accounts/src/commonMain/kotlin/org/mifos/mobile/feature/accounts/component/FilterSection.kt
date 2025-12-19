@@ -76,8 +76,8 @@ internal fun FilterSection(
     ) {
         Column(
             modifier = Modifier.padding(
-                start = DesignToken.spacing.extraLargeIncreased,
-                end = DesignToken.spacing.small,
+                start = KptTheme.spacing.xl,
+                end = KptTheme.spacing.sm,
                 top = DesignToken.padding.medium,
             ),
             verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
@@ -95,7 +95,7 @@ internal fun FilterSection(
                     color = KptTheme.colorScheme.onBackground,
                 )
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraSmall),
+                    horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     if (filtersSelected != 0) {
@@ -198,7 +198,7 @@ fun FilterCheckboxUI(
             )
         }
 
-        Spacer(modifier = Modifier.width(DesignToken.spacing.small))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.sm))
         Text(
             text = stringResource(statusLabel),
             style = MifosTypography.labelMediumEmphasized,

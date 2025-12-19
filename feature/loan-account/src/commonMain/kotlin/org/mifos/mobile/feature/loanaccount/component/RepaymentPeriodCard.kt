@@ -84,12 +84,12 @@ fun RepaymentScheduleItem(
             .border(
                 1.dp,
                 KptTheme.colorScheme.secondaryContainer,
-                DesignToken.shapes.medium,
+                KptTheme.shapes.medium,
             ),
     ) {
         Row(
             modifier = Modifier
-                .padding(DesignToken.padding.large)
+                .padding(KptTheme.spacing.md)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,

@@ -46,12 +46,12 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosLoadingDialog
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextField
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorApplicationPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorType
 import org.mifos.mobile.core.ui.component.MifosDropDownTextField
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun AddGuarantorScreen(
@@ -149,8 +149,8 @@ private fun AddGuarantorContent(
     Column(
         modifier = modifier
             .verticalScroll(state = scrollState)
-            .padding(horizontal = DesignToken.padding.large)
-            .padding(bottom = DesignToken.padding.large),
+            .padding(horizontal = KptTheme.spacing.md)
+            .padding(bottom = KptTheme.spacing.md),
     ) {
         MifosDropDownTextField(
             optionsList = guarantorTypeOptions.filter { it.id == 3L }.mapNotNull { it.value },

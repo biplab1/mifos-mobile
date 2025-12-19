@@ -112,8 +112,8 @@ private fun QrCodeDisplayContent(
     Box(
         modifier = modifier
             .padding(
-                horizontal = DesignToken.padding.large,
-                vertical = DesignToken.padding.extraLargeIncreased,
+                horizontal = KptTheme.spacing.md,
+                vertical = KptTheme.spacing.xl,
             )
             .fillMaxSize(),
     ) {

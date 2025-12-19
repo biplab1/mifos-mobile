@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.attafitamim.krop.core.crop.CropError
 import com.attafitamim.krop.core.crop.CropperLoading
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import template.core.base.designsystem.theme.KptTheme
 
 @Composable
@@ -60,7 +59,7 @@ fun LoadingDialog(
                 Column(
                     verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = modifier.padding(DesignToken.padding.large),
+                    modifier = modifier.padding(KptTheme.spacing.md),
                 ) {
                     CircularProgressIndicator()
                     Text(text = status.getMessage())

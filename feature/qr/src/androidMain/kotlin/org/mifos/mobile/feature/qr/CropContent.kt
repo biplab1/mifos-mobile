@@ -63,7 +63,7 @@ fun CropContent(
         contentAlignment = Alignment.Center,
     ) {
         Column(
-            modifier = modifier.padding(DesignToken.padding.large),
+            modifier = modifier.padding(KptTheme.spacing.md),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
@@ -82,7 +82,7 @@ fun CropContent(
             MifosButton(
                 modifier = Modifier.fillMaxWidth().height(DesignToken.sizes.inputHeight),
                 onClick = onPick,
-                shape = DesignToken.shapes.medium,
+                shape = KptTheme.shapes.medium,
             ) {
                 Text(
                     text = "Choose Image",

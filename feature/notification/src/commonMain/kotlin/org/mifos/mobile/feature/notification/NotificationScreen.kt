@@ -44,7 +44,6 @@ import org.mifos.mobile.core.common.DateHelper
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextButton
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.MifosNotification
 import org.mifos.mobile.core.ui.component.EmptyDataView
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
@@ -215,8 +214,8 @@ private fun NotificationItem(
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.padding(DesignToken.padding.small),
-        horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+        modifier = modifier.padding(KptTheme.spacing.sm),
+        horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Icon(
             painter = painterResource(Res.drawable.ic_notifications),

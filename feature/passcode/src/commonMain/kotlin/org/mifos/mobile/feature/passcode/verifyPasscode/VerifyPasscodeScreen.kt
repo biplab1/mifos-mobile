@@ -93,7 +93,7 @@ private fun VerifyPasscodeScreenContent(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(DesignToken.padding.large)
+                    .padding(KptTheme.spacing.md)
                     .weight(1f),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -106,7 +106,7 @@ private fun VerifyPasscodeScreenContent(
                             color = KptTheme.colorScheme.primary.copy(alpha = 0.2f),
                             shape = CircleShape,
                         )
-                        .padding(DesignToken.padding.small),
+                        .padding(KptTheme.spacing.sm),
                     tint = KptTheme.colorScheme.primary,
                 )
 
@@ -118,7 +118,7 @@ private fun VerifyPasscodeScreenContent(
                     color = KptTheme.colorScheme.onBackground,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.small))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.sm))
 
                 Text(
                     text = stringResource(Res.string.feature_passcode_authenticate_tip),
@@ -127,9 +127,9 @@ private fun VerifyPasscodeScreenContent(
                     textAlign = TextAlign.Center,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.extraLargeIncreased))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.xl))
 
-                Row(horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.large)) {
+                Row(horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.md)) {
                     repeat(state.maxDigits) { index ->
                         val filled = index < state.filledDots
                         val color = when {
@@ -190,14 +190,14 @@ fun NumericKeyboard(
         modifier = modifier
             .fillMaxWidth()
             .background(KptTheme.colorScheme.surface)
-            .padding(DesignToken.padding.large),
+            .padding(KptTheme.spacing.md),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
     ) {
         layout.forEach { row ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
             ) {
                 row.forEach { key ->
                     when (key) {
@@ -291,7 +291,7 @@ fun DigitKeyButton(
         contentAlignment = Alignment.Center,
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.small),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(

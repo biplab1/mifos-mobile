@@ -173,7 +173,7 @@ internal fun LoanAccountContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.large),
+            .padding(KptTheme.spacing.md),
     ) {
         when (state.uiState) {
             ScreenUiState.Loading -> {
@@ -204,7 +204,7 @@ internal fun LoanAccountContent(
             }
 
             ScreenUiState.Success -> {
-                Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
                 MifosDashboardCard(
                     isVisible = state.isAmountVisible,
@@ -281,7 +281,7 @@ internal fun LoanAccountContent(
                             .fillMaxSize()
                             .weight(1f),
                     ) {
-                        item { Spacer(modifier = Modifier.height(DesignToken.spacing.small)) }
+                        item { Spacer(modifier = Modifier.height(KptTheme.spacing.sm)) }
                         items(state.loanAccounts.orEmpty()) { account ->
                             val color = when (account.status?.value) {
                                 LoanStatus.ACTIVE.status -> AppColors.customEnable

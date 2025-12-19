@@ -42,6 +42,7 @@ import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosSuccessDialog
 import org.mifos.mobile.core.ui.component.SuccessDialogState
 import org.mifos.mobile.core.ui.utils.EventsEffect
+import template.core.base.designsystem.theme.KptTheme
 
 /**
  * A stateful composable that manages the "Update Passcode" screen.
@@ -106,7 +107,7 @@ internal fun UpdatePasscodeScreen(
         PasscodeScreenContent(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = DesignToken.padding.large)
+                .padding(horizontal = KptTheme.spacing.md)
                 .statusBarsPadding(),
             passcodeData = state,
             onAction = onAction,

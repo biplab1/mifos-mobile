@@ -189,9 +189,9 @@ internal fun AccountUpdateScreenContent(
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(DesignToken.padding.large)
+                        .padding(KptTheme.spacing.md)
                         .padding(top = DesignToken.padding.medium),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     MifosDetailsCard(
                         keyValuePairs = state.details,
@@ -222,7 +222,7 @@ internal fun AccountUpdateScreenContent(
                             },
 
                             enabled = state.selectedProductId != null,
-                            shape = DesignToken.shapes.medium,
+                            shape = KptTheme.shapes.medium,
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = KptTheme.colorScheme.primary,
                             ),
@@ -251,7 +251,7 @@ internal fun AccountUpdateScreenContent(
 private fun Account_Update_Preview() {
     MifosMobileTheme {
         Column(
-            modifier = Modifier.fillMaxSize().padding(DesignToken.padding.large),
+            modifier = Modifier.fillMaxSize().padding(KptTheme.spacing.md),
         ) {
             AccountUpdateScreenContent(
                 state = AccountUpdateState(clientId = 1, accountId = -1L, dialogState = null),
