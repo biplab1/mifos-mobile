@@ -25,7 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import mifos_mobile.feature.settings.generated.resources.Res
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_logo_content_description
@@ -184,7 +183,7 @@ internal fun AppInfoContent(
                             contentDescription =
                             stringResource(Res.string.feature_settings_appinfo_logo_content_description),
                             modifier = Modifier
-                                .size(150.dp)
+                                .size(DesignToken.sizes.imageDp150)
                                 .align(Alignment.BottomEnd).zIndex(0f),
                         )
                     }

@@ -28,7 +28,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.alexzhirkevich.qrose.rememberQrCodePainter
 import mifos_mobile.feature.qr.generated.resources.Res
@@ -142,7 +141,7 @@ private fun QrCodeDisplayContent(
                 painter = painter,
                 contentDescription = null,
                 modifier = Modifier
-                    .size(212.dp),
+                    .size(DesignToken.sizes.imageDp212),
             )
 
             Spacer(Modifier.height(DesignToken.padding.extraExtraLarge))

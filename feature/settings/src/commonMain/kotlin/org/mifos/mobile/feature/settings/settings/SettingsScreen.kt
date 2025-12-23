@@ -32,7 +32,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.collections.immutable.ImmutableList
 import mifos_mobile.feature.settings.generated.resources.Res
@@ -182,7 +181,7 @@ internal fun SettingsScreenContent(
                         HorizontalDivider(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(0.99997.dp),
+                                .height(DesignToken.strokes.thin),
                         )
                         SettingsActions(state.settingsItems) {
                             if (it.route == Constants.LOGOUT) {
@@ -220,11 +219,11 @@ internal fun SettingsProfileCard(
             modifier = Modifier
                 .size(DesignToken.sizes.profile)
                 .clip(CircleShape)
-                .border(1.dp, KptTheme.colorScheme.primary, CircleShape),
+                .border(DesignToken.strokes.thin, KptTheme.colorScheme.primary, CircleShape),
         ) {
             MifosUserImage(
                 bitmap = state.profileImage,
-                modifier = Modifier.size(100.dp),
+                modifier = Modifier.size(DesignToken.sizes.imageDp100),
                 username = state.client?.displayName,
             )
         }
@@ -281,7 +280,7 @@ internal fun SettingsActions(
                 HorizontalDivider(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(0.99997.dp),
+                        .height(DesignToken.strokes.thin),
                 )
             }
         }

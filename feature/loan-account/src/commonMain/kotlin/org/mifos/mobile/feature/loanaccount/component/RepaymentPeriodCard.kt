@@ -29,7 +29,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.loan_account.generated.resources.Res
 import mifos_mobile.feature.loan_account.generated.resources.feature_loan_due
 import mifos_mobile.feature.loan_account.generated.resources.feature_loan_installment_number
@@ -82,7 +81,7 @@ fun RepaymentScheduleItem(
         modifier = modifier
             .fillMaxWidth()
             .border(
-                1.dp,
+                DesignToken.strokes.thin,
                 KptTheme.colorScheme.secondaryContainer,
                 KptTheme.shapes.medium,
             ),

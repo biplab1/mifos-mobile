@@ -39,7 +39,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.collections.immutable.ImmutableList
 import mifos_mobile.core.ui.generated.resources.ic_icon_logo_1
@@ -274,11 +273,11 @@ internal fun ServiceItemCard(
             Image(
                 modifier = Modifier
                     .border(
-                        1.dp,
+                        DesignToken.strokes.thin,
                         KptTheme.colorScheme.secondaryContainer,
                         KptTheme.shapes.medium,
                     )
-                    .padding(DesignToken.padding.medium + 2.dp),
+                    .padding(DesignToken.padding.dp14),
                 imageVector = icon,
                 contentDescription = null,
                 colorFilter = ColorFilter.tint(KptTheme.colorScheme.tertiary),

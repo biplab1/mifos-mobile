@@ -32,7 +32,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.auth.generated.resources.Res
 import mifos_mobile.feature.auth.generated.resources.feature_recover_now_email_label
@@ -138,7 +137,7 @@ internal fun RecoverPasswordScreen(
                         color = KptTheme.colorScheme.secondary,
                     )
 
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
 
                     ForgotPasswordInputBox(
                         state = state,
@@ -241,7 +240,7 @@ internal fun ForgotPasswordInputBox(
                 color = KptTheme.colorScheme.secondary,
             )
 
-            Spacer(modifier = Modifier.width(6.dp))
+            Spacer(modifier = Modifier.width(DesignToken.spacing.dp6))
 
             Text(
                 modifier = Modifier.clickable { onAction.invoke(RecoverPasswordAction.OnLogin) },

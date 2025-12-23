@@ -31,7 +31,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.share_account.generated.resources.Res
 import mifos_mobile.feature.share_account.generated.resources.feature_account_empty_share_accounts
@@ -238,14 +237,14 @@ internal fun ShareAccountContent(
                         Icon(
                             modifier = Modifier
                                 .clickable {}
-                                .size(20.dp),
+                                .size(DesignToken.sizes.iconDp20),
                             imageVector = MifosIcons.SearchNew,
                             contentDescription = null,
                         )
                         Icon(
                             modifier = Modifier
                                 .clickable { filtersClicked() }
-                                .size(20.dp),
+                                .size(DesignToken.sizes.iconDp20),
                             imageVector = MifosIcons.Filter,
                             contentDescription = null,
                         )
@@ -257,7 +256,7 @@ internal fun ShareAccountContent(
                 HorizontalDivider(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(0.99997.dp),
+                        .height(DesignToken.strokes.thin),
                 )
 
                 if (state.isFilteredEmpty) {

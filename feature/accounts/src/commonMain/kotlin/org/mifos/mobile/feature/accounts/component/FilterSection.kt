@@ -32,7 +32,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.accounts.generated.resources.Res
 import mifos_mobile.feature.accounts.generated.resources.feature_filters_count
 import org.jetbrains.compose.resources.StringResource
@@ -153,7 +152,7 @@ internal fun FilterSection(
         HorizontalDivider(
             modifier = Modifier
                 .padding(top = DesignToken.padding.medium)
-                .height(1.dp),
+                .height(DesignToken.strokes.thin),
         )
     }
 }

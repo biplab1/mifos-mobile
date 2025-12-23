@@ -19,11 +19,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import template.core.base.designsystem.theme.KptTheme
 import kotlin.collections.component1
@@ -39,7 +39,7 @@ fun ConfirmDetailsCard(
         modifier = modifier
             .fillMaxWidth()
             .border(
-                1.dp,
+                DesignToken.strokes.thin,
                 KptTheme.colorScheme.secondaryContainer,
                 KptTheme.shapes.medium,
             ),

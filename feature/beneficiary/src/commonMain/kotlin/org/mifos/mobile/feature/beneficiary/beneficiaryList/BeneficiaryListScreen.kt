@@ -43,7 +43,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.beneficiary.generated.resources.Res
 import mifos_mobile.feature.beneficiary.generated.resources.add
@@ -400,7 +399,7 @@ internal fun BeneficiaryFilters(
 
             Spacer(Modifier.height(DesignToken.spacing.largeIncreased))
 
-            HorizontalDivider(modifier = Modifier.height(1.dp))
+            HorizontalDivider(modifier = Modifier.height(DesignToken.strokes.thin))
 
             FilterSection(
                 title = stringResource(Res.string.linked_with),
@@ -535,7 +534,7 @@ internal fun FilterSection(
         HorizontalDivider(
             modifier = Modifier
                 .padding(top = DesignToken.padding.medium)
-                .height(1.dp),
+                .height(DesignToken.strokes.thin),
         )
     }
 }

@@ -25,7 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.settings.generated.resources.Res
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_logo_content_description
 import mifos_mobile.feature.settings.generated.resources.feature_settings_about_mifos
@@ -153,7 +152,7 @@ internal fun AboutScreenContent(
                                 text = "• $point",
                                 style = MifosTypography.bodySmall,
                                 color = AppColors.customBlack,
-                                modifier = Modifier.padding(vertical = 2.dp),
+                                modifier = Modifier.padding(vertical = DesignToken.padding.dp2),
                             )
                         }
                     }

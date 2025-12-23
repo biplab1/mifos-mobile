@@ -32,7 +32,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.loan_account.generated.resources.Res
 import mifos_mobile.feature.loan_account.generated.resources.feature_loan_account_number_label
 import mifos_mobile.feature.loan_account.generated.resources.feature_loan_account_status_label
@@ -74,7 +73,7 @@ fun AccountSummaryCard(
         modifier = modifier
             .fillMaxWidth()
             .border(
-                1.dp,
+                DesignToken.strokes.thin,
                 KptTheme.colorScheme.secondaryContainer,
                 KptTheme.shapes.medium,
             ),

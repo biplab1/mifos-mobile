@@ -27,7 +27,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.core.ui.generated.resources.ic_icon_success
 import mifos_mobile.feature.client_charge.generated.resources.Res
@@ -144,8 +143,8 @@ fun ChargeDetailsPaidComponent(
         Spacer(Modifier.height(DesignToken.padding.medium))
         Image(
             modifier = Modifier
-                .height(60.dp)
-                .width(60.dp),
+                .height(DesignToken.sizes.imageDp60)
+                .width(DesignToken.sizes.imageDp60),
             painter = painterResource(uiRes.drawable.ic_icon_success),
             contentDescription = "Status icon",
         )

@@ -151,7 +151,7 @@ private fun QrCodeReaderContent(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(bottom = DesignToken.sizes.buttonHeight + 24.dp),
+                    .padding(bottom = DesignToken.sizes.buttonHeight + DesignToken.spacing.dp24),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
@@ -169,7 +169,7 @@ private fun QrCodeReaderContent(
                         .fillMaxWidth()
                         .clip(KptTheme.shapes.medium)
                         .drawQrCorners()
-                        .border(1.dp, Color.Transparent, KptTheme.shapes.medium),
+                        .border(DesignToken.strokes.thin, Color.Transparent, KptTheme.shapes.medium),
                     contentAlignment = Alignment.Center,
                 ) {
                     QrScannerWithPermissions(
@@ -199,7 +199,7 @@ private fun QrCodeReaderContent(
                                 horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
                             ) {
                                 Icon(
-                                    modifier = Modifier.size(20.dp),
+                                    modifier = Modifier.size(DesignToken.sizes.iconDp20),
                                     imageVector = MifosIcons.Warning,
                                     contentDescription = "Warning",
                                     tint = Color.Unspecified,
@@ -241,12 +241,16 @@ private fun QrCodeReaderContent(
 private fun Modifier.drawQrCorners(): Modifier = drawWithContent {
     drawContent()
 
+    // TODO use DesignToken, currently there is some error if replaced directly
     val strokeWidth = 5.dp.toPx()
     val lineLength = 40.dp.toPx()
 
-    val horizontalPadding = 50.dp.toPx() // for left & right
-    val verticalPaddingTop = 50.dp.toPx() // for top corners
-    val verticalPaddingBottom = 200.dp.toPx() // more padding for bottom corners
+    // for left & right
+    val horizontalPadding = 50.dp.toPx()
+    // for top corners
+    val verticalPaddingTop = 50.dp.toPx()
+    // more padding for bottom corners
+    val verticalPaddingBottom = 200.dp.toPx()
 
     val color = AppColors.customWhite
 

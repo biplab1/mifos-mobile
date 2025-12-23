@@ -25,7 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.client_charge.generated.resources.Res
 import mifos_mobile.feature.client_charge.generated.resources.database_checkmark
 import mifos_mobile.feature.client_charge.generated.resources.database_warning
@@ -154,7 +153,7 @@ fun ClientChargeItem(
             Icon(
                 imageVector = MifosIcons.ChevronRight,
                 contentDescription = "",
-                modifier = Modifier.size(20.dp),
+                modifier = Modifier.size(DesignToken.sizes.iconDp20),
             )
         }
     }

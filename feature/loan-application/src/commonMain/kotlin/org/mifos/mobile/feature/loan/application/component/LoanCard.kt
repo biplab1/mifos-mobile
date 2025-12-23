@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,7 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.unit.dp
 import mifos_mobile.core.ui.generated.resources.ic_icon_dashboard
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
@@ -51,7 +49,7 @@ fun LoanCard(
     MifosCustomCard(
         modifier = modifier
             .fillMaxWidth()
-            .height(128.dp)
+            .height(DesignToken.sizes.cardDp128)
             .then(
                 if (onClick != null) {
                     Modifier.clickable { onClick() }
@@ -69,7 +67,7 @@ fun LoanCard(
             Image(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(128.dp)
+                    .height(DesignToken.sizes.imageDp128)
                     .clip(KptTheme.shapes.medium),
                 painter = painterResource(cardImage),
                 contentDescription = null,
@@ -147,7 +145,7 @@ fun LoanCardCustom(
             ),
         shape = KptTheme.shapes.medium,
         colors = CardDefaults.cardColors(containerColor = backgroundColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = DesignToken.elevation.dp6),
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
@@ -156,8 +154,8 @@ fun LoanCardCustom(
             Image(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(140.dp)
-                    .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp)),
+                    .height(DesignToken.sizes.imageDp140)
+                    .clip(DesignToken.shapes.topCornerDp16),
                 painter = painterResource(cardImage),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,

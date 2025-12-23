@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -52,7 +51,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.CurrencyFormatter
@@ -319,7 +317,7 @@ fun TransactionFilterSheetContent(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = KptTheme.spacing.md),
+            .padding(horizontal = DesignToken.spacing.dp24, vertical = KptTheme.spacing.md),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -358,9 +356,9 @@ fun TransactionFilterSheetContent(
                     .fillMaxWidth()
                     .clickable { isAccountDropdownExpanded = true },
                 shape = KptTheme.shapes.medium,
-                border = BorderStroke(1.dp, Color.Gray.copy(alpha = 0.5f)),
+                border = BorderStroke(DesignToken.strokes.thin, Color.Gray.copy(alpha = 0.5f)),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(0.dp),
+                elevation = CardDefaults.cardElevation(KptTheme.elevation.level0),
             ) {
                 Row(
                     modifier = Modifier
@@ -446,7 +444,7 @@ fun TransactionFilterSheetContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(40.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.dp40))
 
         Button(
             onClick = {
@@ -456,8 +454,8 @@ fun TransactionFilterSheetContent(
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp),
-            shape = RoundedCornerShape(25.dp),
+                .height(DesignToken.sizes.buttonDp50),
+            shape = DesignToken.shapes.dp25,
             colors = ButtonDefaults.buttonColors(
                 containerColor = KptTheme.colorScheme.primary,
             ),
@@ -469,7 +467,7 @@ fun TransactionFilterSheetContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
     }
 }
 
@@ -481,10 +479,17 @@ fun FilterOptionChip(
     modifier: Modifier = Modifier,
 ) {
     Surface(
-        modifier = modifier.height(40.dp),
+        modifier = modifier.height(DesignToken.sizes.surfaceDp40),
         shape = DesignToken.shapes.largeIncreased,
         color = if (isSelected) KptTheme.colorScheme.primary else KptTheme.colorScheme.surface,
-        border = if (!isSelected) BorderStroke(1.dp, KptTheme.colorScheme.outline.copy(alpha = 0.5f)) else null,
+        border = if (!isSelected) {
+            BorderStroke(
+                DesignToken.strokes.thin,
+                KptTheme.colorScheme.outline.copy(alpha = 0.5f),
+            )
+        } else {
+            null
+        },
         onClick = onClick,
     ) {
         Box(

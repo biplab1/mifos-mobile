@@ -44,7 +44,6 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
 import com.niyajali.compose.sign.ComposeSign
 import com.niyajali.compose.sign.exportSignature
@@ -148,7 +147,7 @@ internal fun BottomSheetIconContainer(
         Box(
             modifier = Modifier.size(DesignToken.sizes.inputHeight)
                 .border(
-                    1.dp,
+                    DesignToken.strokes.thin,
                     KptTheme.colorScheme.secondaryContainer,
                     KptTheme.shapes.medium,
                 )
@@ -216,7 +215,7 @@ private fun SignatureContent(
                     modifier = modifier
                         .fillMaxWidth()
                         .border(
-                            1.dp,
+                            DesignToken.strokes.thin,
                             KptTheme.colorScheme.secondaryContainer,
                             KptTheme.shapes.medium,
                         ),

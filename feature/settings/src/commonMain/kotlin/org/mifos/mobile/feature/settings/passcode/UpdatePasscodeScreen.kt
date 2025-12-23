@@ -23,7 +23,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.settings.generated.resources.Res
 import mifos_mobile.feature.settings.generated.resources.feature_settings_authorization_passcode
@@ -131,7 +130,7 @@ internal fun PasscodeScreenContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = 24.dp)
+            .padding(top = DesignToken.spacing.dp24)
             .verticalScroll(
                 rememberScrollState(),
             ),
@@ -184,7 +183,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.ConfirmPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
 
         MifosButton(
             text = {

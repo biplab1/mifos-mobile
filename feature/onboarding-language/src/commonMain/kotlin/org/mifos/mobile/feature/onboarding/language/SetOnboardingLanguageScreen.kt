@@ -30,7 +30,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.core.ui.generated.resources.ic_icon_logo_1
 import mifos_mobile.feature.onboarding_language.generated.resources.Res
@@ -102,7 +101,7 @@ internal fun OnboardingLanguageScreenContent(
         Box(
             modifier = modifier
                 .fillMaxSize()
-                .padding(top = 75.dp),
+                .padding(top = DesignToken.padding.dp75),
         ) {
             Column(
                 modifier = Modifier
@@ -110,7 +109,7 @@ internal fun OnboardingLanguageScreenContent(
                     .padding(horizontal = KptTheme.spacing.md),
             ) {
                 Image(
-                    modifier = Modifier.height(DesignToken.sizes.avatarMedium).width(165.dp),
+                    modifier = Modifier.height(DesignToken.sizes.imageDp48).width(DesignToken.sizes.imageDp165),
                     painter = painterResource(
                         mifos_mobile.core.ui.generated.resources.Res.drawable.ic_icon_logo_1,
                     ),

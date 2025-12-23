@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -35,7 +34,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.passcode.generated.resources.Res
 import mifos_mobile.feature.passcode.generated.resources.feature_passcode_authenticate
@@ -110,7 +108,7 @@ private fun VerifyPasscodeScreenContent(
                     tint = KptTheme.colorScheme.primary,
                 )
 
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
 
                 Text(
                     text = stringResource(Res.string.feature_passcode_authenticate),
@@ -148,7 +146,7 @@ private fun VerifyPasscodeScreenContent(
                                 .clip(CircleShape)
                                 .background(color)
                                 .border(
-                                    1.dp,
+                                    DesignToken.strokes.thin,
                                     borderColor,
                                     CircleShape,
                                 ),
@@ -263,9 +261,9 @@ fun KeyButton(
 ) {
     Box(
         modifier = modifier
-            .width(107.33333.dp)
-            .height(41.dp)
-            .clip(RoundedCornerShape(100.dp))
+            .width(DesignToken.sizes.boxDp107)
+            .height(DesignToken.sizes.boxDp41)
+            .clip(DesignToken.shapes.dp100)
             .background(backgroundColor)
             .clickable(onClick = onClick, enabled = enabled),
         contentAlignment = Alignment.Center,
@@ -283,9 +281,9 @@ fun DigitKeyButton(
 ) {
     Box(
         modifier = modifier
-            .width(107.33333.dp)
-            .height(41.dp)
-            .clip(RoundedCornerShape(100.dp))
+            .width(DesignToken.sizes.boxDp107)
+            .height(DesignToken.sizes.boxDp41)
+            .clip(DesignToken.shapes.dp100)
             .background(KptTheme.colorScheme.surfaceContainerLow)
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center,

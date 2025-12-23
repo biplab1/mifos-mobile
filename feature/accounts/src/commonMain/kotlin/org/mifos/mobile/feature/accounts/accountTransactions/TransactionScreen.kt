@@ -34,7 +34,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.accounts.generated.resources.Res
 import mifos_mobile.feature.accounts.generated.resources.feature_duration
@@ -363,7 +362,7 @@ internal fun TransactionFilters(
 
             Spacer(Modifier.height(DesignToken.spacing.largeIncreased))
 
-            HorizontalDivider(modifier = Modifier.height(1.dp))
+            HorizontalDivider(modifier = Modifier.height(DesignToken.strokes.thin))
 
             FilterSection(
                 title = stringResource(Res.string.feature_transaction_type),

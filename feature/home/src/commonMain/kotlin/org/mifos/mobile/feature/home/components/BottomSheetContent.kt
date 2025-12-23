@@ -30,7 +30,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import mifos_mobile.feature.home.generated.resources.Res
 import mifos_mobile.feature.home.generated.resources.feature_home_loan_account
 import mifos_mobile.feature.home.generated.resources.feature_home_loan_tip
@@ -94,7 +93,7 @@ internal fun BottomSheetIconContainer(
             modifier = Modifier
                 .fillMaxWidth()
                 .border(
-                    1.dp,
+                    DesignToken.strokes.thin,
                     KptTheme.colorScheme.secondaryContainer,
                     KptTheme.shapes.medium,
                 ),
@@ -108,7 +107,7 @@ internal fun BottomSheetIconContainer(
                 Box(
                     modifier = Modifier.size(DesignToken.sizes.inputHeight)
                         .border(
-                            1.dp,
+                            DesignToken.strokes.thin,
                             KptTheme.colorScheme.secondaryContainer,
                             KptTheme.shapes.medium,
                         ),

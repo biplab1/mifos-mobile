@@ -31,7 +31,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.savings_account.generated.resources.Res
 import mifos_mobile.feature.savings_account.generated.resources.content_description_filter
@@ -238,7 +237,7 @@ internal fun SavingsAccountContent(
                         Icon(
                             modifier = Modifier
                                 .clickable { filtersClicked() }
-                                .size(20.dp),
+                                .size(DesignToken.sizes.iconDp20),
                             imageVector = MifosIcons.Filter,
                             contentDescription = stringResource(Res.string.content_description_filter),
                         )
@@ -250,7 +249,7 @@ internal fun SavingsAccountContent(
                 HorizontalDivider(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(0.99997.dp),
+                        .height(DesignToken.strokes.thin),
                 )
 
                 if (state.isFilteredEmpty) {

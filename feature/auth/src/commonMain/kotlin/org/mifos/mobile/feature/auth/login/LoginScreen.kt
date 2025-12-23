@@ -36,7 +36,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import mifos_mobile.core.ui.generated.resources.ic_icon_logo_1
@@ -176,7 +175,7 @@ private fun LoginScreenContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = 100.dp)
+            .padding(top = DesignToken.padding.dp100)
             .padding(KptTheme.spacing.md)
             .pointerInput(Unit) {
                 detectTapGestures(
@@ -204,14 +203,14 @@ fun LogoBox(
         modifier = modifier,
     ) {
         Image(
-            modifier = Modifier.height(DesignToken.sizes.avatarMedium).width(165.dp),
+            modifier = Modifier.height(DesignToken.sizes.imageDp48).width(DesignToken.sizes.imageDp165),
             painter = painterResource(
                 mifos_mobile.core.ui.generated.resources.Res.drawable.ic_icon_logo_1,
             ),
             contentDescription = null,
         )
 
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(DesignToken.spacing.dp50))
 
         Text(
             text = stringResource(Res.string.feature_sign_in_title),
