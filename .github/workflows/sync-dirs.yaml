@@ -8,11 +8,10 @@ on:
         required: true
         type: string
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 0 * * 1'
 
 jobs:
   sync-directories:
-    if: github.repository != 'openMF/kmp-project-template'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -32,8 +31,7 @@ jobs:
 
       - name: Add upstream remote and fetch
         run: |
-          UPSTREAM="${{ inputs.upstream || 'https://github.com/openMF/kmp-project-template.git' }}"
-          git remote add upstream "$UPSTREAM" || true
+          git remote add upstream ${{ inputs.upstream }} || true
           git fetch upstream || exit 1
 
       - name: Check upstream/dev exists
