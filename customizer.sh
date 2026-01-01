@@ -430,7 +430,7 @@ update_android_app_imports() {
         if grep -q "import org\.mifos" "$file"; then
             print_processing "Updating imports in: $file"
             sed -i.bak "s/import org\.mifos/import $PACKAGE/g" "$file"
-            count=$((count + 1))
+            ((count++))
         fi
     done < <(find "$target_dir" -type f -name "*.kt")
 
