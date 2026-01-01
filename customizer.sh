@@ -88,9 +88,9 @@ load_or_create_config() {
     mkdir -p "$SYNC_CONFIG_DIR"
 
     cat <<EOF > "$SYNC_CONFIG_FILE"
-PACKAGE=$PACKAGE
-PROJECT_NAME=$PROJECT_NAME
-APPNAME=$APPNAME
+PACKAGE="$PACKAGE"
+PROJECT_NAME="$PROJECT_NAME"
+APPNAME="$APPNAME"
 EOF
 
     print_success "Sync config created"
