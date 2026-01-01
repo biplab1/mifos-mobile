@@ -8,7 +8,7 @@ on:
         required: true
         type: string
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '*/10 * * * *'
 
 jobs:
   sync-directories:
@@ -229,6 +229,11 @@ jobs:
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Re-apply customization
+        run: |
+          chmod +x customizer.sh
+          ./customizer.sh
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
