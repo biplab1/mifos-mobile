@@ -30,28 +30,28 @@ import cmp.navigation.authenticated.navigateToStatusScreenPasscodeFlow
 import cmp.navigation.splash.SplashRoute
 import cmp.navigation.splash.navigateToSplash
 import cmp.navigation.splash.splashDestination
-import cmp.navigation.ui.rememberMifosNavController
+import cmp.navigation.ui.rememberMifos-mobileNavController
 import cmp.navigation.utils.toObjectNavigationRoute
 import org.koin.compose.viewmodel.koinViewModel
-import org.mifos.mobile.core.ui.NonNullEnterTransitionProvider
-import org.mifos.mobile.core.ui.NonNullExitTransitionProvider
-import org.mifos.mobile.core.ui.RootTransitionProviders
-import org.mifos.mobile.feature.auth.navigation.AuthGraphRoute
-import org.mifos.mobile.feature.auth.navigation.authenticationNavGraph
-import org.mifos.mobile.feature.auth.navigation.navigateToAuthGraph
-import org.mifos.mobile.feature.onboarding.language.navigation.OnboardingLanguageRoute
-import org.mifos.mobile.feature.onboarding.language.navigation.navigateToOnboardingLanguage
-import org.mifos.mobile.feature.onboarding.language.navigation.onBoardingLanguageDestination
-import org.mifos.mobile.feature.passcode.navigation.PasscodeRoute
-import org.mifos.mobile.feature.passcode.navigation.navigateToPasscodeScreen
-import org.mifos.mobile.feature.passcode.navigation.passcodeDestination
+import org.mifos.mobile.mobile.core.ui.NonNullEnterTransitionProvider
+import org.mifos.mobile.mobile.core.ui.NonNullExitTransitionProvider
+import org.mifos.mobile.mobile.core.ui.RootTransitionProviders
+import org.mifos.mobile.mobile.feature.auth.navigation.AuthGraphRoute
+import org.mifos.mobile.mobile.feature.auth.navigation.authenticationNavGraph
+import org.mifos.mobile.mobile.feature.auth.navigation.navigateToAuthGraph
+import org.mifos.mobile.mobile.feature.onboarding.language.navigation.OnboardingLanguageRoute
+import org.mifos.mobile.mobile.feature.onboarding.language.navigation.navigateToOnboardingLanguage
+import org.mifos.mobile.mobile.feature.onboarding.language.navigation.onBoardingLanguageDestination
+import org.mifos.mobile.mobile.feature.passcode.navigation.PasscodeRoute
+import org.mifos.mobile.mobile.feature.passcode.navigation.navigateToPasscodeScreen
+import org.mifos.mobile.mobile.feature.passcode.navigation.passcodeDestination
 
 @Suppress("LongMethod", "CyclomaticComplexMethod")
 @Composable
 fun RootNavScreen(
     modifier: Modifier = Modifier,
     viewModel: RootNavViewModel = koinViewModel(),
-    navController: NavHostController = rememberMifosNavController(name = "RootNavScreen"),
+    navController: NavHostController = rememberMifos-mobileNavController(name = "RootNavScreen"),
     onSplashScreenRemoved: () -> Unit = {},
 ) {
     val state by viewModel.stateFlow.collectAsStateWithLifecycle()

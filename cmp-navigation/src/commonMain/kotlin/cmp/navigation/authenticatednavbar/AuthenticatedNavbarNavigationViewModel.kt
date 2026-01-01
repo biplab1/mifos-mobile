@@ -13,9 +13,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import org.mifos.mobile.core.data.util.NetworkMonitor
-import org.mifos.mobile.core.datastore.model.AppSettings
-import org.mifos.mobile.core.ui.utils.BaseViewModel
+import org.mifos.mobile.mobile.core.data.util.NetworkMonitor
+import org.mifos.mobile.mobile.core.datastore.model.AppSettings
+import org.mifos.mobile.mobile.core.ui.utils.BaseViewModel
 
 internal class AuthenticatedNavbarNavigationViewModel(
     networkMonitor: NetworkMonitor,

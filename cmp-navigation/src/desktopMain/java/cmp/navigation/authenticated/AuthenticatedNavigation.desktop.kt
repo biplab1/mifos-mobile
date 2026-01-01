@@ -9,9 +9,9 @@
  */
 package cmp.navigation.authenticated
 
-import org.mifos.mobile.feature.beneficiary.beneficiaryApplicationConfirmation.BeneficiaryApplicationConfirmationNavRoute
-import org.mifos.mobile.feature.loan.application.confirmDetails.ConfirmDetailsRoute
-import org.mifos.mobile.feature.transfer.process.transferProcess.TransferProcessRoute
+import org.mifos.mobile.mobile.feature.beneficiary.beneficiaryApplicationConfirmation.BeneficiaryApplicationConfirmationNavRoute
+import org.mifos.mobile.mobile.feature.loan.application.confirmDetails.ConfirmDetailsRoute
+import org.mifos.mobile.mobile.feature.transfer.process.transferProcess.TransferProcessRoute
 
 actual fun getPopRules(): Map<String, Int> = mapOf(
     ConfirmDetailsRoute::class.qualifiedName.orEmpty() to 2,

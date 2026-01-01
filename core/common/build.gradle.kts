@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.common"
+    namespace = "org.mifos.mobile.mobile.core.common"
 }
 
 kotlin {

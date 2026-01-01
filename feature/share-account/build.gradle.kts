@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.shareaccount"
+    namespace = "org.mifos.mobile.mobile.feature.shareaccount"
 }
 
 kotlin {

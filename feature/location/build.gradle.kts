@@ -12,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.location"
+    namespace = "org.mifos.mobile.mobile.feature.location"
 }
 
 kotlin {

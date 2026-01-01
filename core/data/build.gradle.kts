@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.data"
+    namespace = "org.mifos.mobile.mobile.core.data"
 
     testOptions {
         unitTests {

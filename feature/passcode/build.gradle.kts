@@ -15,7 +15,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.passcode"
+    namespace = "org.mifos.mobile.mobile.feature.passcode"
 }
 
 kotlin {

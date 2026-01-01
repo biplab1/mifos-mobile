@@ -14,10 +14,10 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import org.mifos.library.passcode.data.PasscodeManager
 import org.mifos.library.passcode.data.PasscodePreferencesDataSource
-import org.mifos.mobile.core.common.MifosDispatchers
+import org.mifos.mobile.Mifos-mobile-mobileDispatchers
 
 val PasscodePreferenceModule = module {
     factory<Settings> { Settings() }
-    factory { PasscodePreferencesDataSource(get(), get(named(MifosDispatchers.IO.name))) }
-    factory { PasscodeManager(get(), get(named(MifosDispatchers.Unconfined.name))) }
+    factory { PasscodePreferencesDataSource(get(), get(named(Mifos-mobileDispatchers.IO.name))) }
+    factory { PasscodeManager(get(), get(named(Mifos-mobileDispatchers.Unconfined.name))) }
 }

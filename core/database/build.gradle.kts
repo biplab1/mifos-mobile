@@ -24,7 +24,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.database"
+    namespace = "org.mifos.mobile.mobile.core.database"
     compileSdk = 35
 
     defaultConfig {

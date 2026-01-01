@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.shareapplication"
+    namespace = "org.mifos.mobile.mobile.feature.shareapplication"
 }
 
 kotlin {

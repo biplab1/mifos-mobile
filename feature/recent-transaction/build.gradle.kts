@@ -12,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.recent.transaction"
+    namespace = "org.mifos.mobile.mobile.feature.recent.transaction"
 }
 
 kotlin {

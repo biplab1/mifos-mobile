@@ -15,10 +15,10 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
-import org.mifos.mobile.core.data.repository.UserDataRepository
-import org.mifos.mobile.core.datastore.model.AppSettings
-import org.mifos.mobile.core.model.AuthState
-import org.mifos.mobile.core.ui.utils.BaseViewModel
+import org.mifos.mobile.mobile.core.data.repository.UserDataRepository
+import org.mifos.mobile.mobile.core.datastore.model.AppSettings
+import org.mifos.mobile.mobile.core.model.AuthState
+import org.mifos.mobile.mobile.core.ui.utils.BaseViewModel
 
 class RootNavViewModel(
     userDataRepository: UserDataRepository,

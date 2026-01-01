@@ -18,7 +18,7 @@ android {
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace = "org.mifos.mobile.core.ui"
+    namespace = "org.mifos.mobile.mobile.core.ui"
 }
 
 kotlin{

@@ -12,23 +12,23 @@ package cmp.navigation.authenticatednavbar
 import androidx.compose.ui.graphics.vector.ImageVector
 import cmp.navigation.utils.toObjectNavigationRoute
 import org.jetbrains.compose.resources.StringResource
-import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.ui.navigation.NavigationItem
-import org.mifos.mobile.feature.home.navigation.HomeRoute
-import org.mifos.mobile.feature.settings.navigation.SettingsNavGraphRoute
-import org.mifos.mobile.feature.third.party.transfer.navigation.ThirdPartyTransferNavGraphRoute
-import org.mifos.mobile.navigation.generated.resources.Res
-import org.mifos.mobile.navigation.generated.resources.home
-import org.mifos.mobile.navigation.generated.resources.profile
-import org.mifos.mobile.navigation.generated.resources.transfer
+import org.mifos.mobile.Mifos-mobile-mobileIcons
+import org.mifos.mobile.mobile.core.ui.navigation.NavigationItem
+import org.mifos.mobile.mobile.feature.home.navigation.HomeRoute
+import org.mifos.mobile.mobile.feature.settings.navigation.SettingsNavGraphRoute
+import org.mifos.mobile.mobile.feature.third.party.transfer.navigation.ThirdPartyTransferNavGraphRoute
+import org.mifos.mobile.mobile.navigation.generated.resources.Res
+import org.mifos.mobile.mobile.navigation.generated.resources.home
+import org.mifos.mobile.mobile.navigation.generated.resources.profile
+import org.mifos.mobile.mobile.navigation.generated.resources.transfer
 
 sealed class AuthenticatedNavBarTabItem : NavigationItem {
 
     data object HomeTab : AuthenticatedNavBarTabItem() {
         override val iconResSelected: ImageVector
-            get() = MifosIcons.HomeTabFilled
+            get() = Mifos-mobileIcons.HomeTabFilled
         override val iconRes: ImageVector
-            get() = MifosIcons.HomeTabFilled
+            get() = Mifos-mobileIcons.HomeTabFilled
         override val labelRes: StringResource
             get() = Res.string.home
         override val contentDescriptionRes: StringResource
@@ -45,9 +45,9 @@ sealed class AuthenticatedNavBarTabItem : NavigationItem {
 
     data object TransferTab : AuthenticatedNavBarTabItem() {
         override val iconResSelected: ImageVector
-            get() = MifosIcons.MoneyHand
+            get() = Mifos-mobileIcons.MoneyHand
         override val iconRes: ImageVector
-            get() = MifosIcons.MoneyHand
+            get() = Mifos-mobileIcons.MoneyHand
         override val labelRes: StringResource
             get() = Res.string.transfer
         override val contentDescriptionRes: StringResource
@@ -62,9 +62,9 @@ sealed class AuthenticatedNavBarTabItem : NavigationItem {
 
     data object ProfileTab : AuthenticatedNavBarTabItem() {
         override val iconResSelected: ImageVector
-            get() = MifosIcons.PersonTabFilled
+            get() = Mifos-mobileIcons.PersonTabFilled
         override val iconRes: ImageVector
-            get() = MifosIcons.PersonTabFilled
+            get() = Mifos-mobileIcons.PersonTabFilled
         override val labelRes: StringResource
             get() = Res.string.profile
         override val contentDescriptionRes: StringResource

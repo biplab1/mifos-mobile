@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.datastore"
+    namespace = "org.mifos.mobile.mobile.core.datastore"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

@@ -16,7 +16,7 @@ plugins {
 
 
 android {
-    namespace = "org.mifos.mobile.feature.transfer.process"
+    namespace = "org.mifos.mobile.mobile.feature.transfer.process"
 }
 
 kotlin {

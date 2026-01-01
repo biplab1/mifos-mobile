@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.loanapplication"
+    namespace = "org.mifos.mobile.mobile.feature.loanapplication"
 }
 
 kotlin {

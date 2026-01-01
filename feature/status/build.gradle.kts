@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.status"
+    namespace = "org.mifos.mobile.mobile.feature.status"
     buildFeatures {
         buildConfig = true
     }

@@ -46,7 +46,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
-import org.mifos.library.passcode.component.MifosIcon
+import org.mifos.mobile.Mifos-mobile-mobileIcon
 import org.mifos.library.passcode.component.PasscodeForgotButton
 import org.mifos.library.passcode.component.PasscodeHeader
 import org.mifos.library.passcode.component.PasscodeKeys
@@ -110,7 +110,7 @@ internal fun PasscodeScreen(
                 onSkipButton = onSkipButton,
             )
 
-            MifosIcon(modifier = Modifier.fillMaxWidth())
+            Mifos-mobileIcon(modifier = Modifier.fillMaxWidth())
 
             Column(
                 modifier = Modifier

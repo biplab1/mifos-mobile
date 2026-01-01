@@ -72,5 +72,5 @@ android {
 compose.resources {
     publicResClass = true
     generateResClass = always
-    packageOfResClass = "org.mifos.mobile.navigation.generated.resources"
+    packageOfResClass = "org.mifos.mobile.mobile.navigation.generated.resources"
 }

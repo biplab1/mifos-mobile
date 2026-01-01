@@ -31,7 +31,7 @@ private val LightColorPalette = lightColorScheme(
 )
 
 @Composable
-internal fun MifosPasscodeTheme(
+internal fun Mifos-mobilePasscodeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {

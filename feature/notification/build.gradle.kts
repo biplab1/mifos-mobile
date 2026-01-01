@@ -13,7 +13,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.notification"
+    namespace = "org.mifos.mobile.mobile.feature.notification"
 }
 
 kotlin {

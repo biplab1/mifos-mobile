@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  *
- * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
+ * See See https://github.com/openMF/kmp-project-template/blob/main/LICENSE
  */
 package template.core.base.database
 
@@ -23,9 +23,9 @@ import java.io.File
  * that provide appropriate persistence and user access patterns.
  *
  * Platform-specific storage locations:
- * - Windows: %APPDATA%/MifosDatabase
- * - macOS: ~/Library/Application Support/MifosDatabase
- * - Linux: ~/.local/share/MifosDatabase
+ * - Windows: %APPDATA%/Mifos-mobileDatabase
+ * - macOS: ~/Library/Application Support/Mifos-mobileDatabase
+ * - Linux: ~/.local/share/Mifos-mobileDatabase
  *
  * Key features:
  * - Automatic platform detection and directory selection
@@ -62,7 +62,7 @@ class AppDatabaseFactory {
      * @throws ClassNotFoundException if the database implementation class cannot be located
      *
      * Directory creation behavior:
-     * - Automatically creates the MifosDatabase directory if it does not exist
+     * - Automatically creates the Mifos-mobileDatabase directory if it does not exist
      * - Respects existing directory permissions and structure
      * - Uses platform-appropriate path separators and naming conventions
      *
@@ -104,9 +104,9 @@ class AppDatabaseFactory {
         val os = System.getProperty("os.name").lowercase()
         val userHome = System.getProperty("user.home")
         val appDataDir = when {
-            os.contains("win") -> File(System.getenv("APPDATA"), "MifosDatabase")
-            os.contains("mac") -> File(userHome, "Library/Application Support/MifosDatabase")
-            else -> File(userHome, ".local/share/MifosDatabase")
+            os.contains("win") -> File(System.getenv("APPDATA"), "Mifos-mobileDatabase")
+            os.contains("mac") -> File(userHome, "Library/Application Support/Mifos-mobileDatabase")
+            else -> File(userHome, ".local/share/Mifos-mobileDatabase")
         }
 
         if (!appDataDir.exists()) {

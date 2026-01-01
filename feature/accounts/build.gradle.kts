@@ -16,7 +16,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.accounts"
+    namespace = "org.mifos.mobile.mobile.feature.accounts"
 }
 
 kotlin {

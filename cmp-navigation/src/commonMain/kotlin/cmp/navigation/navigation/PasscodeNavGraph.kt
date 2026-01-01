@@ -13,8 +13,8 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.navigation
 import cmp.navigation.authenticated.AuthenticatedGraphRoute
-import org.mifos.library.passcode.PASSCODE_SCREEN
-import org.mifos.library.passcode.passcodeRoute
+import org.mifos.mobile.library.passcode.PASSCODE_SCREEN
+import org.mifos.mobile.library.passcode.passcodeRoute
 
 internal fun NavGraphBuilder.passcodeNavGraph(navController: NavHostController) {
     navigation(

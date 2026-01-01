@@ -15,9 +15,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import kotlinx.serialization.Serializable
-import org.mifos.mobile.core.ui.composableWithStayTransitions
-import org.mifos.mobile.feature.home.navigation.HomeNavigator
-import org.mifos.mobile.feature.third.party.transfer.navigation.TptNavigator
+import org.mifos.mobile.mobile.core.ui.composableWithStayTransitions
+import org.mifos.mobile.mobile.feature.home.navigation.HomeNavigator
+import org.mifos.mobile.mobile.feature.third.party.transfer.navigation.TptNavigator
 
 @Serializable
 data object AuthenticatedNavbarRoute

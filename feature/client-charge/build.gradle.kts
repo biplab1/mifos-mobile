@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.client_charge"
+    namespace = "org.mifos.mobile.mobile.feature.client_charge"
 }
 
 kotlin {

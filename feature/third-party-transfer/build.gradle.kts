@@ -15,7 +15,7 @@ plugins {
 
 
 android {
-    namespace = "org.mifos.mobile.feature.third.party.transfer"
+    namespace = "org.mifos.mobile.mobile.feature.third.party.transfer"
 }
 
 kotlin {

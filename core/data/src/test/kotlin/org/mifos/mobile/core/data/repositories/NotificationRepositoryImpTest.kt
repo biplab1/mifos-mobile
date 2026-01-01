@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.data.repositories
+package org.mifos.mobile.mobile.core.data.repositories
 
 import app.cash.turbine.test
 import junit.framework.TestCase.assertEquals
@@ -19,13 +19,13 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mifos.mobile.core.data.model.toModel
-import org.mifos.mobile.core.data.repository.NotificationRepository
-import org.mifos.mobile.core.data.repositoryImpl.NotificationRepositoryImp
-import org.mifos.mobile.core.database.dao.MifosNotificationDao
-import org.mifos.mobile.core.database.entity.MifosNotificationEntity
-import org.mifos.mobile.core.network.DataManager
-import org.mifos.mobile.core.testing.util.MainDispatcherRule
+import org.mifos.mobile.mobile.core.data.model.toModel
+import org.mifos.mobile.mobile.core.data.repository.NotificationRepository
+import org.mifos.mobile.mobile.core.data.repositoryImpl.NotificationRepositoryImp
+import org.mifos.mobile.Mifos-mobile-mobileNotificationDao
+import org.mifos.mobile.Mifos-mobile-mobileNotificationEntity
+import org.mifos.mobile.mobile.core.network.DataManager
+import org.mifos.mobile.mobile.core.testing.util.MainDispatcherRule
 import org.mockito.Mock
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when`
@@ -43,7 +43,7 @@ class NotificationRepositoryImpTest {
     lateinit var dataManager: DataManager
 
     @Mock
-    lateinit var mifosNotificationDao: MifosNotificationDao
+    lateinit var mifos-mobileNotificationDao: Mifos-mobileNotificationDao
 
     private lateinit var notificationRepositoryImp: NotificationRepository
 
@@ -51,17 +51,17 @@ class NotificationRepositoryImpTest {
     fun setUp() {
         MockitoAnnotations.openMocks(this)
         notificationRepositoryImp = NotificationRepositoryImp(
-            notificationDao = mifosNotificationDao,
+            notificationDao = mifos-mobileNotificationDao,
             ioDispatcher = UnconfinedTestDispatcher(),
         )
     }
 
     @Test
     fun testLoadNotifications_SuccessResponseReceivedFromDataManager_ReturnsSuccess() = runTest {
-        val notification = mock(MifosNotificationEntity::class.java)
+        val notification = mock(Mifos-mobileNotificationEntity::class.java)
         val notificationList = List(5) { notification }
         `when`(
-            mifosNotificationDao.getNotifications(),
+            mifos-mobileNotificationDao.getNotifications(),
         ).thenReturn(flowOf(notificationList))
 
         val notifications = notificationRepositoryImp.loadNotifications()
@@ -75,7 +75,7 @@ class NotificationRepositoryImpTest {
     @Test(expected = Exception::class)
     fun testLoadNotifications_ErrorResponseReceivedFromDataManager_ReturnsError() = runTest {
         val dummyError = Exception("Dummy error")
-        `when`(mifosNotificationDao.getNotifications()).thenThrow(dummyError)
+        `when`(mifos-mobileNotificationDao.getNotifications()).thenThrow(dummyError)
 
         val notifications = notificationRepositoryImp.loadNotifications()
 

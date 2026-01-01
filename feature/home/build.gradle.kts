@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.home"
+    namespace = "org.mifos.mobile.mobile.feature.home"
 }
 
 kotlin {

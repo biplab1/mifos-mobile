@@ -16,7 +16,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.qrcode"
+    namespace = "org.mifos.mobile.mobile.core.qrcode"
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")
     }

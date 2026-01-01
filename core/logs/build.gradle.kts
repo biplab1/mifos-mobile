@@ -15,7 +15,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.core.logs"
+    namespace = "org.mifos.mobile.mobile.core.logs"
 }
 
 kotlin {

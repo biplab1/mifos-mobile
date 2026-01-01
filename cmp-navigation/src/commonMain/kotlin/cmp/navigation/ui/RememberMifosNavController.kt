@@ -17,7 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import co.touchlab.kermit.Logger
 
 @Composable
-fun rememberMifosNavController(
+fun rememberMifos-mobileNavController(
     name: String,
     vararg navigators: Navigator<out NavDestination>,
 ): NavHostController =

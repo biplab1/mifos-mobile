@@ -7,7 +7,7 @@
  *
  * See https://github.com/openMF/mobile-mobile/blob/master/LICENSE.md
  */
-package org.mifos.mobile.core.data.repositories
+package org.mifos.mobile.mobile.core.data.repositories
 
 import app.cash.turbine.test
 import junit.framework.Assert.assertEquals
@@ -19,12 +19,12 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mifos.mobile.core.data.repository.NotificationRepository
-import org.mifos.mobile.core.data.repositoryImpl.HomeRepositoryImp
-import org.mifos.mobile.core.model.entity.client.Client
-import org.mifos.mobile.core.model.entity.client.ClientAccounts
-import org.mifos.mobile.core.network.DataManager
-import org.mifos.mobile.core.testing.util.MainDispatcherRule
+import org.mifos.mobile.mobile.core.data.repository.NotificationRepository
+import org.mifos.mobile.mobile.core.data.repositoryImpl.HomeRepositoryImp
+import org.mifos.mobile.mobile.core.model.entity.client.Client
+import org.mifos.mobile.mobile.core.model.entity.client.ClientAccounts
+import org.mifos.mobile.mobile.core.network.DataManager
+import org.mifos.mobile.mobile.core.testing.util.MainDispatcherRule
 import org.mockito.Mock
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when`

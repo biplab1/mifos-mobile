@@ -26,30 +26,30 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
-import cmp.navigation.ui.MifosScaffold
+import org.mifos.mobile.Mifos-mobile-mobileScaffold
 import cmp.navigation.ui.ScaffoldNavigationData
-import cmp.navigation.ui.rememberMifosNavController
+import cmp.navigation.ui.rememberMifos-mobileNavController
 import kotlinx.collections.immutable.persistentListOf
 import org.koin.compose.viewmodel.koinViewModel
-import org.mifos.mobile.core.ui.RootTransitionProviders
-import org.mifos.mobile.core.ui.navigation.NavigationItem
-import org.mifos.mobile.core.ui.utils.EventsEffect
-import org.mifos.mobile.feature.home.navigation.HomeNavigator
-import org.mifos.mobile.feature.home.navigation.HomeRoute
-import org.mifos.mobile.feature.home.navigation.homeDestination
-import org.mifos.mobile.feature.home.navigation.navigateToHomeScreen
-import org.mifos.mobile.feature.settings.navigation.navigateToSettingsGraph
-import org.mifos.mobile.feature.settings.navigation.settingsGraph
-import org.mifos.mobile.feature.third.party.transfer.navigation.TptNavigator
-import org.mifos.mobile.feature.third.party.transfer.navigation.navigateToTptGraph
-import org.mifos.mobile.feature.third.party.transfer.navigation.tptGraphDestination
+import org.mifos.mobile.mobile.core.ui.RootTransitionProviders
+import org.mifos.mobile.mobile.core.ui.navigation.NavigationItem
+import org.mifos.mobile.mobile.core.ui.utils.EventsEffect
+import org.mifos.mobile.mobile.feature.home.navigation.HomeNavigator
+import org.mifos.mobile.mobile.feature.home.navigation.HomeRoute
+import org.mifos.mobile.mobile.feature.home.navigation.homeDestination
+import org.mifos.mobile.mobile.feature.home.navigation.navigateToHomeScreen
+import org.mifos.mobile.mobile.feature.settings.navigation.navigateToSettingsGraph
+import org.mifos.mobile.mobile.feature.settings.navigation.settingsGraph
+import org.mifos.mobile.mobile.feature.third.party.transfer.navigation.TptNavigator
+import org.mifos.mobile.mobile.feature.third.party.transfer.navigation.navigateToTptGraph
+import org.mifos.mobile.mobile.feature.third.party.transfer.navigation.tptGraphDestination
 
 @Composable
 internal fun AuthenticatedNavbarNavigationScreen(
     homeNavigator: HomeNavigator,
     tptNavigator: TptNavigator,
     modifier: Modifier = Modifier,
-    navController: NavHostController = rememberMifosNavController(
+    navController: NavHostController = rememberMifos-mobileNavController(
         name = "AuthenticatedNavbarScreen",
     ),
     viewModel: AuthenticatedNavbarNavigationViewModel = koinViewModel(),
@@ -109,7 +109,7 @@ internal fun AuthenticatedNavbarNavigationScreenContent(
         AuthenticatedNavBarTabItem.ProfileTab,
     )
 
-    MifosScaffold(
+    Mifos-mobileScaffold(
         contentWindowInsets = WindowInsets(0.dp),
         navigationData = ScaffoldNavigationData(
             navigationItems = navigationItems,

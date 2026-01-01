@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.qr"
+    namespace = "org.mifos.mobile.mobile.feature.qr"
 }
 
 kotlin {

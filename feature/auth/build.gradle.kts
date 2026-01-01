@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mifos.mobile.feature.auth"
+    namespace = "org.mifos.mobile.mobile.feature.auth"
     buildFeatures {
         buildConfig = true
     }

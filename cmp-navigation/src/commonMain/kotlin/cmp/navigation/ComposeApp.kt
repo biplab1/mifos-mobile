@@ -24,10 +24,10 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cmp.navigation.rootnav.RootNavScreen
 import org.koin.compose.viewmodel.koinViewModel
-import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
-import org.mifos.mobile.core.model.MifosThemeConfig
-import org.mifos.mobile.core.ui.utils.EventsEffect
-import org.mifos.mobile.core.ui.utils.NetworkBanner
+import org.mifos.mobile.Mifos-mobile-mobileMobileTheme
+import org.mifos.mobile.Mifos-mobile-mobileThemeConfig
+import org.mifos.mobile.mobile.core.ui.utils.EventsEffect
+import org.mifos.mobile.mobile.core.ui.utils.NetworkBanner
 
 @Composable
 fun ComposeApp(
@@ -49,12 +49,12 @@ fun ComposeApp(
     val isSystemInDarkTheme = isSystemInDarkTheme()
 
     LaunchedEffect(isSystemInDarkTheme, uiState.themeConfig) {
-        if (uiState.themeConfig == MifosThemeConfig.FOLLOW_SYSTEM) {
+        if (uiState.themeConfig == Mifos-mobileThemeConfig.FOLLOW_SYSTEM) {
             viewModel.trySendAction(AppAction.Internal.SystemThemeUpdate(isSystemInDarkTheme))
         }
     }
 
-    MifosMobileTheme(
+    Mifos-mobileMobileTheme(
         darkTheme = uiState.darkTheme,
         androidTheme = uiState.isAndroidTheme,
         shouldDisplayDynamicTheming = uiState.isDynamicColorsEnabled,
