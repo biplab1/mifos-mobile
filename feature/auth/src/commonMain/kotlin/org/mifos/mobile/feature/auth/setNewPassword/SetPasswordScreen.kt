@@ -47,6 +47,9 @@ import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosPasswordField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp24
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -146,7 +149,7 @@ internal fun SetPasswordScreen(
                         color = KptTheme.colorScheme.onBackground,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                     Text(
                         text = stringResource(Res.string.feature_set_new_password_message),
@@ -154,7 +157,7 @@ internal fun SetPasswordScreen(
                         color = KptTheme.colorScheme.secondary,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
 
                     SetPasswordInputBox(
                         state = state,
@@ -182,7 +185,7 @@ internal fun SetPasswordInputBox(
 
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),

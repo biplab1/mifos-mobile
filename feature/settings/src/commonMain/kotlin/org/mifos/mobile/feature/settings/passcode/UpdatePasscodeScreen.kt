@@ -36,7 +36,8 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosPasswordField
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp24
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosSuccessDialog
 import org.mifos.mobile.core.ui.component.SuccessDialogState
@@ -130,7 +131,7 @@ internal fun PasscodeScreenContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = DesignToken.spacing.dp24)
+            .padding(top = KptTheme.spacing.dp24)
             .verticalScroll(
                 rememberScrollState(),
             ),
@@ -149,7 +150,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.OldPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         MifosPasswordField(
             value = passcodeData.newPasscode,
@@ -165,7 +166,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.NewPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         MifosPasswordField(
             value = passcodeData.confirmPasscode,
@@ -183,7 +184,7 @@ internal fun PasscodeScreenContent(
             showPasswordChange = { onAction(PasscodeAction.ConfirmPasscodeVisibleClick) },
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
 
         MifosButton(
             text = {

@@ -22,7 +22,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
@@ -54,6 +53,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp14
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -200,7 +202,7 @@ internal fun HomeContent(
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.extraLarge))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp28))
 
                     Text(
                         text = stringResource(Res.string.feature_home_services),
@@ -232,8 +234,8 @@ internal fun ServiceBox(
         modifier = modifier
             .fillMaxWidth(),
         maxItemsInEachRow = 4,
-        horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+        horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
     ) {
         items.forEach { item ->
             Box(
@@ -277,7 +279,7 @@ internal fun ServiceItemCard(
                         KptTheme.colorScheme.secondaryContainer,
                         KptTheme.shapes.medium,
                     )
-                    .padding(DesignToken.padding.dp14),
+                    .padding(KptTheme.spacing.dp14),
                 imageVector = icon,
                 contentDescription = null,
                 colorFilter = ColorFilter.tint(KptTheme.colorScheme.tertiary),

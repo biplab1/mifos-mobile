@@ -42,6 +42,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
+import org.mifos.mobile.core.designsystem.theme.dp100
+import org.mifos.mobile.core.designsystem.theme.dp24
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -108,7 +110,7 @@ private fun VerifyPasscodeScreenContent(
                     tint = KptTheme.colorScheme.primary,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
 
                 Text(
                     text = stringResource(Res.string.feature_passcode_authenticate),
@@ -263,7 +265,7 @@ fun KeyButton(
         modifier = modifier
             .width(DesignToken.sizes.boxDp107)
             .height(DesignToken.sizes.boxDp41)
-            .clip(DesignToken.shapes.dp100)
+            .clip(KptTheme.shapes.dp100)
             .background(backgroundColor)
             .clickable(onClick = onClick, enabled = enabled),
         contentAlignment = Alignment.Center,
@@ -283,7 +285,7 @@ fun DigitKeyButton(
         modifier = modifier
             .width(DesignToken.sizes.boxDp107)
             .height(DesignToken.sizes.boxDp41)
-            .clip(DesignToken.shapes.dp100)
+            .clip(KptTheme.shapes.dp100)
             .background(KptTheme.colorScheme.surfaceContainerLow)
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center,

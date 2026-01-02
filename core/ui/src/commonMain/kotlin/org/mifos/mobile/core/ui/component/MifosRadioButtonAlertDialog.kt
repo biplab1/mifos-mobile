@@ -29,6 +29,7 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.core_common_working
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
@@ -49,7 +50,7 @@ fun MifosRadioButtonDialog(
         modifier = modifier,
     ) {
         Card {
-            Column(modifier = Modifier.padding(DesignToken.padding.largeIncreased)) {
+            Column(modifier = Modifier.padding(KptTheme.spacing.dp20)) {
                 Text(text = stringResource(titleResId))
                 LazyColumn(
                     modifier = Modifier

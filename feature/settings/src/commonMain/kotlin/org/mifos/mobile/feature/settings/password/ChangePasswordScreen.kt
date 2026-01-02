@@ -36,7 +36,8 @@ import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosPasswordField
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.ui.CombinedPasswordErrorCard
 import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.component.MifosSuccessDialog
@@ -134,7 +135,7 @@ internal fun PasswordScreenContent(
         modifier = modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(top = DesignToken.padding.largeIncreased),
+            .padding(top = KptTheme.spacing.dp20),
     ) {
         MifosPasswordField(
             modifier = Modifier,
@@ -150,7 +151,7 @@ internal fun PasswordScreenContent(
             onValueChange = { onAction(PasswordAction.OnOldPasswordChange(it)) },
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.padding.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         MifosPasswordField(
             modifier = Modifier,
@@ -176,7 +177,7 @@ internal fun PasswordScreenContent(
             minimumCharacterCount = 12,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.padding.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         MifosPasswordField(
             modifier = Modifier,
@@ -194,7 +195,7 @@ internal fun PasswordScreenContent(
             },
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.padding.largeIncreased))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
 
         MifosButton(
             enabled = state.isEnabled,

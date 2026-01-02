@@ -41,6 +41,9 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.designsystem.component.MifosCard
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -97,9 +100,9 @@ internal fun AppInfoContent(
             Modifier
                 .fillMaxSize()
                 .padding(
-                    horizontal = DesignToken.padding.largeIncreased,
+                    horizontal = KptTheme.spacing.dp20,
                 )
-                .padding(top = DesignToken.padding.largeIncreased)
+                .padding(top = KptTheme.spacing.dp20)
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
@@ -113,14 +116,14 @@ internal fun AppInfoContent(
                 Column(
                     Modifier
                         .fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 ) {
                     Column(
                         Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = DesignToken.padding.extraLarge)
-                            .padding(top = DesignToken.padding.extraLarge),
-                        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+                            .padding(horizontal = KptTheme.spacing.dp28)
+                            .padding(top = KptTheme.spacing.dp28),
+                        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
@@ -195,8 +198,8 @@ internal fun AppInfoContent(
 //            Column(
 //                Modifier
 //                    .fillMaxWidth()
-//                    .padding(top = DesignToken.padding.medium),
-//                verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+//                    .padding(top = KptTheme.spacing.dp12),
+//                verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
 //            ) {
 //                MifosOutlinedButton(
 //                    content = {

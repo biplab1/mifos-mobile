@@ -67,6 +67,8 @@ import org.mifos.mobile.core.designsystem.component.MifosLoadingDialog
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -162,7 +164,7 @@ internal fun UploadIdScreenContent(
                 color = KptTheme.colorScheme.onBackground,
             )
 
-            Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
             Text(
                 text = stringResource(Res.string.feature_upload_id_subtitle),
@@ -170,7 +172,7 @@ internal fun UploadIdScreenContent(
                 color = KptTheme.colorScheme.secondary,
             )
 
-            Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
 
             InputForm(
                 state = state,
@@ -200,7 +202,7 @@ internal fun InputForm(
     val selectedDate = datePickerState.selectedDateMillis?.let { DateHelper.getDateAsStringFromLong(it) } ?: ""
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         UploadDocumentsSection(
             state = state,
@@ -262,7 +264,7 @@ internal fun InputForm(
         Row(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
-                .padding(bottom = DesignToken.padding.medium),
+                .padding(bottom = KptTheme.spacing.dp12),
             horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
         ) {
             Text(

@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -52,7 +53,7 @@ fun MifosLabelValueCard(
     ) {
         Column(
             modifier = Modifier
-                .padding(DesignToken.padding.medium),
+                .padding(KptTheme.spacing.dp12),
             verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
             horizontalAlignment = Alignment.Start,
         ) {

@@ -46,6 +46,7 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -205,7 +206,7 @@ fun MifosRadioButtonGroup(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     isError: Boolean = false,
-    spacing: Dp = DesignToken.spacing.medium,
+    spacing: Dp = KptTheme.spacing.dp12,
 ) {
     Column(
         modifier = modifier.selectableGroup(),
@@ -235,7 +236,7 @@ private fun Enhanced_Radio_Button_Preview() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(DesignToken.padding.medium),
+                .padding(KptTheme.spacing.dp12),
             verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
         ) {
             // Individual radio buttons
@@ -275,7 +276,7 @@ private fun Enhanced_Radio_Button_Preview() {
                 modifier = Modifier.fillMaxWidth(),
             )
 
-            Spacer(modifier = Modifier.size(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.size(KptTheme.spacing.dp12))
 
             // Radio button group
             Text(
@@ -291,7 +292,7 @@ private fun Enhanced_Radio_Button_Preview() {
                 modifier = Modifier.fillMaxWidth(),
             )
 
-            Spacer(modifier = Modifier.size(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.size(KptTheme.spacing.dp12))
 
             // Payment methods group
             Text(

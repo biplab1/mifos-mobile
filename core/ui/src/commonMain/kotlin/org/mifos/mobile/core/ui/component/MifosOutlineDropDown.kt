@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.toSize
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp2
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -107,8 +108,8 @@ fun MifosOutlineDropdown(
                     color = KptTheme.colorScheme.secondaryContainer,
                     shape = KptTheme.shapes.medium,
                 ),
-            tonalElevation = DesignToken.elevation.dp2,
-            shadowElevation = DesignToken.elevation.dp2,
+            tonalElevation = KptTheme.elevation.dp2,
+            shadowElevation = KptTheme.elevation.dp2,
             containerColor = KptTheme.colorScheme.inverseOnSurface,
             shape = KptTheme.shapes.large,
         ) {

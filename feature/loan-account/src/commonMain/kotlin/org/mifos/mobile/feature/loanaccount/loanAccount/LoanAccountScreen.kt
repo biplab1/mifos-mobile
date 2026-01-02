@@ -44,6 +44,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.common.CurrencyFormatter
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -216,7 +218,7 @@ internal fun LoanAccountContent(
                     },
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -241,7 +243,7 @@ internal fun LoanAccountContent(
 
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(
-                            DesignToken.spacing.largeIncreased,
+                            KptTheme.spacing.dp20,
                         ),
                     ) {
                         Icon(
@@ -254,7 +256,7 @@ internal fun LoanAccountContent(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                 HorizontalDivider(
                     modifier = Modifier

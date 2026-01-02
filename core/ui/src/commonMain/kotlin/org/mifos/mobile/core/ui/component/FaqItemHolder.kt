@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -57,7 +58,7 @@ fun FaqItemHolder(
                 .clickable {
                     onItemSelected.invoke(index)
                 }
-                .padding(all = DesignToken.padding.medium),
+                .padding(all = KptTheme.spacing.dp12),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
@@ -90,7 +91,7 @@ fun FaqItemHolder(
                 style = KptTheme.typography.bodyMedium,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(all = DesignToken.padding.medium),
+                    .padding(all = KptTheme.spacing.dp12),
             )
         }
 

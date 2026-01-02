@@ -30,6 +30,7 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.core_ui_money_in
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
@@ -72,7 +73,7 @@ fun MifosHiddenTextRow(
         IconButton(
             onClick = { isHidden = !isHidden },
             modifier = Modifier
-                .padding(start = DesignToken.padding.dp6)
+                .padding(start = KptTheme.spacing.dp6)
                 .size(DesignToken.sizes.iconMedium),
         ) {
             Icon(

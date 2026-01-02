@@ -40,6 +40,7 @@ import org.mifos.mobile.core.common.DateHelper
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -107,7 +108,7 @@ fun RepaymentScheduleItem(
                 )
             }
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
             Column(
                 modifier = Modifier.weight(1f),
             ) {

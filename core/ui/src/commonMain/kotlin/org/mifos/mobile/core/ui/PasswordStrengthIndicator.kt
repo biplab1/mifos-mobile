@@ -45,10 +45,14 @@ import androidx.compose.ui.text.font.FontWeight
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp2
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import org.mifos.mobile.core.designsystem.theme.topCornerDp8
 import template.core.base.designsystem.theme.KptTheme
 
 @Suppress("LongMethod", "CyclomaticComplexMethod", "MagicNumber")
@@ -106,7 +110,7 @@ fun PasswordStrengthIndicator(
                 modifier = Modifier
                     .fillMaxHeight()
                     .fillMaxWidth()
-                    .clip(DesignToken.shapes.dp2)
+                    .clip(KptTheme.shapes.dp2)
                     .graphicsLayer {
                         transformOrigin = TransformOrigin(pivotFractionX = 0f, pivotFractionY = 0f)
                         scaleX = widthPercent
@@ -170,7 +174,7 @@ private fun MinimumCharacterCount(
                 modifier = Modifier.size(DesignToken.sizes.iconTiny),
             )
         }
-        Spacer(modifier = Modifier.width(DesignToken.spacing.dp2))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.dp2))
         Text(
             text = "$minimumCharacterCount characters",
             color = characterCountColor,
@@ -255,7 +259,7 @@ fun CombinedPasswordErrorCard(
                         modifier = Modifier
                             .fillMaxHeight()
                             .fillMaxWidth()
-                            .clip(DesignToken.shapes.topCornerDp8)
+                            .clip(KptTheme.shapes.topCornerDp8)
                             .graphicsLayer {
                                 transformOrigin = TransformOrigin(pivotFractionX = 0f, pivotFractionY = 0f)
                                 scaleX = widthPercent
@@ -267,7 +271,7 @@ fun CombinedPasswordErrorCard(
                 }
 
                 Column(
-                    modifier = Modifier.padding(DesignToken.padding.medium),
+                    modifier = Modifier.padding(KptTheme.spacing.dp12),
                     verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),
                 ) {
                     // Header row with "Password Requirements" and strength label
@@ -278,7 +282,7 @@ fun CombinedPasswordErrorCard(
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.dp6),
+                            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp6),
                         ) {
                             Icon(
                                 imageVector = MifosIcons.OutlinedInfo,
@@ -337,7 +341,7 @@ fun CombinedPasswordErrorCard(
                                         color = KptTheme.colorScheme.error,
                                         shape = CircleShape,
                                     )
-                                    .padding(top = DesignToken.padding.dp6),
+                                    .padding(top = KptTheme.spacing.dp6),
                             )
                             Text(
                                 text = stringResource(it),
@@ -367,7 +371,7 @@ fun CombinedPasswordErrorCard(
                                         color = KptTheme.colorScheme.error,
                                         shape = CircleShape,
                                     )
-                                    .padding(top = DesignToken.padding.dp6),
+                                    .padding(top = KptTheme.spacing.dp6),
                             )
                             Text(
                                 text = stringResource(error),

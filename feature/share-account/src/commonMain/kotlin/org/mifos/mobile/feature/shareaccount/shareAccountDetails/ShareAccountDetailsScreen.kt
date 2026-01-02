@@ -37,8 +37,9 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.AppColors
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.enums.ChargeType
 import org.mifos.mobile.core.ui.component.MifosActionCard
@@ -49,6 +50,7 @@ import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
 import org.mifos.mobile.feature.shareaccount.component.ShareActionItems
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 internal fun ShareAccountDetailsScreen(
@@ -125,8 +127,8 @@ internal fun ShareAccountDetailsContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
-                        .padding(DesignToken.padding.large),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large),
+                        .padding(KptTheme.spacing.md),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     AccountDetailsGrid(
                         details = state.displayItems,
@@ -152,7 +154,7 @@ internal fun AccountDetailsGrid(
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         if (label != null) {
             Text(
@@ -164,8 +166,8 @@ internal fun AccountDetailsGrid(
         if (details != null) {
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
-                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+                verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
+                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 maxItemsInEachRow = 2,
             ) {
                 details.forEach { item ->
@@ -190,7 +192,7 @@ internal fun ShareAccountActions(
     visibleActions: Set<ShareActionItems>,
     onActionClick: (String) -> Unit,
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.large)) {
+    Column(verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md)) {
         Text(
             text = stringResource(Res.string.feature_share_account_details_action),
             style = MifosTypography.labelLargeEmphasized,

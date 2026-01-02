@@ -36,8 +36,9 @@ import mifos_mobile.feature.settings.generated.resources.no_questions_found
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.model.entity.FAQ
@@ -131,7 +132,7 @@ private fun FaqContent(
             LazyColumn(
                 modifier = Modifier.weight(1f).fillMaxWidth()
                     .padding(horizontal = KptTheme.spacing.md)
-                    .padding(top = DesignToken.padding.extraLarge),
+                    .padding(top = KptTheme.spacing.dp28),
                 verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.sm),
             ) {
                 itemsIndexed(items = faqArrayList) { index, faqItem ->
@@ -145,7 +146,7 @@ private fun FaqContent(
                 }
             }
             Row(
-                modifier = Modifier.fillMaxWidth().padding(DesignToken.padding.medium),
+                modifier = Modifier.fillMaxWidth().padding(KptTheme.spacing.dp12),
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically,
             ) {

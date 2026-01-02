@@ -31,6 +31,7 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosButton
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import template.core.base.designsystem.theme.KptTheme
@@ -54,7 +55,7 @@ fun MifosLogoutDialog(
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(
-                        space = DesignToken.spacing.medium,
+                        space = KptTheme.spacing.dp12,
                         alignment = Alignment.CenterVertically,
                     ),
                 ) {

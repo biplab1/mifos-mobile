@@ -39,8 +39,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp0
 import org.mifos.mobile.core.designsystem.theme.AppColors
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import template.core.base.designsystem.theme.KptTheme
 
@@ -83,7 +83,7 @@ fun MifosScaffold(
         snackbarHost = snackbarHost,
         containerColor = containerColor,
         contentColor = contentColor,
-        contentWindowInsets = WindowInsets(DesignToken.padding.none),
+        contentWindowInsets = WindowInsets(KptTheme.spacing.dp0),
         content = { paddingValues ->
             val internalPullToRefreshState = rememberPullToRefreshState()
             Box(
@@ -165,7 +165,7 @@ fun MifosScaffold(
         snackbarHost = snackbarHost,
         containerColor = containerColor,
         contentColor = contentColor,
-        contentWindowInsets = WindowInsets(DesignToken.padding.none),
+        contentWindowInsets = WindowInsets(KptTheme.spacing.dp0),
         content = { paddingValues ->
             val internalPullToRefreshState = rememberPullToRefreshState()
             Box(
@@ -245,7 +245,7 @@ fun MifosElevatedScaffold(
         },
         bottomBar = bottomBar,
         snackbarHost = snackbarHost,
-        contentWindowInsets = WindowInsets(DesignToken.padding.none),
+        contentWindowInsets = WindowInsets(KptTheme.spacing.dp0),
         containerColor = containerColor,
         contentColor = contentColor,
         content = { paddingValues ->

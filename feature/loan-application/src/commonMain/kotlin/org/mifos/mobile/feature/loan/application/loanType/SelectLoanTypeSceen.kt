@@ -35,8 +35,8 @@ import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosExploreCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
@@ -175,7 +175,7 @@ internal fun SelectLoanTypeScreenContent(
                         .padding(top = KptTheme.spacing.md),
                 ) {
                     Column(
-                        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+                        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                     ) {
                         val productOptions = state.productOptions ?: emptyList()
                         if (productOptions.isNotEmpty()) {
@@ -185,8 +185,8 @@ internal fun SelectLoanTypeScreenContent(
                             )
                             LazyVerticalStaggeredGrid(
                                 columns = StaggeredGridCells.Fixed(2),
-                                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
-                                verticalItemSpacing = DesignToken.spacing.medium,
+                                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
+                                verticalItemSpacing = KptTheme.spacing.dp12,
                                 content = {
                                     items(productOptions) { loanType ->
                                         MifosExploreCard(

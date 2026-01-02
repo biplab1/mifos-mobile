@@ -31,9 +31,13 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp25
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import org.mifos.mobile.core.designsystem.theme.topCornerDp16
 import template.core.base.designsystem.theme.KptTheme
 import mifos_mobile.core.ui.generated.resources.Res as UiRes
 
@@ -68,7 +72,7 @@ fun LoanCard(
             ),
         shape = KptTheme.shapes.medium,
         variant = CardVariant.ELEVATED,
-        elevation = CardDefaults.cardElevation(defaultElevation = DesignToken.elevation.elevation),
+        elevation = CardDefaults.cardElevation(defaultElevation = KptTheme.elevation.dp25),
     ) {
         Box(
             modifier = Modifier.fillMaxWidth(),
@@ -86,7 +90,7 @@ fun LoanCard(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(DesignToken.padding.largeIncreased),
+                    .padding(KptTheme.spacing.dp20),
                 verticalArrangement = Arrangement.SpaceBetween,
             ) {
                 Column {
@@ -165,7 +169,7 @@ fun LoanCardCustom(
             ),
         shape = KptTheme.shapes.medium,
         colors = CardDefaults.cardColors(containerColor = backgroundColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = DesignToken.elevation.dp6),
+        elevation = CardDefaults.cardElevation(defaultElevation = KptTheme.elevation.dp6),
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
@@ -175,7 +179,7 @@ fun LoanCardCustom(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(DesignToken.sizes.imageDp140)
-                    .clip(DesignToken.shapes.topCornerDp16),
+                    .clip(KptTheme.shapes.topCornerDp16),
                 painter = painterResource(cardImage),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
@@ -185,7 +189,7 @@ fun LoanCardCustom(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(DesignToken.padding.largeIncreased),
+                    .padding(KptTheme.spacing.dp20),
             ) {
                 Text(
                     text = title,

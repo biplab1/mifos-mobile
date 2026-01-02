@@ -47,7 +47,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.beneficiary.generated.resources.Res
 import mifos_mobile.feature.beneficiary.generated.resources.add
 import mifos_mobile.feature.beneficiary.generated.resources.add_beneficiary
-import mifos_mobile.feature.beneficiary.generated.resources.beneficiary
 import mifos_mobile.feature.beneficiary.generated.resources.filter
 import mifos_mobile.feature.beneficiary.generated.resources.ic_error_black_24dp
 import mifos_mobile.feature.beneficiary.generated.resources.linked_with
@@ -60,6 +59,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -298,7 +299,7 @@ internal fun ActionBar(
         modifier = modifier
             .fillMaxWidth()
             .padding(
-                vertical = DesignToken.padding.medium,
+                vertical = KptTheme.spacing.dp12,
                 horizontal = KptTheme.spacing.md,
             ),
         horizontalArrangement = Arrangement.End,
@@ -324,7 +325,7 @@ internal fun ActionBar(
             )
         }
 
-        Spacer(modifier = Modifier.width(DesignToken.spacing.largeIncreased))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.dp20))
 
         Row(
             modifier = Modifier.clickable {
@@ -397,7 +398,7 @@ internal fun BeneficiaryFilters(
                 },
             )
 
-            Spacer(Modifier.height(DesignToken.spacing.largeIncreased))
+            Spacer(Modifier.height(KptTheme.spacing.dp20))
 
             HorizontalDivider(modifier = Modifier.height(DesignToken.strokes.thin))
 
@@ -455,9 +456,9 @@ internal fun FilterSection(
             modifier = Modifier.padding(
                 start = KptTheme.spacing.xl,
                 end = KptTheme.spacing.sm,
-                top = DesignToken.padding.medium,
+                top = KptTheme.spacing.dp12,
             ),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             Row(
                 modifier = Modifier
@@ -499,7 +500,7 @@ internal fun FilterSection(
             ) {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 ) {
                     filters.forEach { filter ->
                         Row(
@@ -508,7 +509,7 @@ internal fun FilterSection(
                                 .onClick {
                                     onCheckChanged(filter)
                                 }
-                                .padding(horizontal = DesignToken.padding.largeIncreased),
+                                .padding(horizontal = KptTheme.spacing.dp20),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Checkbox(
@@ -533,7 +534,7 @@ internal fun FilterSection(
 
         HorizontalDivider(
             modifier = Modifier
-                .padding(top = DesignToken.padding.medium)
+                .padding(top = KptTheme.spacing.dp12)
                 .height(DesignToken.strokes.thin),
         )
     }

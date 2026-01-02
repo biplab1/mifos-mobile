@@ -60,9 +60,9 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.CurrencyFormatter
 import org.mifos.mobile.core.common.DateHelper
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
@@ -71,6 +71,7 @@ import org.mifos.mobile.core.ui.component.MifosProgressIndicator
 import org.mifos.mobile.core.ui.utils.DevicePreview
 import org.mifos.mobile.core.ui.utils.EventsEffect
 import org.mifos.mobile.core.ui.utils.ScreenUiState
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun TransactionDetailsScreen(
@@ -125,18 +126,18 @@ fun TransactionDetailContent(
         modifier = modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(DesignToken.padding.large),
+            .padding(KptTheme.spacing.md),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         TransactionHeader(transaction)
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.large))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.md))
 
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(MaterialTheme.colorScheme.surfaceContainerLow)
-                .padding(DesignToken.padding.medium),
+                .padding(KptTheme.spacing.dp12),
         ) {
             DetailItem(
                 stringResource(Res.string.feature_transaction_detail_id),
@@ -224,7 +225,7 @@ private fun TransactionHeader(transaction: UiTransactionDetails) {
             )
         }
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         Text(
             text = CurrencyFormatter.format(
@@ -252,7 +253,7 @@ private fun TransactionBreakdown(transaction: UiTransactionDetails) {
         transaction.penalties != null
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
-            Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
             Text(
                 text = stringResource(Res.string.feature_transaction_detail_breakdown),
@@ -314,7 +315,7 @@ fun DetailItem(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = DesignToken.padding.small),
+            .padding(vertical = KptTheme.spacing.sm),
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(

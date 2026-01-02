@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import template.core.base.designsystem.theme.KptTheme
 
@@ -52,7 +52,7 @@ fun RowScope.MifosNavigationBarItem(
         selected = isSelected,
         alwaysShowLabel = true,
         onClick = onClick,
-        modifier = modifier.padding(vertical = DesignToken.padding.dp6),
+        modifier = modifier.padding(vertical = KptTheme.spacing.dp6),
         colors = NavigationBarItemDefaults.colors(
             selectedIconColor = KptTheme.colorScheme.primary,
             unselectedIconColor = KptTheme.colorScheme.primary,

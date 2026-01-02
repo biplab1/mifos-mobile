@@ -42,6 +42,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosCard
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp2
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -89,7 +91,7 @@ internal fun AboutScreenContent(
                 .fillMaxSize()
                 .navigationBarsPadding()
                 .padding(
-                    DesignToken.padding.largeIncreased,
+                    KptTheme.spacing.dp20,
                 ).verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
@@ -104,7 +106,7 @@ internal fun AboutScreenContent(
                     Modifier
                         .fillMaxWidth()
                         .padding(KptTheme.spacing.xl),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
@@ -152,7 +154,7 @@ internal fun AboutScreenContent(
                                 text = "• $point",
                                 style = MifosTypography.bodySmall,
                                 color = AppColors.customBlack,
-                                modifier = Modifier.padding(vertical = DesignToken.padding.dp2),
+                                modifier = Modifier.padding(vertical = KptTheme.spacing.dp2),
                             )
                         }
                     }

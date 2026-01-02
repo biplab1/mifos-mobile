@@ -35,7 +35,7 @@ fun MifosBottomBar(
         modifier = modifier
             .fillMaxWidth()
 //            .shadow(
-//                elevation = DesignToken.elevation.elevation,
+//                elevation = KptTheme.elevation.dp25,
 //                spotColor = Color(0xFF5D5D5D),
 //                ambientColor = Color.Black,
 //            )

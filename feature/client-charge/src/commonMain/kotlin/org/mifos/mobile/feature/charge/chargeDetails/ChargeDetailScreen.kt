@@ -41,6 +41,10 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp28
+import org.mifos.mobile.core.designsystem.theme.dp48
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosDetailsCard
@@ -91,13 +95,13 @@ internal fun ChargeDetailScreen(
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
                     .padding(
-                        vertical = DesignToken.padding.extraLarge,
+                        vertical = KptTheme.spacing.dp28,
                         horizontal = KptTheme.spacing.md,
                     ),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 MifosDetailsCard(keyValuePairs = state.details)
-                Spacer(Modifier.height(DesignToken.padding.extraExtraLarge))
+                Spacer(Modifier.height(KptTheme.spacing.dp48))
                 if (state.isPaid) {
                     ChargeDetailsPaidComponent(
                         refNo = state.refNo,
@@ -132,7 +136,7 @@ fun ChargeDetailsPaidComponent(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = DesignToken.padding.largeIncreased),
+            .padding(horizontal = KptTheme.spacing.dp20),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
@@ -140,7 +144,7 @@ fun ChargeDetailsPaidComponent(
             style = KptTheme.typography.bodySmall,
             textAlign = TextAlign.Center,
         )
-        Spacer(Modifier.height(DesignToken.padding.medium))
+        Spacer(Modifier.height(KptTheme.spacing.dp12))
         Image(
             modifier = Modifier
                 .height(DesignToken.sizes.imageDp60)
@@ -148,7 +152,7 @@ fun ChargeDetailsPaidComponent(
             painter = painterResource(uiRes.drawable.ic_icon_success),
             contentDescription = "Status icon",
         )
-        Spacer(Modifier.height(DesignToken.padding.medium))
+        Spacer(Modifier.height(KptTheme.spacing.dp12))
         Text(
             text = stringResource(Res.string.ref_no, refNo),
             style = KptTheme.typography.bodySmall,

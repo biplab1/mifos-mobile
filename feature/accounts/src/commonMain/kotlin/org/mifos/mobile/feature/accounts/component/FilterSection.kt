@@ -36,6 +36,8 @@ import mifos_mobile.feature.accounts.generated.resources.Res
 import mifos_mobile.feature.accounts.generated.resources.feature_filters_count
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -77,9 +79,9 @@ internal fun FilterSection(
             modifier = Modifier.padding(
                 start = KptTheme.spacing.xl,
                 end = KptTheme.spacing.sm,
-                top = DesignToken.padding.medium,
+                top = KptTheme.spacing.dp12,
             ),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             Row(
                 modifier = Modifier
@@ -121,7 +123,7 @@ internal fun FilterSection(
             ) {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 ) {
                     filters.forEach { filter ->
                         when (filter) {
@@ -151,7 +153,7 @@ internal fun FilterSection(
 
         HorizontalDivider(
             modifier = Modifier
-                .padding(top = DesignToken.padding.medium)
+                .padding(top = KptTheme.spacing.dp12)
                 .height(DesignToken.strokes.thin),
         )
     }
@@ -180,7 +182,7 @@ fun FilterCheckboxUI(
             .onClick {
                 onCheckedChange()
             }
-            .padding(horizontal = DesignToken.padding.largeIncreased),
+            .padding(horizontal = KptTheme.spacing.dp20),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         if (isRadio) {

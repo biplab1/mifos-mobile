@@ -30,6 +30,9 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosButton
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp28
+import org.mifos.mobile.core.designsystem.theme.dp48
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -58,7 +61,7 @@ fun MifosStatusComponent(
             contentDescription = "Status icon",
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         Text(
             text = title,
@@ -67,7 +70,7 @@ fun MifosStatusComponent(
             textAlign = TextAlign.Center,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         Text(
             text = subTitle,
@@ -76,7 +79,7 @@ fun MifosStatusComponent(
             textAlign = TextAlign.Center,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.extraLarge))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp28))
 
         MifosButton(
             modifier = Modifier
@@ -111,7 +114,7 @@ private fun Mifos_Status_Component() {
                 buttonText = "Next",
                 onClick = {},
             )
-            Spacer(modifier = Modifier.height(DesignToken.spacing.extraExtraLarge))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.dp48))
             MifosStatusComponent(
                 icon = Res.drawable.ic_icon_error,
                 title = "Failed To Register The User",

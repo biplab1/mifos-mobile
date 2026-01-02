@@ -43,6 +43,9 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosRadioButton
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp48
+import org.mifos.mobile.core.designsystem.theme.dp75
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -101,7 +104,7 @@ internal fun OnboardingLanguageScreenContent(
         Box(
             modifier = modifier
                 .fillMaxSize()
-                .padding(top = DesignToken.padding.dp75),
+                .padding(top = KptTheme.spacing.dp75),
         ) {
             Column(
                 modifier = Modifier
@@ -116,7 +119,7 @@ internal fun OnboardingLanguageScreenContent(
                     contentDescription = null,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.extraExtraLarge))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp48))
 
                 Text(
                     text = stringResource(Res.string.feature_onboarding_choose_your_app_language),
@@ -124,7 +127,7 @@ internal fun OnboardingLanguageScreenContent(
                     color = KptTheme.colorScheme.onSurface,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                 Text(
                     text = stringResource(
@@ -153,7 +156,7 @@ internal fun LanguageSelectionContent(
 ) {
     LazyColumn(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
     ) {
         items(LanguageConfig.entries) {
             MifosRadioButton(

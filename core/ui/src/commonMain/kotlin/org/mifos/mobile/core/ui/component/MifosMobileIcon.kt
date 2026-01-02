@@ -20,9 +20,11 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.core_ui_money_in
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp0
+import org.mifos.mobile.core.designsystem.theme.dp56
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun MifosMobileIcon(
@@ -36,7 +38,7 @@ fun MifosMobileIcon(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.CenterHorizontally)
-                .padding(DesignToken.padding.none, DesignToken.padding.dp56),
+                .padding(KptTheme.spacing.dp0, KptTheme.spacing.dp56),
         )
     }
 }

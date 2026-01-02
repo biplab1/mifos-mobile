@@ -54,6 +54,8 @@ import org.mifos.mobile.core.designsystem.component.MifosOutlinedButton
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp24
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -159,7 +161,7 @@ internal fun OptAuthScreenContent(
                         style = MifosTypography.headlineMedium,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                     Text(
                         text = stringResource(Res.string.feature_otp_subtitle),
@@ -167,7 +169,7 @@ internal fun OptAuthScreenContent(
                         style = MifosTypography.titleSmallEmphasized,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                     Text(
                         text = stringResource(Res.string.feature_otp_message),
@@ -175,7 +177,7 @@ internal fun OptAuthScreenContent(
                         style = MifosTypography.bodySmall,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
 
                     OtpInputForm(
                         state = state,
@@ -262,7 +264,7 @@ internal fun OtpInputForm(
         )
 
         Column(
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             MifosOutlinedButton(
                 modifier = Modifier

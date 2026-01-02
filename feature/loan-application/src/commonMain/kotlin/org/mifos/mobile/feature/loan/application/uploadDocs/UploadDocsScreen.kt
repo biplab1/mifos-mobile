@@ -44,6 +44,7 @@ import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp0
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
@@ -142,7 +143,7 @@ internal fun UploadDocsDialogs(
                 containerColor = Color.White,
                 contentWindowInsets = {
                     if (dialogState.isSignatureMode) {
-                        WindowInsets(DesignToken.spacing.none)
+                        WindowInsets(KptTheme.spacing.dp0)
                     } else {
                         BottomSheetDefaults.windowInsets
                     }

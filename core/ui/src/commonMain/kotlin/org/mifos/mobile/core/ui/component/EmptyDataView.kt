@@ -30,6 +30,8 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -81,14 +83,14 @@ fun EmptyDataView(
             Icon(
                 modifier = Modifier
                     .size(DesignToken.sizes.iconDp100)
-                    .padding(bottom = DesignToken.padding.medium),
+                    .padding(bottom = KptTheme.spacing.dp12),
                 painter = painterResource(it),
                 contentDescription = null,
             )
         }
 
         Text(
-            modifier = Modifier.padding(horizontal = DesignToken.padding.largeIncreased),
+            modifier = Modifier.padding(horizontal = KptTheme.spacing.dp20),
             text = errorString ?: stringResource(error),
             style = KptTheme.typography.labelMedium,
             textAlign = TextAlign.Center,

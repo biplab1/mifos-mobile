@@ -39,6 +39,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -70,7 +71,7 @@ internal fun BottomSheetContent(
     ) {
         Column(
             modifier = Modifier.padding(horizontal = KptTheme.spacing.md),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             BottomSheetIconContainer(
                 onClick = {

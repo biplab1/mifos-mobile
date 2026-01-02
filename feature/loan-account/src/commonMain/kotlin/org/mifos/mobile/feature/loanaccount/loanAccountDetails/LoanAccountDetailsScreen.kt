@@ -38,6 +38,8 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.common.Constants.TRANSFER_PAY_TO
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -228,7 +230,7 @@ internal fun AccountDetailsGrid(
     Column(
         modifier = Modifier
             .fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         if (label != null) {
             Text(
@@ -240,8 +242,8 @@ internal fun AccountDetailsGrid(
         if (details != null) {
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
-                horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+                verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
+                horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 maxItemsInEachRow = 2,
             ) {
                 details.forEach { item ->

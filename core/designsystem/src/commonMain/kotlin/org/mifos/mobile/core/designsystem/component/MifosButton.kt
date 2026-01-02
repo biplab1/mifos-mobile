@@ -27,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
+import org.mifos.mobile.core.designsystem.theme.dp0
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import template.core.base.designsystem.theme.KptTheme
 
@@ -218,7 +219,7 @@ private fun MifosButtonContent(
                     start = if (leadingIcon != null) {
                         ButtonDefaults.IconSpacing
                     } else {
-                        DesignToken.padding.none
+                        KptTheme.spacing.dp0
                     },
                 ),
         ) {

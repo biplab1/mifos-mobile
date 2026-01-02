@@ -15,7 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextDecoration
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp2
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
 import template.core.base.designsystem.theme.KptTheme
@@ -33,7 +33,7 @@ fun MifosLinkText(
             textDecoration = if (isUnderlined) TextDecoration.Underline else null,
         ),
         modifier = modifier
-            .padding(vertical = DesignToken.padding.dp2)
+            .padding(vertical = KptTheme.spacing.dp2)
             .clickable {
                 onClick()
             },

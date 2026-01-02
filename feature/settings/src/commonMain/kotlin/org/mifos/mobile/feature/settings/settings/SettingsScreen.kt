@@ -43,6 +43,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosActionCard
@@ -218,7 +219,7 @@ internal fun SettingsProfileCard(
     modifier: Modifier = Modifier,
 ) {
     Row(
-        modifier = modifier.fillMaxWidth().padding(DesignToken.padding.extraLarge),
+        modifier = modifier.fillMaxWidth().padding(KptTheme.spacing.dp28),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(

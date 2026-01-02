@@ -38,6 +38,7 @@ import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosBottomSheet
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.rememberMifosPullToRefreshState
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.model.enums.AccountType
@@ -162,7 +163,7 @@ internal fun SavingsAccountFilters(
             },
         )
 
-        Spacer(Modifier.height(DesignToken.spacing.largeIncreased))
+        Spacer(Modifier.height(KptTheme.spacing.dp20))
 
         HorizontalDivider(modifier = Modifier.height(DesignToken.strokes.thin))
 

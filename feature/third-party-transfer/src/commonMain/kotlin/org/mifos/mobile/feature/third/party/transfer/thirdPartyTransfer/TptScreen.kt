@@ -48,6 +48,7 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -214,7 +215,7 @@ internal fun TptForm(
         modifier = modifier
             .padding(KptTheme.spacing.md)
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         MifosPayFromDropdownUI(
             accounts = state.fromAccountOptions.map

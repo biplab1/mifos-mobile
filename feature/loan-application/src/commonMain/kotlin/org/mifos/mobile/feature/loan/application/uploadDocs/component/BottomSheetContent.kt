@@ -64,6 +64,7 @@ import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -266,7 +267,7 @@ private fun SignatureContent(
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+                    horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
                 ) {
                     MifosButton(
                         modifier = Modifier.weight(0.4f),

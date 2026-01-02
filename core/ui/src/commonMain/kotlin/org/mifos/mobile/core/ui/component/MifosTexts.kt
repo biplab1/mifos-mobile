@@ -29,6 +29,7 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.core_ui_money_in
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
+import org.mifos.mobile.core.designsystem.theme.dp5
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
@@ -107,7 +108,7 @@ fun MifosTextTitleDescDrawableSingleLine(
             style = KptTheme.typography.bodyMedium,
             text = description,
         )
-        Spacer(modifier = Modifier.width(DesignToken.spacing.dp5))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.dp5))
         Image(
             painter = painterResource(imageResId),
             contentDescription = "Image",

@@ -32,6 +32,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.common.CurrencyFormatter
 import org.mifos.mobile.core.common.DateHelper
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -81,7 +82,7 @@ fun ClientChargeItem(
                 .padding(KptTheme.spacing.sm),
 
         )
-        Spacer(Modifier.width(DesignToken.padding.medium))
+        Spacer(Modifier.width(KptTheme.spacing.dp12))
         Column(
             modifier = Modifier.weight(1f),
         ) {
@@ -103,7 +104,7 @@ fun ClientChargeItem(
                 style = MifosTypography.bodySmall,
             )
         }
-        Spacer(Modifier.width(DesignToken.padding.medium))
+        Spacer(Modifier.width(KptTheme.spacing.dp12))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),

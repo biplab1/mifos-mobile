@@ -45,7 +45,7 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosLoadingDialog
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextField
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp10
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorApplicationPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorPayload
 import org.mifos.mobile.core.model.entity.guarantor.GuarantorType
@@ -187,7 +187,7 @@ private fun AddGuarantorContent(
             label = stringResource(Res.string.city),
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.dp10))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp10))
 
         MifosButton(
             content = { Text(stringResource(Res.string.submit)) },

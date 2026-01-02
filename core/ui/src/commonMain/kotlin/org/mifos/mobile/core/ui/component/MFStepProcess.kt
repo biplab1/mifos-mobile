@@ -32,9 +32,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import org.mifos.mobile.core.designsystem.theme.dp10
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun MFStepProcess(
@@ -87,7 +90,7 @@ fun MFStepProcess(
         }
         content(
             Modifier
-                .padding(start = DesignToken.padding.dp10, end = DesignToken.padding.dp6)
+                .padding(start = KptTheme.spacing.dp10, end = KptTheme.spacing.dp6)
                 .onGloballyPositioned { barHeight = with(localDensity) { it.size.height.toDp() } },
         )
     }

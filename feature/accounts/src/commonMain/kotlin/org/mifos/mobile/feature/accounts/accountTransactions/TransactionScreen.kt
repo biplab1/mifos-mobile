@@ -51,6 +51,8 @@ import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.rememberMifosPullToRefreshState
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -193,7 +195,7 @@ internal fun TransactionScreenContent(
                                     Text(
                                         text = date,
                                         style = MifosTypography.labelLargeEmphasized,
-                                        modifier = Modifier.padding(vertical = DesignToken.padding.medium),
+                                        modifier = Modifier.padding(vertical = KptTheme.spacing.dp12),
                                     )
                                 }
 
@@ -273,7 +275,7 @@ internal fun ActionBar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = DesignToken.padding.medium),
+            .padding(vertical = KptTheme.spacing.dp12),
         horizontalArrangement = Arrangement.End,
     ) {
         // TODO : commenting because this feature is not currently available, uncomment and implement later
@@ -297,7 +299,7 @@ internal fun ActionBar(
 //            )
 //        }
 
-        Spacer(modifier = Modifier.width(DesignToken.spacing.largeIncreased))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.dp20))
 
         Row(
             modifier = Modifier.clickable {
@@ -370,7 +372,7 @@ internal fun TransactionFilters(
                 },
             )
 
-            Spacer(Modifier.height(DesignToken.spacing.largeIncreased))
+            Spacer(Modifier.height(KptTheme.spacing.dp20))
 
             HorizontalDivider(modifier = Modifier.height(DesignToken.strokes.thin))
 

@@ -28,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -49,7 +50,7 @@ fun TransactionScreenItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(vertical = DesignToken.padding.medium),
+            .padding(vertical = KptTheme.spacing.dp12),
     ) {
         Row(
             modifier = Modifier
@@ -75,7 +76,7 @@ fun TransactionScreenItem(
                     .padding(KptTheme.spacing.sm),
             )
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -93,7 +94,7 @@ fun TransactionScreenItem(
                 )
             }
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Text(
                 text = if (isCredited) {

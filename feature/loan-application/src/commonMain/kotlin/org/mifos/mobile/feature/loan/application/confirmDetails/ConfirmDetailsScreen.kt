@@ -34,6 +34,8 @@ import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosDetailsCard
@@ -168,9 +170,9 @@ internal fun ConfirmDetailsScreenContent(
                 Column(
                     modifier = modifier
                         .padding(KptTheme.spacing.md)
-                        .padding(top = DesignToken.padding.medium)
+                        .padding(top = KptTheme.spacing.dp12)
                         .verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.extraLarge),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp28),
                 ) {
                     MifosDetailsCard(state.details)
 

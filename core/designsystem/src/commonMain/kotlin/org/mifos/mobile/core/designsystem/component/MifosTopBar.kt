@@ -30,6 +30,9 @@ import androidx.compose.ui.draw.shadow
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.bottomCornerDp16
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp25
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -127,7 +130,7 @@ fun MifosRoundedTopAppBar(
         navigationIcon = {
             if (brandIcon != null) {
                 Box(
-                    modifier = Modifier.padding(DesignToken.padding.medium),
+                    modifier = Modifier.padding(KptTheme.spacing.dp12),
                 ) {
                     Image(
                         painter = painterResource(brandIcon),
@@ -154,12 +157,12 @@ fun MifosRoundedTopAppBar(
         modifier = modifier
             .fillMaxWidth()
             .shadow(
-                elevation = DesignToken.elevation.elevation,
-                shape = DesignToken.shapes.topBar,
+                elevation = KptTheme.elevation.dp25,
+                shape = KptTheme.shapes.bottomCornerDp16,
                 spotColor = KptTheme.colorScheme.onSurface,
                 ambientColor = KptTheme.colorScheme.onSurface,
             )
-            .clip(DesignToken.shapes.topBar)
+            .clip(KptTheme.shapes.bottomCornerDp16)
             .background(KptTheme.colorScheme.surface),
     )
 }

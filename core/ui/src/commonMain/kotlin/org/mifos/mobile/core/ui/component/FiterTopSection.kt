@@ -24,6 +24,7 @@ import mifos_mobile.core.ui.generated.resources.feature_savings_apply
 import mifos_mobile.core.ui.generated.resources.feature_savings_filter
 import mifos_mobile.core.ui.generated.resources.feature_savings_reset
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -66,8 +67,7 @@ fun FilterTopSection(
 
         Row(
             horizontalArrangement = Arrangement.spacedBy(
-                DesignToken.spacing
-                    .largeIncreased,
+                KptTheme.spacing.dp20,
             ),
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -77,8 +77,7 @@ fun FilterTopSection(
                         isAnyFilterSelected,
                     ) { resetFilters.invoke() },
                 horizontalArrangement = Arrangement.spacedBy(
-                    DesignToken.spacing
-                        .extraSmall,
+                    KptTheme.spacing.xs,
                 ),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
@@ -101,8 +100,7 @@ fun FilterTopSection(
                 modifier = Modifier
                     .clickable { onApplyFilter.invoke() },
                 horizontalArrangement = Arrangement.spacedBy(
-                    DesignToken.spacing
-                        .extraSmall,
+                    KptTheme.spacing.xs,
                 ),
                 verticalAlignment = Alignment.CenterVertically,
             ) {

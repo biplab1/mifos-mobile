@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -65,7 +66,7 @@ fun MifosBeneficiariesCard(
                 bitmap = null,
             )
 
-            Spacer(modifier = Modifier.width(DesignToken.padding.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -86,7 +87,7 @@ fun MifosBeneficiariesCard(
                     style = MifosTypography.bodyMedium,
                 )
             }
-            Spacer(modifier = Modifier.width(DesignToken.padding.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Icon(
                 imageVector = MifosIcons.ChevronRight,

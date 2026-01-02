@@ -49,9 +49,13 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.circle
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -90,14 +94,14 @@ fun MifosDashboardCard(
                 .fillMaxWidth()
                 .padding(KptTheme.spacing.sm),
             horizontalArrangement = Arrangement.spacedBy(
-                DesignToken.spacing.medium,
+                KptTheme.spacing.dp12,
                 Alignment.End,
             ),
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(DesignToken.padding.medium),
+                    .padding(KptTheme.spacing.dp12),
                 verticalArrangement = Arrangement.SpaceBetween,
             ) {
                 if (loanAccount != null) {
@@ -154,7 +158,7 @@ fun MifosDashboardCard(
             onClick = onVisibilityToggle,
             modifier = Modifier
                 .align(Alignment.BottomEnd)
-                .padding(DesignToken.padding.medium),
+                .padding(KptTheme.spacing.dp12),
         ) {
             Icon(
                 imageVector = if (isVisible) MifosIcons.Eye else MifosIcons.EyeOff,
@@ -172,7 +176,7 @@ fun MifosAccountApplyDashboard(
 ) {
     MifosCustomCard(
         modifier = modifier
-            .padding(horizontal = DesignToken.padding.largeIncreased)
+            .padding(horizontal = KptTheme.spacing.dp20)
             .border(
                 DesignToken.strokes.dpPoint5,
                 KptTheme.colorScheme.primary,
@@ -192,9 +196,9 @@ fun MifosAccountApplyDashboard(
                     KptTheme.colorScheme.onSurface.copy(alpha = 0.01f),
                 )
                 .fillMaxWidth()
-                .padding(DesignToken.padding.extraLarge),
+                .padding(KptTheme.spacing.dp28),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             Icon(
                 imageVector = MifosIcons.AddColor,
@@ -222,7 +226,7 @@ fun MifosAccountApplyDashboard(
                     .wrapContentWidth()
                     .height(DesignToken.sizes.avatarMedium),
                 onClick = onOpenAccountClick,
-                shape = DesignToken.shapes.circle,
+                shape = KptTheme.shapes.circle,
                 text = {
                     Text(
                         text = stringResource(Res.string.feature_dashboard_open_account),

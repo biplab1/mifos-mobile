@@ -57,7 +57,7 @@ import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
@@ -209,7 +209,7 @@ internal fun LoanProductDetailsScreenContent(
                         .fillMaxSize()
                         .padding(KptTheme.spacing.md)
                         .padding(top = KptTheme.spacing.md),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                 ) {
                     item {
                         LoanCard(
@@ -229,7 +229,7 @@ internal fun LoanProductDetailsScreenContent(
                             text = stringResource(Res.string.feature_loan_terms_and_conditions),
                             style = MifosTypography.titleMediumEmphasized,
                         )
-                        Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
+                        Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
                         Column(
                             modifier = Modifier.fillMaxWidth(),
                             verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.xs),

@@ -33,7 +33,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.Constants
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.model.entity.AccountDetails
 import org.mifos.mobile.core.model.entity.TransferSuccessDestination
@@ -152,7 +153,7 @@ internal fun RepaymentScreenContent(
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
                         .padding(
-                            vertical = DesignToken.padding.extraLarge,
+                            vertical = KptTheme.spacing.dp28,
                             horizontal = KptTheme.spacing.md,
                         ),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -205,7 +206,7 @@ fun RepaymentScheduleList(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
     ) {
         periods.forEach { period ->
             RepaymentScheduleItem(

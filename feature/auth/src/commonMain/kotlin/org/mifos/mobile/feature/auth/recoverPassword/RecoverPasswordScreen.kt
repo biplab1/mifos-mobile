@@ -49,6 +49,9 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp24
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -129,7 +132,7 @@ internal fun RecoverPasswordScreen(
                         color = KptTheme.colorScheme.onBackground,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                     Text(
                         text = stringResource(Res.string.feature_recover_now_message),
@@ -137,7 +140,7 @@ internal fun RecoverPasswordScreen(
                         color = KptTheme.colorScheme.secondary,
                     )
 
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
 
                     ForgotPasswordInputBox(
                         state = state,
@@ -240,7 +243,7 @@ internal fun ForgotPasswordInputBox(
                 color = KptTheme.colorScheme.secondary,
             )
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.dp6))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp6))
 
             Text(
                 modifier = Modifier.clickable { onAction.invoke(RecoverPasswordAction.OnLogin) },

@@ -45,6 +45,9 @@ import mifos_mobile.core.ui.generated.resources.select_other_payment_account
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.bottomCornerDp12
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -104,7 +107,7 @@ fun MifosDropDownPayFromComponent(
                     .fillMaxSize()
                     .padding(
                         horizontal = KptTheme.spacing.md,
-                        vertical = DesignToken.padding.largeIncreased,
+                        vertical = KptTheme.spacing.dp20,
                     ),
                 verticalArrangement = Arrangement.SpaceBetween,
             ) {
@@ -166,7 +169,7 @@ fun AccountDropdownItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .padding(DesignToken.padding.medium),
+            .padding(KptTheme.spacing.dp12),
     ) {
         Text(
             text = accountNumber,
@@ -194,7 +197,7 @@ fun AccountDropdownList(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clip(DesignToken.shapes.bottomCornerDp12)
+            .clip(KptTheme.shapes.bottomCornerDp12)
             .background(KptTheme.colorScheme.tertiary),
     ) {
         Column(
@@ -204,7 +207,7 @@ fun AccountDropdownList(
                 Modifier
                     .fillMaxWidth()
                     .height(KptTheme.spacing.sm)
-                    .clip(DesignToken.shapes.bottomCornerDp12)
+                    .clip(KptTheme.shapes.bottomCornerDp12)
                     .background(KptTheme.colorScheme.background),
             )
             Row(
@@ -232,7 +235,7 @@ fun AccountDropdownList(
         AnimatedVisibility(visible = expanded) {
             Column(
                 Modifier
-                    .padding(bottom = DesignToken.padding.medium),
+                    .padding(bottom = KptTheme.spacing.dp12),
             ) {
                 accounts.forEach { (accountNumber, balance) ->
                     AccountDropdownItem(

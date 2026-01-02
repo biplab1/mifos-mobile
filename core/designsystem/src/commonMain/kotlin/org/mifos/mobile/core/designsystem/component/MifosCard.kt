@@ -57,7 +57,11 @@ import mifos_mobile.core.designsystem.generated.resources.feature_upload_id_sele
 import mifos_mobile.core.designsystem.generated.resources.feature_upload_id_view_file
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp25
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
+import org.mifos.mobile.core.designsystem.theme.negativeDp7
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -203,7 +207,7 @@ fun MifosUploadStateCardContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(DesignToken.padding.medium),
+            .padding(KptTheme.spacing.dp12),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -264,7 +268,7 @@ fun MifosUploadedStateCard(
         Box(
             modifier = Modifier
                 .padding(start = KptTheme.spacing.md)
-                .offset(y = DesignToken.spacing.negativeDp7),
+                .offset(y = KptTheme.spacing.negativeDp7),
         ) {
             Text(
                 text = label,
@@ -293,7 +297,7 @@ fun MifosUploadedCardContent(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(DesignToken.padding.largeIncreased),
+            .padding(KptTheme.spacing.dp20),
     ) {
         Box(
             modifier = Modifier
@@ -329,7 +333,7 @@ fun MifosUploadedCardContent(
                 color = KptTheme.colorScheme.secondary,
             )
 
-            Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
+            Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
 
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
@@ -468,7 +472,7 @@ private fun Upload_Card_Preview() {
     MifosMobileTheme {
         Column(
             modifier = Modifier.fillMaxSize().padding(KptTheme.spacing.md),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
         ) {
             Text(
                 text = "Different variant cards",
@@ -485,7 +489,7 @@ private fun Upload_Card_Preview() {
                     shape = KptTheme.shapes.medium,
                     elevation = CardDefaults.cardElevation(
                         defaultElevation = if (it == CardVariant.ELEVATED) {
-                            DesignToken.elevation.elevation
+                            KptTheme.elevation.dp25
                         } else {
                             KptTheme.elevation.level0
                         },
@@ -502,7 +506,7 @@ private fun Upload_Card_Preview() {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(DesignToken.padding.medium),
+                            .padding(KptTheme.spacing.dp12),
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
@@ -541,7 +545,7 @@ fun FloatingTitleCardPreview() {
     MifosMobileTheme {
         Column(
             modifier = Modifier.fillMaxSize().padding(KptTheme.spacing.md),
-            verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
         ) {
             MifosUploadedStateCard(
                 label = "Profile Photo",

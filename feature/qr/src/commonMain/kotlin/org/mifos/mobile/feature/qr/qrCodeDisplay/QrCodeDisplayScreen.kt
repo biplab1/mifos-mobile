@@ -41,6 +41,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.DateHelper
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp48
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -127,7 +129,7 @@ private fun QrCodeDisplayContent(
                 color = KptTheme.colorScheme.primary,
             )
 
-            Spacer(Modifier.height(DesignToken.padding.largeIncreased))
+            Spacer(Modifier.height(KptTheme.spacing.dp20))
 
             Text(
                 text = stringResource(Res.string.qr_scan_instruction),
@@ -135,7 +137,7 @@ private fun QrCodeDisplayContent(
                 textAlign = TextAlign.Center,
             )
 
-            Spacer(Modifier.height(DesignToken.padding.extraExtraLarge))
+            Spacer(Modifier.height(KptTheme.spacing.dp48))
 
             Image(
                 painter = painter,
@@ -144,7 +146,7 @@ private fun QrCodeDisplayContent(
                     .size(DesignToken.sizes.imageDp212),
             )
 
-            Spacer(Modifier.height(DesignToken.padding.extraExtraLarge))
+            Spacer(Modifier.height(KptTheme.spacing.dp48))
 
             Text(
                 text = stringResource(Res.string.qr_alignment_instruction),

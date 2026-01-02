@@ -27,7 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Dialog
 import com.attafitamim.krop.core.crop.CropError
 import com.attafitamim.krop.core.crop.CropperLoading
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp6
 import template.core.base.designsystem.theme.KptTheme
 
 @Composable
@@ -57,7 +57,7 @@ fun LoadingDialog(
         Dialog(onDismissRequest = { dismissed = true }) {
             Surface(shape = KptTheme.shapes.small) {
                 Column(
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.dp6, Alignment.CenterVertically),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp6, Alignment.CenterVertically),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = modifier.padding(KptTheme.spacing.md),
                 ) {

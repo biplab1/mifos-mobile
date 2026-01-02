@@ -31,6 +31,7 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.ic_icon_dashboard
 import org.jetbrains.compose.resources.painterResource
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -72,7 +73,7 @@ fun MifosBeneficiaryTopCard(
                         .background(Color.LightGray),
                     bitmap = null,
                 )
-                Spacer(modifier = Modifier.width(DesignToken.padding.medium))
+                Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
                 Column {
                     Text(
                         text = beneficiary?.name ?: "",

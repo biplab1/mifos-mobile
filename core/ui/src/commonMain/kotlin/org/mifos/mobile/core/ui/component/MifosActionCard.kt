@@ -33,6 +33,7 @@ import mifos_mobile.core.ui.generated.resources.savings_account
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -51,7 +52,7 @@ fun MifosActionCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .padding(vertical = DesignToken.padding.medium),
+            .padding(vertical = KptTheme.spacing.dp12),
     ) {
         Row(
             modifier = modifier
@@ -72,7 +73,7 @@ fun MifosActionCard(
 
             )
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -89,7 +90,7 @@ fun MifosActionCard(
                 )
             }
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Icon(
                 imageVector = MifosIcons.ChevronRight,

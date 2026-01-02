@@ -42,6 +42,7 @@ import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -149,7 +150,7 @@ internal fun MakeTransferScreenContent(
                             horizontal = KptTheme.spacing.md,
                             vertical = KptTheme.spacing.xl,
                         ),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                 ) {
                     MifosDropDownDoubleTextField(
                         optionsList = state.toAccountOptions.map

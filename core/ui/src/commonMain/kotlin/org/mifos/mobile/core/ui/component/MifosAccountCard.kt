@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -52,7 +53,7 @@ fun MifosAccountCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onAccountClick(accountId) }
-            .padding(vertical = DesignToken.padding.medium),
+            .padding(vertical = KptTheme.spacing.dp12),
     ) {
         Row(
             modifier = Modifier
@@ -73,7 +74,7 @@ fun MifosAccountCard(
 
             )
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Column(
                 modifier = Modifier.weight(1f),
@@ -90,7 +91,7 @@ fun MifosAccountCard(
                 )
             }
 
-            Spacer(modifier = Modifier.width(DesignToken.spacing.medium))
+            Spacer(modifier = Modifier.width(KptTheme.spacing.dp12))
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,

@@ -29,10 +29,12 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.no_internet
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun NoInternet(
@@ -51,7 +53,7 @@ fun NoInternet(
         Icon(
             modifier = Modifier
                 .size(DesignToken.sizes.iconDp100)
-                .padding(bottom = DesignToken.padding.medium),
+                .padding(bottom = KptTheme.spacing.dp12),
             imageVector = icon,
             contentDescription = "No Internet Icon",
         )
@@ -61,7 +63,7 @@ fun NoInternet(
             style = TextStyle(fontSize = 20.sp),
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
         if (isRetryEnabled) {
             FilledTonalButton(onClick = { retry.invoke() }) {
                 Text(text = "Retry")

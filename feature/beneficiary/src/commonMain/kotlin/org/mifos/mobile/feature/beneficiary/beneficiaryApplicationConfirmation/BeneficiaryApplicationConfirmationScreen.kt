@@ -28,7 +28,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.component.MifosDetailsCard
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
@@ -147,7 +147,7 @@ fun BeneficiaryApplicationConfirmationScreenContent(
             ScreenUiState.Success -> {
                 Column(
                     Modifier.padding(KptTheme.spacing.md),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                 ) {
                     Text(
                         text = stringResource(Res.string.validate_details),

@@ -42,6 +42,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.CardVariant
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -109,7 +110,7 @@ fun AccountSummaryCard(
                 enter = slideInHorizontally(initialOffsetX = { fullWidth -> fullWidth }) + fadeIn(),
                 exit = slideOutHorizontally(targetOffsetX = { fullWidth -> fullWidth }) + fadeOut(),
             ) {
-                Column(modifier = Modifier.padding(top = DesignToken.padding.medium)) {
+                Column(modifier = Modifier.padding(top = KptTheme.spacing.dp12)) {
                     keyValuePairs.forEach { (key, value) ->
                         Row(
                             modifier = Modifier

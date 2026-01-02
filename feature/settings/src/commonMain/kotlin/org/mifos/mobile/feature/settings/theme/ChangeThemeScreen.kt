@@ -50,6 +50,7 @@ import org.mifos.mobile.core.datastore.model.TimeBasedTheme
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosRadioButton
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -117,7 +118,7 @@ internal fun ThemeScreenContent(
         Column(
             modifier = Modifier.padding(KptTheme.spacing.md),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(DesignToken.padding.largeIncreased),
+            verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
         ) {
             uiState.themeOptions.forEach { (theme, labelRes) ->
                 MifosRadioButton(
@@ -297,7 +298,7 @@ private fun TimeRow(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable(onClick = onClick),
-            shape = DesignToken.shapes.medium,
+            shape = KptTheme.shapes.medium,
             tonalElevation = 1.dp,
         ) {
             Text(

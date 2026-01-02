@@ -31,9 +31,11 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp25
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
+import org.mifos.mobile.core.designsystem.theme.topCornerDp24
 import template.core.base.designsystem.theme.KptTheme
 
 @Composable
@@ -45,18 +47,18 @@ fun MifosPoweredCard(
     Box(
         modifier = modifier
             .shadow(
-                elevation = DesignToken.elevation.elevation,
-                shape = DesignToken.shapes.bottomSheet,
+                elevation = KptTheme.elevation.dp25,
+                shape = KptTheme.shapes.topCornerDp24,
                 ambientColor = KptTheme.colorScheme.onSurface,
                 spotColor = KptTheme.colorScheme.onSurface,
                 clip = false,
             )
-            .background(KptTheme.colorScheme.surface, shape = DesignToken.shapes.bottomSheet),
+            .background(KptTheme.colorScheme.surface, shape = KptTheme.shapes.topCornerDp24),
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = DesignToken.padding.medium),
+                .padding(vertical = KptTheme.spacing.dp12),
             horizontalArrangement = Arrangement.Center,
         ) {
             Text(

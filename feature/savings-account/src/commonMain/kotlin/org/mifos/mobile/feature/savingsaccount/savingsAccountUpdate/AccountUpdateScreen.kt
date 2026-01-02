@@ -36,6 +36,8 @@ import org.mifos.mobile.core.designsystem.component.BasicDialogState
 import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
@@ -190,7 +192,7 @@ internal fun AccountUpdateScreenContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(KptTheme.spacing.md)
-                        .padding(top = DesignToken.padding.medium),
+                        .padding(top = KptTheme.spacing.dp12),
                     verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
                 ) {
                     MifosDetailsCard(
@@ -198,7 +200,7 @@ internal fun AccountUpdateScreenContent(
                     )
 
                     Column(
-                        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+                        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                     ) {
                         MifosOutlineDropdown(
                             selectedText = state.selectedProduct,

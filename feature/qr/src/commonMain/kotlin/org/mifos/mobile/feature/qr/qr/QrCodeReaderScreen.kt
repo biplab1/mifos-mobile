@@ -52,6 +52,8 @@ import org.mifos.mobile.core.designsystem.component.MifosBasicDialog
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosCustomCard
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp24
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
@@ -151,7 +153,7 @@ private fun QrCodeReaderContent(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(bottom = DesignToken.sizes.buttonHeight + DesignToken.spacing.dp24),
+                    .padding(bottom = DesignToken.sizes.buttonHeight + KptTheme.spacing.dp24),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
@@ -161,7 +163,7 @@ private fun QrCodeReaderContent(
                     color = AppColors.customBlack,
                 )
 
-                Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
                 Box(
                     modifier = Modifier

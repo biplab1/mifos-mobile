@@ -19,19 +19,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mifos_mobile.feature.settings.generated.resources.Res
 import mifos_mobile.feature.settings.generated.resources.feature_settings_change_language
 import mifos_mobile.feature.settings.generated.resources.feature_settings_language
-import mifos_mobile.feature.settings.generated.resources.language
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
 import org.mifos.mobile.core.designsystem.component.MifosRadioButton
+import org.mifos.mobile.core.designsystem.theme.dp12
 import org.mifos.mobile.core.designsystem.theme.AppColors
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -126,7 +125,7 @@ internal fun LanguageSelectionContent(
 ) {
     LazyColumn(
         modifier = modifier.padding(KptTheme.spacing.md),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
     ) {
         items(LanguageConfig.entries) {
             MifosRadioButton(

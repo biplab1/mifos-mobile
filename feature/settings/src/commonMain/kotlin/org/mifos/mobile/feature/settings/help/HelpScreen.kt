@@ -50,8 +50,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosButton
 import org.mifos.mobile.core.designsystem.component.MifosCard
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.theme.AppColors
-import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.designsystem.theme.MifosTypography
 import org.mifos.mobile.core.ui.utils.ShareUtils
@@ -110,10 +111,10 @@ internal fun HelpScreenContent(
             .verticalScroll(rememberScrollState())
             .padding(
                 horizontal = KptTheme.spacing.md,
-                vertical = DesignToken.padding.medium,
+                vertical = KptTheme.spacing.dp12,
             )
             .statusBarsPadding(),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.padding.medium),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
     ) {
         FAQCard(onClick = navigateToFAQ)
         PhoneSupportCard(onCallClick = onCallClick)
@@ -138,7 +139,7 @@ private fun FAQCard(
         modifier = modifier,
     ) {
         Column(
-            modifier = Modifier.padding(DesignToken.padding.extraLarge),
+            modifier = Modifier.padding(KptTheme.spacing.dp28),
         ) {
             Text(
                 text = stringResource(Res.string.feature_settings_doubt),
@@ -291,7 +292,7 @@ private fun SupportCardContent(
     onActionClick: () -> Unit,
 ) {
     Column(
-        modifier = modifier.padding(DesignToken.padding.extraLarge),
+        modifier = modifier.padding(KptTheme.spacing.dp28),
         verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.md),
     ) {
         Text(
@@ -351,8 +352,8 @@ private fun HelpActionButton(
         ),
         shape = KptTheme.shapes.small,
         contentPadding = PaddingValues(
-            horizontal = DesignToken.padding.extraLarge,
-            vertical = DesignToken.padding.medium,
+            horizontal = KptTheme.spacing.dp28,
+            vertical = KptTheme.spacing.dp12,
         ),
         modifier = modifier,
     ) {

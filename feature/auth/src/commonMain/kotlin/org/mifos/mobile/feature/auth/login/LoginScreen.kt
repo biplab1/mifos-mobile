@@ -59,6 +59,10 @@ import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosPasswordField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp100
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp50
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -175,7 +179,7 @@ private fun LoginScreenContent(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = DesignToken.padding.dp100)
+            .padding(top = KptTheme.spacing.dp100)
             .padding(KptTheme.spacing.md)
             .pointerInput(Unit) {
                 detectTapGestures(
@@ -187,7 +191,7 @@ private fun LoginScreenContent(
             .verticalScroll(rememberScrollState()),
     ) {
         LogoBox()
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
         InputBox(
             state = state,
             onAction = onAction,
@@ -210,7 +214,7 @@ fun LogoBox(
             contentDescription = null,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.dp50))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp50))
 
         Text(
             text = stringResource(Res.string.feature_sign_in_title),
@@ -218,7 +222,7 @@ fun LogoBox(
             color = KptTheme.colorScheme.onSurface,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         Text(
             text = stringResource(Res.string.feature_sign_in_sub_title),
@@ -236,7 +240,7 @@ fun InputBox(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         MifosOutlinedTextField(
             value = state.username,

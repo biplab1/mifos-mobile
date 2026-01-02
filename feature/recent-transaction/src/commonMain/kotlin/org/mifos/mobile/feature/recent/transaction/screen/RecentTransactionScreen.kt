@@ -55,6 +55,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.common.CurrencyFormatter
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp24
+import org.mifos.mobile.core.designsystem.theme.dp25
+import org.mifos.mobile.core.designsystem.theme.dp40
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.model.entity.accounts.savings.SavingAccount
@@ -208,7 +213,7 @@ fun TransactionItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .padding(horizontal = KptTheme.spacing.md, vertical = DesignToken.padding.medium),
+            .padding(horizontal = KptTheme.spacing.md, vertical = KptTheme.spacing.dp12),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -334,7 +339,7 @@ fun TransactionFilterSheetContent(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = DesignToken.spacing.dp24, vertical = KptTheme.spacing.md),
+            .padding(horizontal = KptTheme.spacing.dp24, vertical = KptTheme.spacing.md),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -364,7 +369,7 @@ fun TransactionFilterSheetContent(
         Text(
             text = "Filter By Account :",
             style = KptTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
-            modifier = Modifier.padding(vertical = DesignToken.padding.medium),
+            modifier = Modifier.padding(vertical = KptTheme.spacing.dp12),
         )
 
         Box {
@@ -429,17 +434,17 @@ fun TransactionFilterSheetContent(
             }
         }
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.largeIncreased))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp20))
 
         Text(
             text = "Transaction Type:",
             style = KptTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
-            modifier = Modifier.padding(bottom = DesignToken.padding.medium),
+            modifier = Modifier.padding(bottom = KptTheme.spacing.dp12),
         )
 
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+            horizontalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         ) {
             FilterOptionChip(
                 label = "All",
@@ -461,7 +466,7 @@ fun TransactionFilterSheetContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.dp40))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp40))
 
         Button(
             onClick = {
@@ -472,7 +477,7 @@ fun TransactionFilterSheetContent(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(DesignToken.sizes.buttonDp50),
-            shape = DesignToken.shapes.dp25,
+            shape = KptTheme.shapes.dp25,
             colors = ButtonDefaults.buttonColors(
                 containerColor = KptTheme.colorScheme.primary,
             ),
@@ -484,7 +489,7 @@ fun TransactionFilterSheetContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.dp24))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp24))
     }
 }
 
@@ -497,7 +502,7 @@ fun FilterOptionChip(
 ) {
     Surface(
         modifier = modifier.height(DesignToken.sizes.surfaceDp40),
-        shape = DesignToken.shapes.largeIncreased,
+        shape = KptTheme.shapes.dp20,
         color = if (isSelected) KptTheme.colorScheme.primary else KptTheme.colorScheme.surface,
         border = if (!isSelected) {
             BorderStroke(

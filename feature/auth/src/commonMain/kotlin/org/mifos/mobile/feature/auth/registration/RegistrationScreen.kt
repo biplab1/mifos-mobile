@@ -72,6 +72,9 @@ import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosPasswordField
 import org.mifos.mobile.core.designsystem.component.MifosScaffold
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
+import org.mifos.mobile.core.designsystem.theme.dp28
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -201,9 +204,9 @@ private fun RegistrationScreenContent(
             .padding(KptTheme.spacing.md)
             .padding(top = KptTheme.spacing.md)
             .statusBarsPadding(),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.medium),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp12),
         contentPadding = PaddingValues(
-            bottom = DesignToken.spacing.extraLarge,
+            bottom = KptTheme.spacing.dp28,
         ),
     ) {
         item {
@@ -274,7 +277,7 @@ private fun RegistrationScreenContent(
 fun FormSection(
     inputConfigs: List<InputFieldConfig>,
     modifier: Modifier = Modifier,
-    verticalSpacing: Dp = DesignToken.spacing.largeIncreased,
+    verticalSpacing: Dp = KptTheme.spacing.dp20,
 ) {
     Column(
         modifier = modifier,

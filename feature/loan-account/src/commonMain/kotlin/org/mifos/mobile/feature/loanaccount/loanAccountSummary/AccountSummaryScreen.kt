@@ -38,7 +38,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.mifos.mobile.core.designsystem.component.MifosElevatedScaffold
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.component.MifosErrorComponent
 import org.mifos.mobile.core.ui.component.MifosPoweredCard
@@ -161,9 +162,9 @@ internal fun LoanAccountSummaryContent(
                         .fillMaxSize()
                         .padding(KptTheme.spacing.md)
                         .verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+                    verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
                 ) {
-                    Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+                    Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
                     AccountSummaryCard(
                         title = stringResource(Res.string.feature_loan_account_details_title),
                         keyValuePairs = state.accountDetails.orEmpty()

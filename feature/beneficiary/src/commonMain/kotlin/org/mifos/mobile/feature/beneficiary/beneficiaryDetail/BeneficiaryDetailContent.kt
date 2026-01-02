@@ -36,6 +36,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.mifos.mobile.core.designsystem.component.MifosOutlinedTextField
 import org.mifos.mobile.core.designsystem.component.MifosTextFieldConfig
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -61,7 +63,7 @@ internal fun BeneficiaryDetailContent(
             .fillMaxSize()
             .padding(KptTheme.spacing.md)
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(DesignToken.spacing.largeIncreased),
+        verticalArrangement = Arrangement.spacedBy(KptTheme.spacing.dp20),
     ) {
         ActionBar(
             onAction = onAction,
@@ -137,7 +139,7 @@ internal fun ActionBar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = DesignToken.padding.medium),
+            .padding(vertical = KptTheme.spacing.dp12),
         horizontalArrangement = Arrangement.End,
     ) {
         Row(
@@ -161,7 +163,7 @@ internal fun ActionBar(
             )
         }
 
-        Spacer(modifier = Modifier.width(DesignToken.spacing.largeIncreased))
+        Spacer(modifier = Modifier.width(KptTheme.spacing.dp20))
 
         Row(
             modifier = Modifier.clickable {

@@ -20,9 +20,10 @@ import mifos_mobile.core.ui.generated.resources.Res
 import mifos_mobile.core.ui.generated.resources.core_ui_money_in
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import org.mifos.mobile.core.designsystem.theme.DesignToken
+import org.mifos.mobile.core.designsystem.theme.dp6
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
 import org.mifos.mobile.core.ui.utils.DevicePreview
+import template.core.base.designsystem.theme.KptTheme
 
 @Composable
 fun MifosRoundIcon(
@@ -34,7 +35,7 @@ fun MifosRoundIcon(
             .clip(CircleShape),
     ) {
         Image(
-            modifier = Modifier.padding(all = DesignToken.padding.dp6),
+            modifier = Modifier.padding(all = KptTheme.spacing.dp6),
             painter = painterResource(iconId),
             contentDescription = "Icon",
         )

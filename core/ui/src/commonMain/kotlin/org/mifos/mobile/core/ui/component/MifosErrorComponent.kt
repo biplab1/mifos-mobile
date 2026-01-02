@@ -33,6 +33,8 @@ import mifos_mobile.core.ui.generated.resources.retry
 import mifos_mobile.core.ui.generated.resources.something_went_wrong
 import org.jetbrains.compose.resources.stringResource
 import org.mifos.mobile.core.designsystem.component.MifosButton
+import org.mifos.mobile.core.designsystem.theme.dp12
+import org.mifos.mobile.core.designsystem.theme.dp20
 import org.mifos.mobile.core.designsystem.icon.MifosIcons
 import org.mifos.mobile.core.designsystem.theme.DesignToken
 import org.mifos.mobile.core.designsystem.theme.MifosMobileTheme
@@ -85,7 +87,7 @@ fun NoInternetComponent(
             style = MifosTypography.titleSmallEmphasized,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         if (isRetryEnabled) {
             MifosButton(
@@ -136,7 +138,7 @@ fun EmptyDataComponent(
             textAlign = TextAlign.Center,
         )
 
-        Spacer(modifier = Modifier.height(DesignToken.spacing.medium))
+        Spacer(modifier = Modifier.height(KptTheme.spacing.dp12))
 
         if (isRetryEnabled) {
             MifosButton(
@@ -171,13 +173,13 @@ fun EmptyDataComponentWithModifiedMessageAndIcon(
         Icon(
             modifier = Modifier
                 .size(DesignToken.sizes.iconDp100)
-                .padding(bottom = DesignToken.padding.medium),
+                .padding(bottom = KptTheme.spacing.dp12),
             imageVector = if (isEmptyData) icon else MifosIcons.Info,
             contentDescription = "Info Icon",
         )
 
         Text(
-            modifier = Modifier.padding(horizontal = DesignToken.padding.largeIncreased),
+            modifier = Modifier.padding(horizontal = KptTheme.spacing.dp20),
             text = if (isEmptyData) message else stringResource(Res.string.something_went_wrong),
             style = TextStyle(fontSize = 20.sp),
             textAlign = TextAlign.Center,
