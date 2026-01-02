@@ -44,7 +44,6 @@ import mifos_mobile.feature.accounts.generated.resources.feature_transaction_det
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_breakdown
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_date
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_default_type
-import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_external_id
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_fees
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_id
 import mifos_mobile.feature.accounts.generated.resources.feature_transaction_detail_interest
@@ -177,13 +176,6 @@ fun TransactionDetailContent(
                 DetailItem(
                     stringResource(Res.string.feature_transaction_detail_type),
                     transaction.typeValue,
-                )
-            }
-
-            if (!transaction.externalId.isNullOrEmpty()) {
-                DetailItem(
-                    label = stringResource(Res.string.feature_transaction_detail_external_id),
-                    value = transaction.externalId,
                 )
             }
 
@@ -349,7 +341,6 @@ fun TransactionDetailContentPreview() {
         interest = 59.88,
         fees = 0.0,
         penalties = 0.0,
-        externalId = "EXT-888",
         outstandingBalance = 1200.0,
     )
 
