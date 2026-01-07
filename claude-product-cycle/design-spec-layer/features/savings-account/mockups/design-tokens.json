@@ -1,0 +1,44 @@
+{
+  "feature": "savings-account",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "secondary": {
+        "gradient": { "start": "#11998E", "end": "#38EF7D" }
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "interest": "#11998E"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "balance": { "size": "32sp", "weight": "800" },
+      "interestRate": { "size": "20sp", "weight": "600" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "lg": "16dp", "card": "20dp" }
+  },
+  "screens": [
+    { "id": "savings-detail", "name": "Savings Account Detail", "components": ["balance-card", "interest-info", "goal-progress", "transaction-list", "quick-actions"] },
+    { "id": "savings-deposit", "name": "Deposit Screen", "components": ["amount-input", "source-selector", "confirm-button"] },
+    { "id": "savings-withdraw", "name": "Withdraw Screen", "components": ["amount-input", "destination-selector", "confirm-button"] }
+  ],
+  "components": [
+    { "id": "balance-card", "specs": { "background": "gradient", "radius": "24dp", "padding": "24dp" } },
+    { "id": "interest-badge", "specs": { "background": "#11998E-15%", "textColor": "#11998E", "radius": "8dp" } },
+    { "id": "goal-progress", "specs": { "height": "8dp", "radius": "4dp" } },
+    { "id": "quick-action-button", "specs": { "size": "56dp", "iconSize": "24dp" } }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "feature": "transfer",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "error": "#FF4757",
+        "pending": "#FFB800"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "amount": { "size": "36sp", "weight": "800" },
+      "accountName": { "size": "16sp", "weight": "600" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp", "xxl": "32dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "lg": "16dp", "card": "20dp" }
+  },
+  "screens": [
+    { "id": "transfer-type", "name": "Transfer Type Selection", "components": ["transfer-option-card", "recent-transfers"] },
+    { "id": "transfer-form", "name": "Transfer Form", "components": ["account-selector", "amount-input", "beneficiary-picker", "note-input"] },
+    { "id": "transfer-review", "name": "Review Transfer", "components": ["summary-card", "fee-breakdown", "confirm-button"] },
+    { "id": "transfer-success", "name": "Transfer Success", "components": ["success-animation", "receipt-card", "share-button"] },
+    { "id": "transfer-pending", "name": "Transfer Pending", "components": ["pending-animation", "status-timeline"] }
+  ],
+  "components": [
+    { "id": "transfer-option-card", "specs": { "height": "80dp", "iconSize": "40dp", "radius": "16dp" } },
+    { "id": "account-selector", "specs": { "height": "72dp", "avatarSize": "48dp" } },
+    { "id": "amount-input", "specs": { "height": "80dp", "fontSize": "36sp", "cursorColor": "#667EEA" } },
+    { "id": "summary-card", "specs": { "background": "gradient-5%", "radius": "20dp" } },
+    { "id": "success-checkmark", "specs": { "size": "80dp", "strokeWidth": "4dp", "color": "#00D09C" } }
+  ],
+  "animations": {
+    "amountTyping": { "scale": "1.02", "duration": "100ms" },
+    "successCheckmark": { "drawDuration": "400ms", "bounceDuration": "200ms" },
+    "confetti": { "particleCount": 50, "duration": "1200ms" }
+  }
+}

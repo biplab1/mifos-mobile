@@ -1,0 +1,42 @@
+{
+  "feature": "recent-transaction",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "transaction": {
+        "credit": "#00D09C",
+        "debit": "#FF4757",
+        "pending": "#FFB800"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "amount": { "size": "16sp", "weight": "600" },
+      "description": { "size": "14sp", "weight": "500" },
+      "date": { "size": "12sp", "weight": "400" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "card": "16dp" }
+  },
+  "screens": [
+    { "id": "transaction-list", "name": "Transaction List", "components": ["transaction-item", "date-header", "filter-bar", "search"] },
+    { "id": "transaction-detail", "name": "Transaction Detail", "components": ["amount-display", "detail-row", "receipt-button"] },
+    { "id": "transaction-filter", "name": "Filter Modal", "components": ["date-picker", "type-selector", "apply-button"] }
+  ],
+  "components": [
+    { "id": "transaction-item", "specs": { "height": "72dp", "iconSize": "40dp", "iconRadius": "12dp" } },
+    { "id": "date-header", "specs": { "height": "32dp", "textSize": "12sp", "background": "#F3F4F6" } },
+    { "id": "amount-badge", "specs": { "creditColor": "#00D09C", "debitColor": "#FF4757" } }
+  ]
+}

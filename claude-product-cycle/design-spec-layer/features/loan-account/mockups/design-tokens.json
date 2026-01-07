@@ -1,0 +1,43 @@
+{
+  "feature": "loan-account",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "error": "#FF4757",
+        "warning": "#FFB800",
+        "overdue": "#FF4757"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "loanBalance": { "size": "28sp", "weight": "700" },
+      "paymentAmount": { "size": "24sp", "weight": "600" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "lg": "16dp", "card": "20dp" }
+  },
+  "screens": [
+    { "id": "loan-detail", "name": "Loan Account Detail", "components": ["loan-summary-card", "repayment-progress", "payment-schedule", "transaction-list"] },
+    { "id": "loan-schedule", "name": "Repayment Schedule", "components": ["schedule-item", "payment-status-badge"] },
+    { "id": "loan-payment", "name": "Make Payment", "components": ["amount-input", "payment-method", "confirm-button"] }
+  ],
+  "components": [
+    { "id": "loan-summary-card", "specs": { "background": "gradient", "radius": "20dp" } },
+    { "id": "repayment-progress", "specs": { "height": "12dp", "radius": "6dp" } },
+    { "id": "schedule-item", "specs": { "height": "80dp", "statusBadgeSize": "24dp" } },
+    { "id": "payment-due-card", "specs": { "background": "warning-10%", "radius": "16dp" } }
+  ]
+}

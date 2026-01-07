@@ -1,0 +1,39 @@
+{
+  "feature": "beneficiary",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "error": "#FF4757"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "title": { "size": "20sp", "weight": "600" },
+      "body": { "size": "14sp", "weight": "400" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "lg": "16dp", "card": "20dp" }
+  },
+  "screens": [
+    { "id": "beneficiary-list", "name": "Beneficiary List", "components": ["beneficiary-card", "search-bar", "fab"] },
+    { "id": "add-beneficiary", "name": "Add Beneficiary", "components": ["form-input", "bank-selector", "primary-button"] },
+    { "id": "beneficiary-detail", "name": "Beneficiary Detail", "components": ["avatar", "info-row", "action-button"] }
+  ],
+  "components": [
+    { "id": "beneficiary-card", "specs": { "height": "72dp", "avatarSize": "48dp", "radius": "16dp" } },
+    { "id": "bank-selector", "specs": { "height": "56dp", "iconSize": "24dp" } }
+  ]
+}

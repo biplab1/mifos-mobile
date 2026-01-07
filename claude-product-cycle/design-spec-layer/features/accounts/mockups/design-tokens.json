@@ -1,0 +1,260 @@
+{
+  "feature": "accounts",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": {
+          "start": "#667EEA",
+          "end": "#764BA2",
+          "angle": 45
+        },
+        "solid": "#667EEA"
+      },
+      "secondary": {
+        "gradient": {
+          "start": "#11998E",
+          "end": "#38EF7D"
+        }
+      },
+      "surface": {
+        "light": "#FFFFFF",
+        "dark": "#0D1117"
+      },
+      "background": {
+        "light": "#F8F9FA",
+        "dark": "#0D1117"
+      },
+      "card": {
+        "light": "#FFFFFF",
+        "dark": "#161B22"
+      },
+      "text": {
+        "primary": {
+          "light": "#1F2937",
+          "dark": "#F0F6FC"
+        },
+        "secondary": {
+          "light": "#6B7280",
+          "dark": "#8B949E"
+        }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "error": "#FF4757",
+        "warning": "#FFB800",
+        "info": "#667EEA"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "netWorth": {
+        "size": "36sp",
+        "weight": "800",
+        "lineHeight": "44dp"
+      },
+      "accountBalance": {
+        "size": "24sp",
+        "weight": "700",
+        "lineHeight": "32dp"
+      },
+      "sectionHeader": {
+        "size": "16sp",
+        "weight": "600",
+        "lineHeight": "24dp"
+      },
+      "body": {
+        "size": "14sp",
+        "weight": "400",
+        "lineHeight": "20dp"
+      },
+      "caption": {
+        "size": "12sp",
+        "weight": "500",
+        "lineHeight": "16dp"
+      }
+    },
+    "spacing": {
+      "xs": "4dp",
+      "sm": "8dp",
+      "md": "12dp",
+      "lg": "16dp",
+      "xl": "20dp",
+      "xxl": "24dp",
+      "xxxl": "32dp"
+    },
+    "radius": {
+      "sm": "8dp",
+      "md": "12dp",
+      "lg": "16dp",
+      "xl": "20dp",
+      "card": "20dp"
+    }
+  },
+  "screens": [
+    {
+      "id": "main-accounts",
+      "name": "Main Accounts View",
+      "description": "Financial command center with net worth, analytics, and account cards",
+      "components": ["net-worth-card", "spending-analytics", "ai-insight-card", "account-card", "bill-reminder"]
+    },
+    {
+      "id": "goals-tab",
+      "name": "Goals Tab View",
+      "description": "Gamified savings goals with achievements",
+      "components": ["goals-overview", "achievement-badge", "goal-card"]
+    },
+    {
+      "id": "category-drilldown",
+      "name": "Spending Category Drill-Down",
+      "description": "Detailed category spending view",
+      "components": ["category-chart", "sub-category-list", "transaction-list"]
+    },
+    {
+      "id": "loading",
+      "name": "Loading State",
+      "description": "Shimmer placeholders during data fetch",
+      "components": ["shimmer-card", "shimmer-chart"]
+    },
+    {
+      "id": "empty",
+      "name": "Empty State",
+      "description": "First-time user with suggestions",
+      "components": ["empty-illustration", "suggestion-card"]
+    },
+    {
+      "id": "error",
+      "name": "Error State",
+      "description": "Connection error with retry",
+      "components": ["error-illustration", "retry-button"]
+    },
+    {
+      "id": "offline",
+      "name": "Offline State",
+      "description": "Cached data view",
+      "components": ["offline-banner", "cached-account-card"]
+    }
+  ],
+  "components": [
+    {
+      "id": "net-worth-card",
+      "name": "Net Worth Card",
+      "specs": {
+        "background": "gradient",
+        "radius": "20dp",
+        "padding": "24dp",
+        "amountSize": "36sp",
+        "amountWeight": "800"
+      }
+    },
+    {
+      "id": "financial-health-score",
+      "name": "Financial Health Score",
+      "specs": {
+        "ringSize": "80dp",
+        "ringStroke": "8dp",
+        "scoreSize": "28sp",
+        "scoreWeight": "700"
+      }
+    },
+    {
+      "id": "spending-analytics",
+      "name": "Spending Analytics Chart",
+      "specs": {
+        "barWidth": "24dp",
+        "barRadius": "4dp",
+        "barSpacing": "12dp",
+        "maxHeight": "120dp"
+      }
+    },
+    {
+      "id": "category-chip",
+      "name": "Category Chip",
+      "specs": {
+        "height": "44dp",
+        "iconSize": "20dp",
+        "amountSize": "14sp",
+        "progressHeight": "4dp"
+      }
+    },
+    {
+      "id": "ai-insight-card",
+      "name": "AI Insight Card",
+      "specs": {
+        "iconSize": "40dp",
+        "background": "gradient-5%",
+        "border": "1dp primary-20%",
+        "radius": "16dp"
+      }
+    },
+    {
+      "id": "achievement-badge",
+      "name": "Achievement Badge",
+      "specs": {
+        "size": "64x80dp",
+        "iconContainer": "48dp",
+        "iconSize": "28dp",
+        "labelSize": "10sp"
+      }
+    },
+    {
+      "id": "account-card",
+      "name": "Account Card",
+      "specs": {
+        "radius": "20dp",
+        "padding": "20dp",
+        "iconContainer": "48dp",
+        "balanceSize": "24sp",
+        "elevation": "2dp"
+      }
+    },
+    {
+      "id": "goal-progress",
+      "name": "Goal Progress Bar",
+      "specs": {
+        "height": "8dp",
+        "radius": "4dp",
+        "trackColor": "#E5E7EB",
+        "fillGradient": true
+      }
+    },
+    {
+      "id": "bill-reminder",
+      "name": "Bill Reminder Card",
+      "specs": {
+        "overdueBackground": "#FF4757-10%",
+        "dueSoonBackground": "#FFB800-10%",
+        "normalBackground": "surface"
+      }
+    }
+  ],
+  "animations": {
+    "pageLoad": {
+      "staggerDelay": "50ms",
+      "itemDuration": "300ms",
+      "easing": "DecelerateInterpolator"
+    },
+    "scoreCounter": {
+      "duration": "800ms",
+      "easing": "DecelerateInterpolator"
+    },
+    "chartBarGrow": {
+      "duration": "400ms",
+      "easing": "DecelerateInterpolator"
+    },
+    "cardPress": {
+      "scale": "0.98",
+      "duration": "100ms"
+    },
+    "swipeReveal": {
+      "threshold": "80dp",
+      "snapDuration": "200ms"
+    },
+    "pullRefresh": {
+      "triggerDistance": "64dp",
+      "indicatorSize": "40dp"
+    }
+  }
+}

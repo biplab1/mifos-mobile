@@ -1,0 +1,48 @@
+{
+  "feature": "home",
+  "generated": "2026-01-07",
+  "tool": "google-stitch",
+  "version": "2.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "gradient": { "start": "#667EEA", "end": "#764BA2", "angle": 45 },
+        "solid": "#667EEA"
+      },
+      "surface": { "light": "#FFFFFF", "dark": "#0D1117" },
+      "card": { "light": "#FFFFFF", "dark": "#161B22" },
+      "text": {
+        "primary": { "light": "#1F2937", "dark": "#F0F6FC" },
+        "secondary": { "light": "#6B7280", "dark": "#8B949E" }
+      },
+      "semantic": {
+        "success": "#00D09C",
+        "error": "#FF4757",
+        "warning": "#FFB800"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "greeting": { "size": "28sp", "weight": "700" },
+      "balance": { "size": "32sp", "weight": "800" },
+      "sectionTitle": { "size": "18sp", "weight": "600" }
+    },
+    "spacing": { "sm": "8dp", "md": "12dp", "lg": "16dp", "xl": "24dp", "xxl": "32dp" },
+    "radius": { "sm": "8dp", "md": "12dp", "lg": "16dp", "card": "20dp", "full": "9999dp" }
+  },
+  "screens": [
+    { "id": "home-main", "name": "Home Dashboard", "components": ["greeting-card", "balance-card", "quick-actions", "recent-transactions", "promo-card"] },
+    { "id": "home-loading", "name": "Loading State", "components": ["shimmer-card", "shimmer-list"] },
+    { "id": "home-empty", "name": "Empty State", "components": ["empty-illustration", "cta-button"] }
+  ],
+  "components": [
+    { "id": "balance-card", "specs": { "background": "gradient", "radius": "24dp", "padding": "24dp" } },
+    { "id": "quick-action", "specs": { "size": "64dp", "iconSize": "28dp", "radius": "16dp" } },
+    { "id": "transaction-item", "specs": { "height": "72dp", "iconSize": "40dp" } },
+    { "id": "promo-card", "specs": { "height": "120dp", "radius": "20dp" } }
+  ],
+  "animations": {
+    "balanceReveal": { "duration": "600ms", "easing": "DecelerateInterpolator" },
+    "quickActionPress": { "scale": "0.95", "duration": "100ms" }
+  }
+}
